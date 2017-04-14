@@ -69,31 +69,15 @@ public class EventManager : MonoBehaviour , IManager{
     }
     public void PressingDir(InputDir _dir)
     {
-        // 누르고 있을 때 
-        switch(_dir)
-        {
-            case InputDir.East:
+        int selID =m_model.m_selectedCardData.GetSelectionID(_dir);
 
-                m_view.ChangeInteractPanel("E");
-                break;
-            case InputDir.West:
+        Selection sel = SelectionManager.GetInst().GetSelectionUsingID(selID);
 
-                m_view.ChangeInteractPanel("W");
-                break;
-            case InputDir.South:
-
-                m_view.ChangeInteractPanel("S");
-                break;
-            case InputDir.North:
-
-                m_view.ChangeInteractPanel("N");
-                break;
-            case InputDir.None:
-            default:
-                m_view.ChangeInteractPanel("");
-                break;
-        }
-
+        if (sel != null)
+            m_view.ChangeInteractPanel(sel.m_name);
+        else
+            m_view.ChangeInteractPanel("");
+    
     }
     public void UpDir(InputDir _dir)
     {

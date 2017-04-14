@@ -7,12 +7,24 @@ using UnityEngine;
 public class CardData
 {
     public string m_name;
-    public Status m_deltaStatus;
+    public string m_desc;
+    public int[] m_selectionID;
 
-    public CardData(string _name, Status _status)
+    public CardData(string _name,string _desc,int[] _selectionID)
     {
+        m_selectionID = new int[4];
+
         m_name = _name;
-        m_deltaStatus = _status;
+        m_desc = _desc;
+
+        m_selectionID = _selectionID;
+    }
+    public int GetSelectionID(InputDir _dir)
+    {
+        if (_dir == InputDir.None)
+            return -1;
+
+        return m_selectionID[(int)_dir];
     }
 
 }

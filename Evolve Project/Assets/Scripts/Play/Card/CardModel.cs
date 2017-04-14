@@ -12,8 +12,8 @@ public class CardModel : MonoBehaviour
 
         for(int i = 0;  i < 30 ;i++)
         {
-            Status status = new Status(i, i, i, i, i);
-            CardData data = new CardData(i.ToString(),status);
+            int[] selectionID = { Random.Range(-1, 9), Random.Range(-1, 9), Random.Range(-1, 9), Random.Range(-1, 9) };
+            CardData data = new CardData(i.ToString(),i.ToString()+"Desc",selectionID);
             m_cardList.Add(data);
         }
     }

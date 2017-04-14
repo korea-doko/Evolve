@@ -5,11 +5,11 @@ using UnityEngine;
 
 public enum InputDir
 {
-    None,
     East,
     West,
     South,
-    North
+    North,
+    None
 }
 public class InputManager : MonoBehaviour, IManager
 {
