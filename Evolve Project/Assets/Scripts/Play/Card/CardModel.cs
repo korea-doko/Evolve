@@ -10,9 +10,10 @@ public class CardModel : MonoBehaviour
     {
         m_cardList = new List<CardData>();
 
-        for(int i = 0;  i< 30;i++)
+        for(int i = 0;  i < 30 ;i++)
         {
-            CardData data = new CardData(i.ToString());
+            Status status = new Status(i, i, i, i, i);
+            CardData data = new CardData(i.ToString(),status);
             m_cardList.Add(data);
         }
     }

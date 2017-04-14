@@ -5,6 +5,7 @@ using UnityEngine;
 
 public enum InputDir
 {
+    None,
     East,
     West,
     South,
@@ -29,7 +30,7 @@ public class InputManager : MonoBehaviour, IManager
     {
         m_buttonDownPos = Vector3.zero;
 
-        m_screenTouchSensitivity = 100.0f;
+        m_screenTouchSensitivity = 300.0f;
     }
     public void InitStart()
     {
@@ -39,8 +40,10 @@ public class InputManager : MonoBehaviour, IManager
     {
         if (Input.GetMouseButtonDown(0))
             ButtonDown();
+
         if (Input.GetMouseButton(0))
             ButtonPressing();
+
         if (Input.GetMouseButtonUp(0))
             ButtonUp();
     }
@@ -51,18 +54,37 @@ public class InputManager : MonoBehaviour, IManager
     }
     void ButtonPressing()
     {
-        if (Vector3.Distance(m_buttonDownPos, Input.mousePosition) > m_screenTouchSensitivity)
-            Debug.Log("aa");
-
+        EventManager.GetInst().PressingDir(GetDir(m_buttonDownPos, Input.mousePosition));      
     }
     void ButtonUp()
     {
-        Debug.Log("moving distance : " + Vector3.Distance(m_buttonDownPos, Input.mousePosition).ToString());
         m_buttonDownPos = Vector3.zero;
 
-        EventManager.GetInst().GetInputDir(InputDir.East);
-        // 일단...
+        EventManager.GetInst().UpDir(GetDir(m_buttonDownPos, Input.mousePosition)); 
+    }
 
+    public InputDir GetDir(Vector3 _startPos, Vector3 _endPos)
+    {
+        float disX = Mathf.Abs( _endPos.x - _startPos.x);
+        float disY = Mathf.Abs( _endPos.y - _startPos.y);
+        
+        if (disX < m_screenTouchSensitivity && disY < m_screenTouchSensitivity)
+            return InputDir.None;
+
+        if( disX > disY)
+        {
+            if (_endPos.x > _startPos.x)
+                return InputDir.East;
+            else
+                return InputDir.West;    
+        }
+        else
+        {
+            if (_endPos.y > _startPos.y)
+                return InputDir.North;
+            else
+                return InputDir.South;
+        }
     }
 
   

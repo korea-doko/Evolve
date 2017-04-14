@@ -8,7 +8,8 @@ public enum ManagerType
     Input,
     Canvas,
     Card,
-    Event
+    Event,
+    Player
 }
 
 public class PlayManager : MonoBehaviour
