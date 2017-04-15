@@ -69,14 +69,14 @@ public class EventManager : MonoBehaviour , IManager{
     }
     public void PressingDir(InputDir _dir)
     {
-        int selID =m_model.m_selectedCardData.GetSelectionID(_dir);
+     //   int selID =m_model.m_selectedCardData.GetSelectionID(_dir);
 
-        Selection sel = SelectionManager.GetInst().GetSelectionUsingID(selID);
+     //   Selection sel = SelectionManager.GetInst().GetSelectionUsingID(selID);
 
-        if (sel != null)
-            m_view.ChangeInteractPanel(sel.m_name,_dir);
-        else
-            m_view.ChangeInteractPanel("",_dir);
+        //if (sel != null)
+        //    m_view.ChangeInteractPanel(sel.m_name,_dir);
+        //else
+        //    m_view.ChangeInteractPanel("",_dir);
     
     }
     public void UpDir(InputDir _dir)

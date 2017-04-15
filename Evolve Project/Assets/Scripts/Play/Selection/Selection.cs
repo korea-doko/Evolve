@@ -10,11 +10,19 @@ public class Selection
     public string m_desc;
     public Status m_deltaStatus;
 
-    public Selection(int _id,string _name, string _desc, Status _deltaStatus)
+    public Selection(Dictionary<string,string> _data)
     {
-        m_id = _id;
-        m_name = _name;
-        m_desc = _desc;
-        m_deltaStatus = _deltaStatus;
-    }	
+        m_id = int.Parse(_data["GivenID"]);
+        m_name = _data["SelectionName"];
+        m_desc = _data["Desc"];
+
+        int deltaDamage = int.Parse(_data["DeltaDamage"]);
+        int deltaLife = int.Parse(_data["DeltaLife"]);
+        int deltaExp = int.Parse(_data["DeltaExp"]);
+        int deltaHungry = int.Parse(_data["DeltaHungry"]);
+        int deltaMagicPower = int.Parse(_data["DeltaMagicPower"]);
+
+        m_deltaStatus = new Status(deltaDamage, deltaLife, deltaExp, deltaHungry, deltaMagicPower);
+    }
+ 
 }

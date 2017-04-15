@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour, IManager {
 
-    public List<Selection> m_selectionList;
+    public SelectionModel m_model;
 
     public static SelectionManager m_inst;
     public static SelectionManager GetInst()
@@ -20,14 +20,9 @@ public class SelectionManager : MonoBehaviour, IManager {
 
     public void InitAwake()
     {
-        m_selectionList = new List<Selection>();
+        m_model = PlayManager.MakeObjectWithComponent<SelectionModel>("SelectionModel", this.gameObject);
 
-        for(int i = 0; i < 10;i++)
-        {
-            Status stat = new Status(i, i, i, i, i);
-            Selection sel = new Selection(i,i.ToString() + "Sel Name", i.ToString() + "Sel Desc",stat);
-            m_selectionList.Add(sel);
-        }
+        m_model.Init();
     }
 
     public void InitStart()
@@ -44,7 +39,7 @@ public class SelectionManager : MonoBehaviour, IManager {
         if (_selectionID == -1)
             return null;
 
-        return m_selectionList[_selectionID];
+        return m_model.m_selectionList[_selectionID];
     }
     
 }

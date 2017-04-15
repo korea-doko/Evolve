@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Selection.xsd" generated="2017-04-15T14:37:54">
+<Selection>
+<ID>1</ID>
+<GivenID>101</GivenID>
+<SelectionName>숲으로 이동</SelectionName>
+<Desc>숲으로 간다</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>0</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>2</ID>
+<GivenID>102</GivenID>
+<SelectionName>동쪽으로 이동</SelectionName>
+<Desc>동쪽으로이동</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>0</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>3</ID>
+<GivenID>103</GivenID>
+<SelectionName>서쪽으로 이동</SelectionName>
+<Desc>서쪽으로이동</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>0</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>4</ID>
+<GivenID>104</GivenID>
+<SelectionName>남쪽으로 이동</SelectionName>
+<Desc>남쪽으로 이동</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>0</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>5</ID>
+<GivenID>105</GivenID>
+<SelectionName>북쪽으로 이동</SelectionName>
+<Desc>북쪽으로 이동</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>0</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>6</ID>
+<GivenID>106</GivenID>
+<SelectionName>강으로 이동</SelectionName>
+<Desc>강으로 이동</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>0</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>7</ID>
+<GivenID>107</GivenID>
+<SelectionName>고대 사원으로 이동</SelectionName>
+<Desc>고대 사원으로 간다</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>0</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>8</ID>
+<GivenID>108</GivenID>
+<SelectionName>던전으로 이동</SelectionName>
+<Desc>던전 안으로 간다</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>0</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>9</ID>
+<GivenID>109</GivenID>
+<SelectionName>동굴로 이동</SelectionName>
+<Desc>동굴 속으로 들어간다</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>0</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>10</ID>
+<GivenID>110</GivenID>
+<SelectionName>산으로 이동</SelectionName>
+<Desc>산으로 간다</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>0</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>11</ID>
+<GivenID>201</GivenID>
+<SelectionName>잠을 잔다</SelectionName>
+<Desc>잠을 잔다</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>3</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>12</ID>
+<GivenID>202</GivenID>
+<SelectionName>밥을 먹는다</SelectionName>
+<Desc>밥을 먹는다</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>1</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>-3</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>13</ID>
+<GivenID>203</GivenID>
+<SelectionName>운동한다</SelectionName>
+<Desc>운동한다</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>1</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>0</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>14</ID>
+<GivenID>204</GivenID>
+<SelectionName>마법 연습</SelectionName>
+<Desc>마법을 연습한다</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>1</DeltaLife>
+<DeltaExp>1</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>3</DeltaMagicPower>
+</Selection>
+<Selection>
+<ID>15</ID>
+<GivenID>205</GivenID>
+<SelectionName>명상</SelectionName>
+<Desc>명상하기</Desc>
+<DeltaDamage>0</DeltaDamage>
+<DeltaLife>1</DeltaLife>
+<DeltaExp>3</DeltaExp>
+<DeltaHungry>1</DeltaHungry>
+<DeltaMagicPower>1</DeltaMagicPower>
+</Selection>
+</dataroot>

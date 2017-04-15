@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Card.xsd" generated="2017-04-15T15:06:29">
+<Card>
+<ID>1</ID>
+<GivenID>100</GivenID>
+<CardName>이동</CardName>
+<Desc>이동한다</Desc>
+</Card>
+<Card>
+<ID>2</ID>
+<GivenID>200</GivenID>
+<CardName>휴식</CardName>
+<Desc>휴식한다</Desc>
+</Card>
+</dataroot>
