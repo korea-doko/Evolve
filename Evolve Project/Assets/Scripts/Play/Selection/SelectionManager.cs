@@ -34,12 +34,5 @@ public class SelectionManager : MonoBehaviour, IManager {
 
     }
 
-    public Selection GetSelectionUsingID(int _selectionID)
-    {
-        if (_selectionID == -1)
-            return null;
-
-        return m_model.m_selectionList[_selectionID];
-    }
     
 }
