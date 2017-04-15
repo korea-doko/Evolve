@@ -16,8 +16,5 @@ public class Selection
         m_name = _name;
         m_desc = _desc;
         m_deltaStatus = _deltaStatus;
-    }
-
-
-	
+    }	
 }

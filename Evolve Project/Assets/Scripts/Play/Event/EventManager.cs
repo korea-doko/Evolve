@@ -74,15 +74,16 @@ public class EventManager : MonoBehaviour , IManager{
         Selection sel = SelectionManager.GetInst().GetSelectionUsingID(selID);
 
         if (sel != null)
-            m_view.ChangeInteractPanel(sel.m_name);
+            m_view.ChangeInteractPanel(sel.m_name,_dir);
         else
-            m_view.ChangeInteractPanel("");
+            m_view.ChangeInteractPanel("",_dir);
     
     }
     public void UpDir(InputDir _dir)
     {
-        m_view.ChangeInteractPanel("");
-        // 안보이게
+        m_view.ChangeInteractPanel("",InputDir.None);
+        // 원래대로 돌아가게 만든다.
+
         m_state = EventState.GetCard;
 
     }

@@ -20,9 +20,10 @@ public class EventView : MonoBehaviour {
     {
         m_eventLogPanel.ChangeTextTo(_text);
     }
-    public void ChangeInteractPanel(string _text)
+    public void ChangeInteractPanel(string _text,InputDir _dir)
     {
         m_interactPanel.ChangeTextTo(_text);
+        m_interactPanel.AnimatorMoveTo(_dir);
     }
 
 }
