@@ -10,6 +10,14 @@ public class Selection
     public string m_desc;
     public Status m_deltaStatus;
 
+    public Selection()
+    {
+        m_id = -1;
+        m_name = "no name";
+        m_desc = "no desc";
+        m_deltaStatus = new Status();
+    }
+
     public Selection(Dictionary<string,string> _data)
     {
         m_id = int.Parse(_data["GivenID"]);

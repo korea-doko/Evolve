@@ -12,4 +12,8 @@ public class PlayerView : MonoBehaviour {
 
         m_statusPanel.Init(_model.m_status);
     }
+    public void ChangePlayerStatus(Status _status)
+    {
+        m_statusPanel.ChangePlayerStatus(_status);
+    }
 }

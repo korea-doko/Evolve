@@ -36,5 +36,10 @@ public class PlayerManager : MonoBehaviour,IManager {
     {
 
     }
+    public void ChangePlayerStatus(Selection _sel)
+    {
+        m_model.ChangePlayerStatus(_sel.m_deltaStatus);
+        m_view.ChangePlayerStatus(m_model.m_status);
+    }
 
 }

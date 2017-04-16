@@ -60,27 +60,50 @@ public class EventManager : MonoBehaviour , IManager{
     {
         CardData data = CardManager.GetInst().GetNextCard();
         m_model.ChangeSelectedCard(data);
+        // 카드가 선택됐음
+
+        Selection[] selAry = SelectionManager.GetInst().GetSelectionsAbout(data);
+        m_model.ChangeSelections(selAry);
+        // 해당 카드에 맞는 Selection을 가져와야 한다.
+
         m_view.ChangeEventLogPanel(data.m_name);
+        // 선택된 카드의 정보를 띄워준다.
+
         m_state = EventState.ReadyPlayer;
     }
     void ReadyPlayer()
     {
-
+        // 플레이어 인풋 대기 중
     }
     public void PressingDir(InputDir _dir)
-    {        
-        //if (sel != null)
-        //    m_view.ChangeInteractPanel(sel.m_name,_dir);
-        //else
-        //    m_view.ChangeInteractPanel("",_dir);
+    {
+        if( _dir == InputDir.None)
+        {
+            m_view.ChangeInteractPanel("", _dir);
+            return;
+        }
+
+        Selection sel =  m_model.m_selectedSelectionAry[(int)_dir];
+
+        if (sel.m_id != -1)
+            m_view.ChangeInteractPanel(sel.m_name, _dir);
+        else
+            m_view.ChangeInteractPanel("", InputDir.None);
 
     }
     public void UpDir(InputDir _dir)
     {
-        m_view.ChangeInteractPanel("",InputDir.None);
+        Selection sel = m_model.m_selectedSelectionAry[(int)_dir];
+        m_view.ChangeInteractPanel("", InputDir.None);
         // 원래대로 돌아가게 만든다.
 
-        m_state = EventState.GetCard;
+        if ( sel.m_id == -1 || sel == null)
+            return;
+        
+        PlayerManager.GetInst().ChangePlayerStatus(sel);
 
+        m_model.ClearSelections();
+        m_state = EventState.GetCard;        
     }
 }
+    

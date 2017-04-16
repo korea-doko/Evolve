@@ -10,4 +10,8 @@ public class PlayerModel : MonoBehaviour
     {
         m_status = new Status(1, 1, 1, 1, 1);
     }
+    public void ChangePlayerStatus(Status _status)
+    {
+        m_status = m_status + _status;
+    }
 }
