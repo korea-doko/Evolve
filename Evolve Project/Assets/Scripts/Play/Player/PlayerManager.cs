@@ -25,21 +25,39 @@ public class PlayerManager : MonoBehaviour,IManager {
         m_model.Init(); 
 
     }
-
     public void InitStart()
     {
-        m_view = PlayManager.MakeObjectWithComponent<PlayerView>("PlayerView", this.gameObject);
+        MonsterData data = MonsterManager.GetInst().DeepCopyMonsterDataUsingID(0);
+        m_model.InitMonData(data);
 
+        m_view = PlayManager.MakeObjectWithComponent<PlayerView>("PlayerView", this.gameObject);
         m_view.Init(m_model);
     }
     public void UpdateManager()
     {
 
     }
+
+
     public void ChangePlayerStatus(Selection _sel)
     {
-        m_model.ChangePlayerStatus(_sel.m_deltaStatus);
-        m_view.ChangePlayerStatus(m_model.m_status);
+        //m_model.ChangePlayerStatus(_sel.m_deltaStatus);
+
+        //m_view.ChangePlayerStatus(m_model.m_status);
     }
 
+    public void AttachPassive(Passive _passive)
+    {
+        m_model.AttachPassive(_passive);
+    }
+
+    public void DetachPassive(Passive _passive)
+    {
+        m_model.DetachPassive(_passive);
+    }
+
+    public void CheckPassive()
+    {
+        m_model.CheckPassive();
+    }
 }

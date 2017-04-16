@@ -4,14 +4,33 @@ using UnityEngine;
 
 public class PlayerModel : MonoBehaviour
 {
-    public Status m_status;
+    public MonsterData m_monData;
+    public List<Passive> m_passiveList;
 
     public void Init()
     {
-        m_status = new Status(1, 1, 1, 1, 1);
+        m_passiveList = new List<Passive>();
     }
-    public void ChangePlayerStatus(Status _status)
+    public void InitMonData(MonsterData _monData)
     {
-        m_status = m_status + _status;
+        m_monData = _monData;
     }
+    
+    
+    public void AttachPassive(Passive _passive)
+    {
+        _passive.Attach(this);
+        m_passiveList.Add(_passive);
+    }
+    public void DetachPassive(Passive _passive)
+    {
+        _passive.Detach(this);
+        m_passiveList.Remove(_passive);
+    }
+    public void CheckPassive()
+    {
+        for (int i = 0; i < m_passiveList.Count; i++)
+            m_passiveList[i].Check(this);
+    }
+
 }

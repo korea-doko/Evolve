@@ -10,7 +10,9 @@ public enum ManagerType
     Card,
     Event,
     Player,
-    Selection
+    Selection,
+    Passive,
+    Monster
 }
 
 public class PlayManager : MonoBehaviour
