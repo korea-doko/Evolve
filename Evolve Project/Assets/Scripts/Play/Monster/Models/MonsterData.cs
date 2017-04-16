@@ -15,6 +15,9 @@ public class MonsterData
     public int m_expForEvolution;
     public int m_passiveID;
 
+    public int m_currentExp;
+    public int m_currentHungryPoint;
+
     public MonsterData()
     {
         m_id = -1;
@@ -26,6 +29,8 @@ public class MonsterData
         m_hungryPointPerTurn = -1;
         m_expForEvolution = -1;
         m_passiveID = -1;
+        m_currentExp = -1;
+        m_currentHungryPoint = -1;
     }
     public MonsterData(MonsterData _data)
     {
@@ -38,6 +43,8 @@ public class MonsterData
         m_hungryPointPerTurn = _data.m_hungryPointPerTurn;
         m_expForEvolution = _data.m_expForEvolution;
         m_passiveID = _data.m_passiveID;
+        m_currentExp = _data.m_currentExp;
+        m_currentHungryPoint = _data.m_currentHungryPoint;
     }
     public MonsterData(Dictionary<string,string> _data)
     {
@@ -50,5 +57,16 @@ public class MonsterData
         m_hungryPointPerTurn = int.Parse(_data["HungryPointPerTurn"]);
         m_expForEvolution = int.Parse(_data["ExpForEvolution"]);
         m_passiveID = int.Parse(_data["PassiveID"]);
+        m_currentExp = 0;
+        m_currentHungryPoint = 0;
+    }
+
+    public void ChangeStatus(Status _status)
+    {
+        m_damage += _status.m_paramAry[(int)StatusType.Damage];
+        m_life += _status.m_paramAry[(int)StatusType.Life];
+        m_magicPower += _status.m_paramAry[(int)StatusType.MagicPower];
+        m_currentHungryPoint += _status.m_paramAry[(int)StatusType.Hungry];
+        m_currentExp += _status.m_paramAry[(int)StatusType.Experience];
     }
 }

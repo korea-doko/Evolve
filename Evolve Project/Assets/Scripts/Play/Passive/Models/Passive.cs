@@ -2,18 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Passive : MonoBehaviour {
+[System.Serializable]
+public class Passive
+{
+    public int m_id;
 
-    public void Attach(PlayerModel _model)
+    public Passive()
     {
+
+    }
+    public virtual void Attach(PlayerModel _model)
+    {
+       
         // 붙을 때
     }
-    public void Detach(PlayerModel _model)
+    public virtual void Detach(PlayerModel _model)
     {
         // 없어질 때
     }
-    public void Check(PlayerModel _model)
+    public virtual void Check(PlayerModel _model)
     {
         // 계속해서 
+    }
+    public virtual Status ApplyToStatus(Status _status)
+    {
+        return null;
     }
 }

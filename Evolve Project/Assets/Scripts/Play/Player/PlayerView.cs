@@ -10,10 +10,10 @@ public class PlayerView : MonoBehaviour {
     {
         m_statusPanel = GameObject.Find("StatusPanel").GetComponent<StatusPanel>();
 
-        //m_statusPanel.Init(_model.m_status);
+        m_statusPanel.Init(_model);
     }
-    public void ChangePlayerStatus(Status _status)
+    public void ChangePlayerStatus(PlayerModel _model)
     {
-        m_statusPanel.ChangePlayerStatus(_status);
+        m_statusPanel.ChangePlayerStatus(_model);
     }
 }

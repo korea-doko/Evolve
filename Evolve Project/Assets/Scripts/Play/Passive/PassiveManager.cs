@@ -8,6 +8,17 @@ public class PassiveManager : MonoBehaviour , IManager{
     public PassiveModel m_model;
     public PassiveView m_view;
 
+    public static PassiveManager m_inst;
+    public static PassiveManager GetInst()
+    {
+        return m_inst;
+
+    }
+    public PassiveManager()
+    {
+        m_inst = this;
+    }
+
     public void InitAwake()
     {
         m_model = PlayManager.MakeObjectWithComponent<PassiveModel>("PassiveModel", this.gameObject);
@@ -23,6 +34,11 @@ public class PassiveManager : MonoBehaviour , IManager{
     public void UpdateManager()
     {
 
+    }
+
+    public Passive GetPassiveUsingID(int _id)
+    {
+        return m_model.m_passiveList[_id];
     }
 
 }

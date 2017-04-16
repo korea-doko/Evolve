@@ -77,19 +77,22 @@ public class EventManager : MonoBehaviour , IManager{
     }
     public void PressingDir(InputDir _dir)
     {
-        if( _dir == InputDir.None)
+        if (_dir == InputDir.None)
         {
-            m_view.ChangeInteractPanel("", _dir);
-            return;
+            m_view.ChangeInteractPanel("", InputDir.None);
+           return;
         }
 
         Selection sel =  m_model.m_selectedSelectionAry[(int)_dir];
 
-        if (sel.m_id != -1)
-            m_view.ChangeInteractPanel(sel.m_name, _dir);
-        else
+        if (sel == null || sel.m_id == -1)
+        {
             m_view.ChangeInteractPanel("", InputDir.None);
+            return;
+        }
 
+        m_view.ChangeInteractPanel(sel.m_name, _dir);
+        
     }
     public void UpDir(InputDir _dir)
     {
@@ -97,7 +100,7 @@ public class EventManager : MonoBehaviour , IManager{
         m_view.ChangeInteractPanel("", InputDir.None);
         // 원래대로 돌아가게 만든다.
 
-        if ( sel.m_id == -1 || sel == null)
+        if (sel == null || sel.m_id == -1 )
             return;
         
         PlayerManager.GetInst().ChangePlayerStatus(sel);

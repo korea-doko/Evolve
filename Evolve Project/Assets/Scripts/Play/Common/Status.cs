@@ -19,6 +19,12 @@ public class Status
     {
         m_paramAry = new int[5] { -1, -1, -1, -1, -1 };
     }
+    public Status(Status _status)
+    {
+        m_paramAry = new int[5];
+        for (int i = 0; i < 5; i++)
+            m_paramAry[i] = _status.m_paramAry[i];
+    }
     public Status(int _damage, int _life, int _experience,int _hungry, int _magicPower)
     {
         m_paramAry = new int[5];

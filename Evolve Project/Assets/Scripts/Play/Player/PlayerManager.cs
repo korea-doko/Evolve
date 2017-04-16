@@ -30,6 +30,8 @@ public class PlayerManager : MonoBehaviour,IManager {
         MonsterData data = MonsterManager.GetInst().DeepCopyMonsterDataUsingID(0);
         m_model.InitMonData(data);
 
+        AttachPassive(PassiveManager.GetInst().GetPassiveUsingID(0));
+
         m_view = PlayManager.MakeObjectWithComponent<PlayerView>("PlayerView", this.gameObject);
         m_view.Init(m_model);
     }
@@ -41,9 +43,9 @@ public class PlayerManager : MonoBehaviour,IManager {
 
     public void ChangePlayerStatus(Selection _sel)
     {
-        //m_model.ChangePlayerStatus(_sel.m_deltaStatus);
+        m_model.ChangePlayerStatus(_sel.m_deltaStatus);
 
-        //m_view.ChangePlayerStatus(m_model.m_status);
+        m_view.ChangePlayerStatus(m_model);
     }
 
     public void AttachPassive(Passive _passive)
@@ -56,8 +58,5 @@ public class PlayerManager : MonoBehaviour,IManager {
         m_model.DetachPassive(_passive);
     }
 
-    public void CheckPassive()
-    {
-        m_model.CheckPassive();
-    }
+    
 }
