@@ -6,7 +6,11 @@ using UnityEngine;
 public enum EventState
 {
     GetCard,
-    ReadyPlayer
+    CardEffect,
+    ReadyPlayer,
+    CleanEffect,
+    CheckPlayer,
+
 }
 
 public class EventManager : MonoBehaviour , IManager{
@@ -48,8 +52,17 @@ public class EventManager : MonoBehaviour , IManager{
             case EventState.GetCard:
                 GetCard();
                 break;
+            case EventState.CardEffect:
+                CardEffect();
+                break;
             case EventState.ReadyPlayer:
                 ReadyPlayer();
+                break;
+            case EventState.CleanEffect:
+                CleanEffect();
+                break;
+            case EventState.CheckPlayer:
+                CheckPlayer();
                 break;
             default:
                 break;
@@ -69,7 +82,13 @@ public class EventManager : MonoBehaviour , IManager{
         m_view.ChangeEventLogPanel(data.m_name);
         // 선택된 카드의 정보를 띄워준다.
 
-        CardManager.GetInst().AffectCard(data);
+       
+
+        m_state = EventState.CardEffect;
+    }
+    void CardEffect()
+    {
+        CardManager.GetInst().AffectCard(m_model.m_selectedCardData);
         // 카드의 효과를 먼저 준다.
 
         m_state = EventState.ReadyPlayer;
@@ -77,6 +96,20 @@ public class EventManager : MonoBehaviour , IManager{
     void ReadyPlayer()
     {
         // 플레이어 인풋 대기 중
+    }
+    void CleanEffect()
+    {
+        CardManager.GetInst().CleanEffect(m_model.m_selectedCardData);
+
+        m_model.ClearSelections();
+
+        m_state = EventState.CheckPlayer;
+    }
+    void CheckPlayer()
+    {
+        Debug.Log("플레이어 죽었나, 진화했나 등등..");
+
+        m_state = EventState.GetCard;
     }
     public void PressingDir(InputDir _dir)
     {
@@ -108,8 +141,7 @@ public class EventManager : MonoBehaviour , IManager{
         
         PlayerManager.GetInst().ChangePlayerStatus(sel);
 
-        m_model.ClearSelections();
-        m_state = EventState.GetCard;        
+        m_state = EventState.CleanEffect;        
     }
 }
     

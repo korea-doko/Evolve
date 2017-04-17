@@ -81,8 +81,37 @@ public class CardManager : MonoBehaviour, IManager {
             default:
                 break;
         }
+    }
 
+    public void CleanEffect(CardData _data)
+    {
+        CardEffectType type = (CardEffectType)_data.m_givenID;
 
+        switch (type)
+        {
+            case CardEffectType.AncientTemple:
+                Debug.Log("정리");
+                break;
+            case CardEffectType.HuntingDog:
+                Debug.Log("정리");
+                break;
+            case CardEffectType.GoblinSlayer:
+                Debug.Log("정리");
+                break;
+            case CardEffectType.RankAWarrior:
+                Debug.Log("정리"); break;
+            case CardEffectType.ProtectionOfLight:
+
+                Debug.Log("정리"); break;
+            case CardEffectType.BlessingOfDarkness:
+
+                Debug.Log("정리"); break;
+            case CardEffectType.WarriorOfDesert:
+
+                Debug.Log("정리"); break;
+            default:
+                break;
+        }
     }
     
 
