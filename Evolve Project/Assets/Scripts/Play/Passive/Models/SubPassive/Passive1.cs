@@ -23,7 +23,7 @@ public class Passive1 : Passive
     {
         base.Check(_model);
     }
-    public override Status ApplyToStatus(Status _status)
+    public override Status ApplyToStatus(PlayerModel _model,Status _status)
     {
         Status temp = new Status(_status);
         temp.m_paramAry[(int)StatusType.Hungry] += 2;

@@ -24,7 +24,7 @@ public class Passive
     {
         // 계속해서 
     }
-    public virtual Status ApplyToStatus(Status _status)
+    public virtual Status ApplyToStatus(PlayerModel _model,Status _status)
     {
         return null;
     }

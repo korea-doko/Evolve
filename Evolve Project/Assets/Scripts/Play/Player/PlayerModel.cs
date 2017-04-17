@@ -7,8 +7,12 @@ public class PlayerModel : MonoBehaviour
     public MonsterData m_monData;
     public List<Passive> m_passiveList;
 
+    public bool m_isTest;
+
     public void Init()
     {
+        m_isTest = true;
+
         m_passiveList = new List<Passive>();
     }
     public void InitMonData(MonsterData _monData)
@@ -22,7 +26,7 @@ public class PlayerModel : MonoBehaviour
         Status tempStatus = _status;
 
         for (int i = 0; i < m_passiveList.Count; i++) 
-            tempStatus = m_passiveList[i].ApplyToStatus(tempStatus);
+            tempStatus = m_passiveList[i].ApplyToStatus(this,tempStatus);
         
 
         m_monData.ChangeStatus(tempStatus);

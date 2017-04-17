@@ -24,8 +24,11 @@ public class Passive0 : Passive
     {
         base.Check(_model);
     }
-    public override Status ApplyToStatus(Status _status)
+    public override Status ApplyToStatus(PlayerModel _model, Status _status)
     {
+        if (_model.m_isTest)
+            Debug.Log("조건이 맞아서 이 텍스트가 나온다.");
+
         Status temp = new Status(_status);
         temp.m_paramAry[(int)StatusType.Damage] += 1;
         return temp;

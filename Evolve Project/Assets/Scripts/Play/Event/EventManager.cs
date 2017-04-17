@@ -69,6 +69,9 @@ public class EventManager : MonoBehaviour , IManager{
         m_view.ChangeEventLogPanel(data.m_name);
         // 선택된 카드의 정보를 띄워준다.
 
+        CardManager.GetInst().AffectCard(data);
+        // 카드의 효과를 먼저 준다.
+
         m_state = EventState.ReadyPlayer;
     }
     void ReadyPlayer()

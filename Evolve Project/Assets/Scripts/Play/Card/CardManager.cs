@@ -47,6 +47,43 @@ public class CardManager : MonoBehaviour, IManager {
 
     }
 
+    public void AffectCard(CardData _data)
+    {
+        CardEffectType type = (CardEffectType)_data.m_givenID;
+
+        switch (type)
+        {
+            case CardEffectType.AncientTemple:
+                Debug.Log("모험가 타이틀 있으면 생명력 +1");
+                break;
+            case CardEffectType.HuntingDog:
+
+                Debug.Log("스켈레톤 타입일 경우 데미지 -1");
+                break;
+            case CardEffectType.GoblinSlayer:
+                Debug.Log("코볼트일 때, 시작 시 생명력 -1 모든 선택지에서 부정적효과 -1");
+                break;
+            case CardEffectType.RankAWarrior:
+                Debug.Log("A랭크 이하 몬스터일 경우, 부정적 효과 -1, B랭크 이하일 경우 -2");
+                break;
+            case CardEffectType.ProtectionOfLight:
+
+                Debug.Log("패시브 :빛의수호");
+                break;
+            case CardEffectType.BlessingOfDarkness:
+
+                Debug.Log("패시브 :어둠의전사");
+                break;
+            case CardEffectType.WarriorOfDesert:
+
+                Debug.Log("패시브 :사막의전사");
+                break;
+            default:
+                break;
+        }
+
+
+    }
     
 
 

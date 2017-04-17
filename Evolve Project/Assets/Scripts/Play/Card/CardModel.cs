@@ -4,6 +4,26 @@ using UnityEngine;
 using System.IO;
 using System.Xml;
 
+
+public enum CardEffectType
+{
+    //Movement Type
+    AncientTemple = 10200,
+
+    // Engaing Enemy Type
+    HuntingDog = 30000,
+    GoblinSlayer = 30100,
+    RankAWarrior = 30200,
+
+    // Event Type
+    ProtectionOfLight = 40000,
+    BlessingOfDarkness = 40100,
+    WarriorOfDesert = 40200
+    
+
+
+}
+
 public class CardModel : MonoBehaviour
 {
     public List<CardData> m_cardList;
