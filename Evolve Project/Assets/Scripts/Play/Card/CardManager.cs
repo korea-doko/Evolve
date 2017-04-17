@@ -82,7 +82,6 @@ public class CardManager : MonoBehaviour, IManager {
                 break;
         }
     }
-
     public void CleanEffect(CardData _data)
     {
         CardEffectType type = (CardEffectType)_data.m_givenID;

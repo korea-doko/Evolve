@@ -9,8 +9,7 @@ public enum EventState
     CardEffect,
     ReadyPlayer,
     CleanEffect,
-    CheckPlayer,
-
+    NotifyOthers 
 }
 
 public class EventManager : MonoBehaviour , IManager{
@@ -61,9 +60,9 @@ public class EventManager : MonoBehaviour , IManager{
             case EventState.CleanEffect:
                 CleanEffect();
                 break;
-            case EventState.CheckPlayer:
-                CheckPlayer();
-                break;
+            case EventState.NotifyOthers:
+                NotifyOthers();
+                break;    
             default:
                 break;
         }
@@ -100,17 +99,24 @@ public class EventManager : MonoBehaviour , IManager{
     void CleanEffect()
     {
         CardManager.GetInst().CleanEffect(m_model.m_selectedCardData);
-
         m_model.ClearSelections();
 
-        m_state = EventState.CheckPlayer;
+
+
+
+        m_state = EventState.NotifyOthers;
+
     }
-    void CheckPlayer()
+    void NotifyOthers()
     {
-        Debug.Log("플레이어 죽었나, 진화했나 등등..");
+        Debug.Log("나중에 여기 이름좀 바꿔야할듯");
+        EnviManager.GetInst().Notified();
+
 
         m_state = EventState.GetCard;
     }
+
+
     public void PressingDir(InputDir _dir)
     {
         if (_dir == InputDir.None)
