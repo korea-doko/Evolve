@@ -44,16 +44,20 @@ public class NPCManager : MonoBehaviour ,IManager{
 
 
 
-    public NPCData GetNPCData(NPCName _name)
+    public NPCData GetNPCData()
     {
-        return m_model.GetNPCData(_name);
+        Debug.Log("여기에서 조건에 따라서 NPC를 골라야한다.");
+        // 여기에는 복잡한 조건에 따라서 나오게 해야한다. 
+        // 현재 플레이어의 상태에 따라서
+        NPCName name = UnityEngine.Random.Range(0, 1) == 0 ? NPCName.God : NPCName.Player;
+        
+
+        return m_model.GetNPCData(name);
     }
 
     public CardData GetCardDataInNPCData(NPCData _data)
     {
-        int randomIndex = UnityEngine.Random.Range(0, _data.m_cardList.Count -1 );
-
-        return _data.m_cardList[randomIndex];
+        return _data.GetCardDataInPreferCondtion();
     }
 
 }

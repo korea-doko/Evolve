@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum EventState
 {
-    GetNPC,
+    GetNPC,             // 어떤 NPC 선택할 것인가?
     GetCardInNPC,       // NPC 안에 있는 적절한 카드를 가져온다.
     GetSelection,       // 어떤 선택지들을 가져오는가?
     CardEffect,         // 카드를 가져올 때, 먼저 발동되는 효과가 있다면 그것을 처리한다.
@@ -82,24 +82,15 @@ public class EventManager : MonoBehaviour , IManager{
 
     void GetNPC()
     {
-        NPCName name = UnityEngine.Random.Range(0, 1) == 0 ? NPCName.God : NPCName.Player;
-        Debug.Log("여기에서 조건에 따라서 NPC를 골라야한다.");
-        // 여기에는 복잡한 조건에 따라서 나오게 해야한다. 
-        // 현재 플레이어의 상태에 따라서
-
-        NPCData npcData = NPCManager.GetInst().GetNPCData(name);
-
+        NPCData npcData = NPCManager.GetInst().GetNPCData();
         m_model.SetNPCData(npcData);
-        m_state = EventState.GetCardInNPC;
 
+        m_state = EventState.GetCardInNPC;
     }
     void GetCardInNPC()
     {
 
         CardData data = NPCManager.GetInst().GetCardDataInNPCData(m_model.m_selectedNPCData);
-        Debug.Log("여기에서 적절한 Card를 골라야한다.");
-        // 이 때, GetCardDataInNPCData에서는 현재 플레이어의 정보와 기타 정보를 조합해서
-        // 카드 정보를 가져온다.
 
         m_model.ChangeSelectedCard(data);
         // 카드가 선택됐음

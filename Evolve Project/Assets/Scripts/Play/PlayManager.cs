@@ -6,7 +6,6 @@ using System;
 public enum ManagerType
 {
     Input,
-    Canvas,
     Card,
     Event,
     Player,
