@@ -13,7 +13,8 @@ public enum ManagerType
     Selection,
     Passive,
     Monster,
-    Envi
+    Envi,
+    NPC
 }
 
 public class PlayManager : MonoBehaviour
