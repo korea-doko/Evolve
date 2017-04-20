@@ -6,11 +6,13 @@ public class EventModel : MonoBehaviour {
 
     public CardData m_selectedCardData;
     public Selection[] m_selectedSelectionAry;
+    public Selection m_selection;
 
     public void Init()
     {
         m_selectedCardData = null;
-        m_selectedSelectionAry = new Selection[4];
+        m_selection = null; 
+        m_selectedSelectionAry = null;
 
     }
 
@@ -22,9 +24,15 @@ public class EventModel : MonoBehaviour {
     {
         m_selectedSelectionAry = _sels;
     }
+    public void SetSelection(Selection _sel)
+    {
+        m_selection = _sel;
+    }
     public void ClearSelections()
     {
-        m_selectedSelectionAry = null;
+        m_selectedCardData = null;
+        m_selection = null;
+        m_selectedSelectionAry = null;            
     }
 
 }

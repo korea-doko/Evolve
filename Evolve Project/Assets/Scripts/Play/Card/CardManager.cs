@@ -32,9 +32,12 @@ public class CardManager : MonoBehaviour, IManager {
         m_view.Init(m_model);
     }
 
-    public CardData GetNextCard()
+    public CardData GetCard()
     {
         // 일단 랜덤으로..
+        // 플레이어의 정보를 바탕으로,
+        // 현재 위치 등을 기반으로 해야한다.
+
         int randomIndex = UnityEngine.Random.Range(0, m_model.m_cardList.Count);
 
         CardData data = m_model.m_cardList[randomIndex]; 
