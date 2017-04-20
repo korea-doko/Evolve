@@ -5,7 +5,8 @@ using UnityEngine;
 
 public enum EventState
 {
-    GetCard,            // 어떤 카드를 가져올 것인가?
+    GetNPC,
+    GetCardInNPC,       // NPC 안에 있는 적절한 카드를 가져온다.
     GetSelection,       // 어떤 선택지들을 가져오는가?
     CardEffect,         // 카드를 가져올 때, 먼저 발동되는 효과가 있다면 그것을 처리한다.
     ReadyPlayer,        // 플레이어의 선택을 기다린다.
@@ -33,7 +34,7 @@ public class EventManager : MonoBehaviour , IManager{
 
     public void InitAwake()
     {
-        m_state = EventState.GetCard;
+        m_state = EventState.GetNPC;
 
         m_model = PlayManager.MakeObjectWithComponent<EventModel>("EventModel", this.gameObject);
 
@@ -50,8 +51,11 @@ public class EventManager : MonoBehaviour , IManager{
     {
         switch(m_state)
         {
-            case EventState.GetCard:
-                GetCard();
+            case EventState.GetNPC:
+                GetNPC();
+                break;
+            case EventState.GetCardInNPC:
+                GetCardInNPC();
                 break;
             case EventState.GetSelection:
                 GetSelection();
@@ -76,13 +80,30 @@ public class EventManager : MonoBehaviour , IManager{
         }
     }  
 
-    void GetCard()
+    void GetNPC()
     {
-        CardData data = CardManager.GetInst().GetCard();
+        NPCName name = UnityEngine.Random.Range(0, 1) == 0 ? NPCName.God : NPCName.Player;
+        Debug.Log("여기에서 조건에 따라서 NPC를 골라야한다.");
+        // 여기에는 복잡한 조건에 따라서 나오게 해야한다. 
+        // 현재 플레이어의 상태에 따라서
+
+        NPCData npcData = NPCManager.GetInst().GetNPCData(name);
+
+        m_model.SetNPCData(npcData);
+        m_state = EventState.GetCardInNPC;
+
+    }
+    void GetCardInNPC()
+    {
+
+        CardData data = NPCManager.GetInst().GetCardDataInNPCData(m_model.m_selectedNPCData);
+        Debug.Log("여기에서 적절한 Card를 골라야한다.");
+        // 이 때, GetCardDataInNPCData에서는 현재 플레이어의 정보와 기타 정보를 조합해서
+        // 카드 정보를 가져온다.
+
         m_model.ChangeSelectedCard(data);
         // 카드가 선택됐음
 
-      
         m_view.ChangeEventLogPanel(data.m_name);
         // 선택된 카드의 정보를 띄워준다.
 
@@ -90,9 +111,12 @@ public class EventManager : MonoBehaviour , IManager{
     }
     void GetSelection()
     {
-        Selection[] selAry = SelectionManager.GetInst().GetSelectionsAbout();
+        Selection[] selAry = CardManager.GetInst().GetSelections(m_model.m_selectedCardData);
+        // GetSelection을 통해서 적절한 선택지를 가져와야하는데, 이때 플레이어의 정보와 
+        // 어떤 지문인지 알아야 한다.
+
         m_model.ChangeSelections(selAry);
-        // 해당 카드에 맞는 Selection을 가져와야 한다.
+        
 
         m_state = EventState.CardEffect;
     }
@@ -132,7 +156,7 @@ public class EventManager : MonoBehaviour , IManager{
         EnviManager.GetInst().Notified();
 
 
-        m_state = EventState.GetCard;
+        m_state = EventState.GetNPC;
     }
 
 

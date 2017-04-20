@@ -8,12 +8,20 @@ public class EventModel : MonoBehaviour {
     public Selection[] m_selectedSelectionAry;
     public Selection m_selection;
 
+    public NPCData m_selectedNPCData;
+
     public void Init()
     {
         m_selectedCardData = null;
         m_selection = null; 
         m_selectedSelectionAry = null;
 
+        m_selectedNPCData = null;
+    }
+
+    public void SetNPCData(NPCData _data)
+    {
+        m_selectedNPCData = _data;
     }
 
     public void ChangeSelectedCard(CardData _data)

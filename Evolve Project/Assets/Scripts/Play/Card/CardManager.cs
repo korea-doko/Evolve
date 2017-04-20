@@ -8,6 +8,8 @@ public class CardManager : MonoBehaviour, IManager {
     public CardModel m_model;
     public CardView m_view;
 
+    public Selection[] m_returnSelectionAry;
+
     public static CardManager m_inst;
     public static CardManager GetInst()
     {
@@ -20,6 +22,8 @@ public class CardManager : MonoBehaviour, IManager {
 
     public void InitAwake()
     {
+        m_returnSelectionAry = new Selection[4];
+
         m_model = PlayManager.MakeObjectWithComponent<CardModel>("CardModel", this.gameObject);
 
         m_model.Init();
@@ -42,22 +46,30 @@ public class CardManager : MonoBehaviour, IManager {
         m_view.Init(m_model);
     }
 
-    public CardData GetCard()
-    {
-        // 일단 랜덤으로..
-        // 플레이어의 정보를 바탕으로,
-        // 현재 위치 등을 기반으로 해야한다.
-
-        int randomIndex = UnityEngine.Random.Range(0, m_model.m_cardList.Count);
-
-        CardData data = m_model.m_cardList[randomIndex]; 
-
-        return data;
-    }
+   
 
     public void UpdateManager()
     {
 
+    }
+
+    public Selection[] GetSelections(CardData _data)
+    {
+        int count = _data.m_selList.Count;
+
+        int randNum = UnityEngine.Random.Range(0, 4);
+
+        for(int i = 0; i < randNum;i++)
+        {
+            int randIndex = UnityEngine.Random.Range(0, count - 1);
+
+            if (_data.m_selList[i] == null)
+                break;
+
+            m_returnSelectionAry[i] = _data.m_selList[i];
+        }
+
+        return m_returnSelectionAry;
     }
 
     public void AffectCard(CardData _data)

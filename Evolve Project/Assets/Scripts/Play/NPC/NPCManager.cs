@@ -40,5 +40,20 @@ public class NPCManager : MonoBehaviour ,IManager{
 
     public void UpdateManager()
     {
-    }    
+    }
+
+
+
+    public NPCData GetNPCData(NPCName _name)
+    {
+        return m_model.GetNPCData(_name);
+    }
+
+    public CardData GetCardDataInNPCData(NPCData _data)
+    {
+        int randomIndex = UnityEngine.Random.Range(0, _data.m_cardList.Count -1 );
+
+        return _data.m_cardList[randomIndex];
+    }
+
 }
