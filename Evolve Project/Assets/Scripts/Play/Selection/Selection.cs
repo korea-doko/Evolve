@@ -8,6 +8,8 @@ public class Selection
     public int m_id;
     public string m_name;
     public string m_desc;
+    public int m_cardID;
+
     public Status m_deltaStatus;
 
     public Selection()
@@ -21,16 +23,18 @@ public class Selection
     public Selection(Dictionary<string,string> _data)
     {
         m_id = int.Parse(_data["GivenID"]);
-        m_name = _data["SelectionName"];
         m_desc = _data["Desc"];
+        //m_name = _data["SelectionName"];
 
-        int deltaDamage = int.Parse(_data["DeltaDamage"]);
-        int deltaLife = int.Parse(_data["DeltaLife"]);
-        int deltaExp = int.Parse(_data["DeltaExp"]);
-        int deltaHungry = int.Parse(_data["DeltaHungry"]);
-        int deltaMagicPower = int.Parse(_data["DeltaMagicPower"]);
+        //int deltaDamage = int.Parse(_data["DeltaDamage"]);
+        //int deltaLife = int.Parse(_data["DeltaLife"]);
+        //int deltaExp = int.Parse(_data["DeltaExp"]);
+        //int deltaHungry = int.Parse(_data["DeltaHungry"]);
+        //int deltaMagicPower = int.Parse(_data["DeltaMagicPower"]);
 
-        m_deltaStatus = new Status(deltaDamage, deltaLife, deltaExp, deltaHungry, deltaMagicPower);
+        //m_deltaStatus = new Status(deltaDamage, deltaLife, deltaExp, deltaHungry, deltaMagicPower);
+
+        m_cardID = int.Parse(_data["CardID"]);
     }
  
 }

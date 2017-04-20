@@ -48,7 +48,7 @@ public class CardModel : MonoBehaviour
 
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(textAsset.text);
-        XmlNodeList itemList = xmlDoc.GetElementsByTagName("Card");
+        XmlNodeList itemList = xmlDoc.GetElementsByTagName("Card1");
 
         
         foreach (XmlNode itemInfo in itemList)
@@ -68,6 +68,9 @@ public class CardModel : MonoBehaviour
                         break;
                     case "Desc":
                         partialDic.Add("Desc", content.InnerText);
+                        break;
+                    case "NPCID":
+                        partialDic.Add("NPCID", content.InnerText);
                         break;
                 }
             }

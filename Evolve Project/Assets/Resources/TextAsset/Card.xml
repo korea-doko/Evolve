@@ -1,51 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Card.xsd" generated="2017-04-17T12:16:37">
-<Card>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Card.xsd" generated="2017-04-20T15:35:25">
+<Card1>
 <ID>1</ID>
-<GivenID>10000</GivenID>
-<CardName>이동</CardName>
-<Desc>이동한다</Desc>
-</Card>
-<Card>
+<GivenID>0</GivenID>
+<Desc>Card Desc0</Desc>
+<NPCID>0</NPCID>
+</Card1>
+<Card1>
 <ID>2</ID>
-<GivenID>10200</GivenID>
-<CardName>고대사원</CardName>
-<Desc>고대사원으로이동</Desc>
-</Card>
-<Card>
+<GivenID>1</GivenID>
+<Desc>Card Desc1</Desc>
+<NPCID>1</NPCID>
+</Card1>
+<Card1>
 <ID>3</ID>
-<GivenID>20000</GivenID>
-<CardName>휴식</CardName>
-<Desc>휴식한다</Desc>
-</Card>
-<Card>
+<GivenID>2</GivenID>
+<Desc>Card Desc2</Desc>
+<NPCID>0</NPCID>
+</Card1>
+<Card1>
 <ID>4</ID>
-<GivenID>30000</GivenID>
-<CardName>사냥개</CardName>
-<Desc>스켈레톤에게 강하다</Desc>
-</Card>
-<Card>
+<GivenID>3</GivenID>
+<Desc>Card Desc3</Desc>
+<NPCID>1</NPCID>
+</Card1>
+<Card1>
 <ID>5</ID>
-<GivenID>30100</GivenID>
-<CardName>고블린슬레이어</CardName>
-<Desc>고블린에게 증오를 가지고 있다</Desc>
-</Card>
-<Card>
+<GivenID>4</GivenID>
+<Desc>Card Desc4</Desc>
+<NPCID>0</NPCID>
+</Card1>
+<Card1>
 <ID>6</ID>
-<GivenID>30200</GivenID>
-<CardName>A랭크 모험가</CardName>
-<Desc>A랭크의 강한 모험가</Desc>
-</Card>
-<Card>
+<GivenID>5</GivenID>
+<Desc>Card Desc5</Desc>
+<NPCID>1</NPCID>
+</Card1>
+<Card1>
 <ID>7</ID>
-<GivenID>40000</GivenID>
-<CardName>빛의 수호</CardName>
-<Desc>빛의 수호 패시브를 얻는다.</Desc>
-</Card>
-<Card>
+<GivenID>6</GivenID>
+<Desc>Card Desc6</Desc>
+<NPCID>0</NPCID>
+</Card1>
+<Card1>
 <ID>8</ID>
-<GivenID>40100</GivenID>
-<CardName>어둠의 축복</CardName>
-<Desc>어둠의전사 패시브</Desc>
-</Card>
+<GivenID>7</GivenID>
+<Desc>Card Desc7</Desc>
+<NPCID>1</NPCID>
+</Card1>
+<Card1>
+<ID>9</ID>
+<GivenID>8</GivenID>
+<Desc>Card Desc8</Desc>
+<NPCID>0</NPCID>
+</Card1>
+<Card1>
+<ID>10</ID>
+<GivenID>9</GivenID>
+<Desc>Card Desc9</Desc>
+<NPCID>1</NPCID>
+</Card1>
+<Card1>
+<ID>11</ID>
+<GivenID>10</GivenID>
+<Desc>Card Desc10</Desc>
+<NPCID>0</NPCID>
+</Card1>
 </dataroot>

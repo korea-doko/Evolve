@@ -3,35 +3,29 @@
 <xsd:element name="dataroot">
 <xsd:complexType>
 <xsd:sequence>
-<xsd:element ref="Selection" minOccurs="0" maxOccurs="unbounded"/>
+<xsd:element ref="Selection1" minOccurs="0" maxOccurs="unbounded"/>
 </xsd:sequence>
 <xsd:attribute name="generated" type="xsd:dateTime"/>
 </xsd:complexType>
 </xsd:element>
-<xsd:element name="Selection">
+<xsd:element name="Selection1">
 <xsd:annotation>
 <xsd:appinfo>
+<od:index index-name="CardID" index-key="CardID " primary="no" unique="no" clustered="no" order="asc"/>
 <od:index index-name="GivenID" index-key="GivenID " primary="no" unique="no" clustered="no" order="asc"/>
 <od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
 <od:tableProperty name="PublishToWeb" type="2" value="1"/>
-<od:tableProperty name="GUID" type="9" value="ynvHDEPuwkqwNwQ/ZXXO4A==
+<od:tableProperty name="GUID" type="9" value="YiitUOVZ6k28OjSF6+Zq4g==
 "/>
 <od:tableProperty name="Orientation" type="2" value="0"/>
 <od:tableProperty name="OrderByOn" type="1" value="0"/>
-<od:tableProperty name="NameMap" type="11" value="CswOVQAAAADKe8cMQ+7CSrA3BD9ldc7gAAAAALuTO3QT6+RAAAAAAAAAAABTAGUA
-bABlAGMAdABpAG8AbgAAAAAAAACOGNZFvP5JRY7lY6KSzwcXBwAAAMp7xwxD7sJK
-sDcEP2V1zuBJAEQAAAAAAAAA+loLYYP6BUioXT1EHhjITQcAAADKe8cMQ+7CSrA3
-BD9ldc7gRwBpAHYAZQBuAEkARAAAAAAAAAC8pehGLkZwTYYOfwD1c1gJBwAAAMp7
-xwxD7sJKsDcEP2V1zuBTAGUAbABlAGMAdABpAG8AbgBOAGEAbQBlAAAAAAAAACH+
-0vSrEeVJihPNJpYgK6sHAAAAynvHDEPuwkqwNwQ/ZXXO4EQAZQBzAGMAAAAAAAAA
-f9opLS935kq5AEnvmZ5AFgcAAADKe8cMQ+7CSrA3BD9ldc7gRABlAGwAdABhAEQA
-YQBtAGEAZwBlAAAAAAAAAD3IKMopTH9Kk4hqTF4uk9AHAAAAynvHDEPuwkqwNwQ/
-ZXXO4EQAZQBsAHQAYQBMAGkAZgBlAAAAAAAAAAD/XMBoyHNLnGtaoZbC6VkHAAAA
-ynvHDEPuwkqwNwQ/ZXXO4EQAZQBsAHQAYQBFAHgAcAAAAAAAAAAoHmrkpqHHSrbs
-3TDfp+nuBwAAAMp7xwxD7sJKsDcEP2V1zuBEAGUAbAB0AGEASAB1AG4AZwByAHkA
-AAAAAAAADY36f+myk0eAevI4AMx/wAcAAADKe8cMQ+7CSrA3BD9ldc7gRABlAGwA
-dABhAE0AYQBnAGkAYwBQAG8AdwBlAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwA
-AAAFAAAAAAAAAAAAAAAAAAAAAAA=
+<od:tableProperty name="NameMap" type="11" value="CswOVQAAAABiKK1Q5VnqTbw6NIXr5mriAAAAAHEv9Bm16+RAAAAAAAAAAABTAGUA
+bABlAGMAdABpAG8AbgAxAAAAAAAAAAgxPI9/0GJBiNomyFCr1MUHAAAAYiitUOVZ
+6k28OjSF6+Zq4kkARAAAAAAAAABvbH4Z1C/zTo17gGYYpHR1BwAAAGIorVDlWepN
+vDo0hevmauJHAGkAdgBlAG4ASQBEAAAAAAAAAI5MzynrfqFKr0xQDX+I/2gHAAAA
+YiitUOVZ6k28OjSF6+Zq4kMAYQByAGQASQBEAAAAAAAAAA2h0T4BIYhOvkIbQtoH
+0tIHAAAAYiitUOVZ6k28OjSF6+Zq4kQAZQBzAGMAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAwAAAAFAAAAAAAAAAAAAAAAAAAAAAA=
 "/>
 <od:tableProperty name="DefaultView" type="2" value="2"/>
 <od:tableProperty name="DisplayViewsOnSharePointSite" type="2" value="1"/>
@@ -55,9 +49,9 @@ AAAFAAAAAAAAAAAAAAAAAAAAAAA=
 <xsd:element name="ID" minOccurs="1" od:jetType="autonumber" od:sqlSType="int" od:autoUnique="yes" od:nonNullable="yes" type="xsd:int">
 <xsd:annotation>
 <xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="jhjWRbz+SUWO5WOiks8HFw==
+<od:fieldProperty name="GUID" type="9" value="CDE8j3/QYkGI2ibIUKvUxQ==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="690"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="1"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="TextAlign" type="2" value="0"/>
@@ -70,10 +64,10 @@ AAAFAAAAAAAAAAAAAAAAAAAAAAA=
 <xsd:element name="GivenID" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
 <xsd:annotation>
 <xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="+loLYYP6BUioXT1EHhjITQ==
+<od:fieldProperty name="GUID" type="9" value="b2x+GdQv806Ne4BmGKR0dQ==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="810"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="2"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="3"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
@@ -93,13 +87,13 @@ AAAFAAAAAAAAAAAAAAAAAAAAAAA=
 </xsd:restriction>
 </xsd:simpleType>
 </xsd:element>
-<xsd:element name="SelectionName" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:element name="CardID" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
 <xsd:annotation>
 <xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="vKXoRi5GcE2GDn8A9XNYCQ==
+<od:fieldProperty name="GUID" type="9" value="jkzPKet+oUqvTFANf4j/aA==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="2565"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="3"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="2"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
@@ -122,140 +116,10 @@ AAAFAAAAAAAAAAAAAAAAAAAAAAA=
 <xsd:element name="Desc" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
 <xsd:annotation>
 <xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="If7S9KsR5UmKE80mliArqw==
+<od:fieldProperty name="GUID" type="9" value="DaHRPgEhiE6+QhtC2gfS0g==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="2205"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="4"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="IMEMode" type="2" value="10"/>
-<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
-<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="ResultType" type="2" value="0"/>
-<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
-</xsd:appinfo>
-</xsd:annotation>
-<xsd:simpleType>
-<xsd:restriction base="xsd:string">
-<xsd:maxLength value="255"/>
-</xsd:restriction>
-</xsd:simpleType>
-</xsd:element>
-<xsd:element name="DeltaDamage" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="f9opLS935kq5AEnvmZ5AFg==
-"/>
-<od:fieldProperty name="ColumnWidth" type="3" value="975"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="5"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="IMEMode" type="2" value="10"/>
-<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
-<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="ResultType" type="2" value="0"/>
-<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
-</xsd:appinfo>
-</xsd:annotation>
-<xsd:simpleType>
-<xsd:restriction base="xsd:string">
-<xsd:maxLength value="255"/>
-</xsd:restriction>
-</xsd:simpleType>
-</xsd:element>
-<xsd:element name="DeltaLife" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="PcgoyilMf0qTiGpMXi6T0A==
-"/>
-<od:fieldProperty name="ColumnWidth" type="3" value="810"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="6"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="IMEMode" type="2" value="10"/>
-<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
-<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="ResultType" type="2" value="0"/>
-<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
-</xsd:appinfo>
-</xsd:annotation>
-<xsd:simpleType>
-<xsd:restriction base="xsd:string">
-<xsd:maxLength value="255"/>
-</xsd:restriction>
-</xsd:simpleType>
-</xsd:element>
-<xsd:element name="DeltaExp" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="AP9cwGjIc0uca1qhlsLpWQ==
-"/>
-<od:fieldProperty name="ColumnWidth" type="3" value="900"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="7"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="IMEMode" type="2" value="10"/>
-<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
-<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="ResultType" type="2" value="0"/>
-<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
-</xsd:appinfo>
-</xsd:annotation>
-<xsd:simpleType>
-<xsd:restriction base="xsd:string">
-<xsd:maxLength value="255"/>
-</xsd:restriction>
-</xsd:simpleType>
-</xsd:element>
-<xsd:element name="DeltaHungry" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="KB5q5Kahx0q27N0w36fp7g==
-"/>
-<od:fieldProperty name="ColumnWidth" type="3" value="855"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="8"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="IMEMode" type="2" value="10"/>
-<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
-<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="ResultType" type="2" value="0"/>
-<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
-</xsd:appinfo>
-</xsd:annotation>
-<xsd:simpleType>
-<xsd:restriction base="xsd:string">
-<xsd:maxLength value="255"/>
-</xsd:restriction>
-</xsd:simpleType>
-</xsd:element>
-<xsd:element name="DeltaMagicPower" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="DY36f+myk0eAevI4AMx/wA==
-"/>
-<od:fieldProperty name="ColumnWidth" type="3" value="885"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="9"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="AllowZeroLength" type="1" value="1"/>

@@ -27,7 +27,15 @@ public class NPCManager : MonoBehaviour ,IManager{
 
     public void InitStart()
     {
+        int numCard = CardManager.GetInst().m_model.m_cardList.Count;
 
+        for (int i = 0; i < numCard; i++)
+        {
+            CardData cardData = CardManager.GetInst().m_model.m_cardList[i];
+            NPCData npcData = m_model.GetNPCData(cardData.m_npcName);
+
+            npcData.AddCardData(cardData);
+        }
     }
 
     public void UpdateManager()

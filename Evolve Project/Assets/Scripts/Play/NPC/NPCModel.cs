@@ -27,6 +27,10 @@ public class NPCModel : MonoBehaviour
 
             m_npcDataList.Add(npcData);
         }
+    }
 
+    public NPCData GetNPCData(NPCName _name)
+    {
+        return m_npcDataList[(int)_name];
     }
 }

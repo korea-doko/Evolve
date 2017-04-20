@@ -27,8 +27,18 @@ public class CardManager : MonoBehaviour, IManager {
 
     public void InitStart()
     {
-        m_view = PlayManager.MakeObjectWithComponent<CardView>("CardView", this.gameObject);
+        int numSelection = SelectionManager.GetInst().m_model.m_selectionList.Count;
 
+        for (int i = 0; i <numSelection;i++)
+        {
+            Selection sel = SelectionManager.GetInst().m_model.m_selectionList[i];
+
+            CardData cardData = m_model.m_cardList[sel.m_cardID];
+            cardData.AddSelection(sel);
+        }
+
+
+        m_view = PlayManager.MakeObjectWithComponent<CardView>("CardView", this.gameObject);
         m_view.Init(m_model);
     }
 
