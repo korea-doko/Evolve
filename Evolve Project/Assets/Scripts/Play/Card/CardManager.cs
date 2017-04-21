@@ -57,7 +57,15 @@ public class CardManager : MonoBehaviour, IManager {
     public List<Selection> GetSelections(CardData _data)
     {
         return _data.GetPreferSelectionList();
-
+    }
+    public CardData GetCardDataUsingID(int _id)
+    {
+        for(int i = 0; i < m_model.m_cardList.Count;i++)
+        {
+            if (m_model.m_cardList[i].m_givenID == _id)
+                return m_model.m_cardList[i];
+        }
+        return null;
     }
 
     public void AffectCard(CardData _data)

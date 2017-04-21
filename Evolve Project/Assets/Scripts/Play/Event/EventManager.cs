@@ -87,36 +87,50 @@ public class EventManager : MonoBehaviour , IManager{
 
     void CheckCondition()
     {
-        if (m_model.m_nextNPCName != NPCName.None)
+
+        if( m_model.m_nextCardID != -1)
         {
-            // 이 경우, 다음에 와야하는 NPC가 존재한다.
-            
+            // 선택된 카드가 있음.
+            // 카드에 지정된 NPC가 있기 때문에 둘다 가져올 수 있음.
+            CardData cardData = CardManager.GetInst().GetCardDataUsingID(m_model.m_nextCardID);
+            NPCData npcData = NPCManager.GetInst().GetNPCDataHavingCardData(cardData);
+
+            if (npcData == null)
+                Debug.Log(" 해당 CardID를 가진 npc가 존재하지 않음");
+
+            m_model.SetNPCData(npcData);
+            // 해당 Card의 NPC를 찾아냈다.
+
+            CardData cardDataInNPC = NPCManager.GetInst().GetCardDataInNPCData(npcData, m_model.m_nextCardID);
+            m_model.ChangeSelectedCard(cardDataInNPC);
+
+            m_view.ChangeEventLogPanel(cardDataInNPC.m_desc);
+
+            m_state = EventState.GetSelection;
+
+            return;
+        }
+
+        if( m_model.m_nextNPCName != NPCName.None )
+        {
+            // 카드는 지정안됐는데, 다음 NPC는 지정됐다.
             NPCData npcData = NPCManager.GetInst().GetNPCData(m_model.m_nextNPCName);
             m_model.SetNPCData(npcData);
 
-            if (m_model.m_nextCardID != -1)
-            {
-                CardData data = NPCManager.GetInst().GetCardDataInNPCData(npcData,m_model.m_nextCardID);
-                m_model.ChangeSelectedCard(data);
-                // 카드가 선택됐음
-
-                m_view.ChangeEventLogPanel(data.m_desc);
-                // 선택된 카드의 정보를 띄워준다.
-
-                m_state = EventState.GetSelection;
-            }
-            else
-                m_state = EventState.GetCardInNPC;
-            // 카드는 NPC안에서... 알아서 고르게
+            m_state = EventState.GetCardInNPC;
+            return;
         }
-        else
-            m_state = EventState.GetNPC;
-        // 아무것도 정해지지 않았음.   
 
+        // NPC , 카드 둘다 지정이 안됐다
+        m_state = EventState.GetNPC;            
     }
     void GetNPC()
     {
-        NPCData npcData = NPCManager.GetInst().GetNPCData();
+        // 현재 랜덤한 NPC가져오게 했음
+
+        NPCName name = UnityEngine.Random.Range(0, 1) == 0 ? NPCName.God : NPCName.Player;
+
+        NPCData npcData = NPCManager.GetInst().GetNPCData(name);
         m_model.SetNPCData(npcData);
         
         m_state = EventState.GetCardInNPC;
