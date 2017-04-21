@@ -44,20 +44,34 @@ public class NPCManager : MonoBehaviour ,IManager{
 
 
 
-    public NPCData GetNPCData()
+    public NPCData GetNPCData(NPCName _name = NPCName.None)
     {
-        Debug.Log("여기에서 조건에 따라서 NPC를 골라야한다.");
-        // 여기에는 복잡한 조건에 따라서 나오게 해야한다. 
-        // 현재 플레이어의 상태에 따라서
-        NPCName name = UnityEngine.Random.Range(0, 1) == 0 ? NPCName.God : NPCName.Player;
+        // 지정된 NPCData라면, 그것을 리턴
+        if (_name != NPCName.None)
+            return m_model.GetNPCData(_name);
+
         
+        // 지정된 NPCData가 아니라면, 조건에 따라서 NPC가져오게 하자.
+
+        NPCName name = UnityEngine.Random.Range(0, 1) == 0 ? NPCName.God : NPCName.Player;
 
         return m_model.GetNPCData(name);
     }
 
-    public CardData GetCardDataInNPCData(NPCData _data)
+    public CardData GetCardDataInNPCData(NPCData _data, int _cardID = -1)
     {
-        return _data.GetCardDataInPreferCondtion();
+        if (_cardID == -1)
+            return _data.GetCardDataInPreferCondtion();
+
+        for(int i = 0; i < _data.m_cardList.Count;i++)
+        {
+            if (_data.m_cardList[i].m_givenID == _cardID)
+                return _data.m_cardList[i];
+        }
+
+
+        Debug.Log("NPCData 안에 해당 CardID를 가진 CardData 없음");
+        return null;       
     }
 
 }

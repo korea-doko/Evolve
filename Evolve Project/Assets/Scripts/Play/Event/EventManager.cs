@@ -5,6 +5,7 @@ using UnityEngine;
 
 public enum EventState
 {
+    CheckCondition,     // 조건을 검사, ex) 처음 시작인가? 지정된 카드가 있는가? 지정된 NPC가 있는가??
     GetNPC,             // 어떤 NPC 선택할 것인가?
     GetCardInNPC,       // NPC 안에 있는 적절한 카드를 가져온다.
     GetSelection,       // 어떤 선택지들을 가져오는가?
@@ -12,7 +13,8 @@ public enum EventState
     ReadyPlayer,        // 플레이어의 선택을 기다린다.
     DoSelection,        // 선택된 것을 실행한다.
     CleanEffect,        // 카드를 가져올 때, 적용된 것이 초기화 될 필요가 있다면, 그것을 초기화 한다.
-    NotifyOthers        // 다른 매니저에게 한번에 선택 싸이클이 돌았다는 것을 알려준다.
+    NotifyOthers,       // 다른 매니저에게 한번에 선택 싸이클이 돌았다는 것을 알려준다.
+
 }
 
 public class EventManager : MonoBehaviour , IManager{
@@ -34,7 +36,7 @@ public class EventManager : MonoBehaviour , IManager{
 
     public void InitAwake()
     {
-        m_state = EventState.GetNPC;
+        m_state = EventState.CheckCondition;
 
         m_model = PlayManager.MakeObjectWithComponent<EventModel>("EventModel", this.gameObject);
 
@@ -51,6 +53,9 @@ public class EventManager : MonoBehaviour , IManager{
     {
         switch(m_state)
         {
+            case EventState.CheckCondition:
+                CheckCondition();
+                break;
             case EventState.GetNPC:
                 GetNPC();
                 break;
@@ -74,17 +79,46 @@ public class EventManager : MonoBehaviour , IManager{
                 break;
             case EventState.NotifyOthers:
                 NotifyOthers();
-                break;    
+                break;
             default:
                 break;
         }
-    }  
+    }
 
+    void CheckCondition()
+    {
+        if (m_model.m_nextNPCName != NPCName.None)
+        {
+            // 이 경우, 다음에 와야하는 NPC가 존재한다.
+            
+            NPCData npcData = NPCManager.GetInst().GetNPCData(m_model.m_nextNPCName);
+            m_model.SetNPCData(npcData);
+
+            if (m_model.m_nextCardID != -1)
+            {
+                CardData data = NPCManager.GetInst().GetCardDataInNPCData(npcData,m_model.m_nextCardID);
+                m_model.ChangeSelectedCard(data);
+                // 카드가 선택됐음
+
+                m_view.ChangeEventLogPanel(data.m_desc);
+                // 선택된 카드의 정보를 띄워준다.
+
+                m_state = EventState.GetSelection;
+            }
+            else
+                m_state = EventState.GetCardInNPC;
+            // 카드는 NPC안에서... 알아서 고르게
+        }
+        else
+            m_state = EventState.GetNPC;
+        // 아무것도 정해지지 않았음.   
+
+    }
     void GetNPC()
     {
         NPCData npcData = NPCManager.GetInst().GetNPCData();
         m_model.SetNPCData(npcData);
-
+        
         m_state = EventState.GetCardInNPC;
     }
     void GetCardInNPC()
@@ -107,13 +141,12 @@ public class EventManager : MonoBehaviour , IManager{
         // 어떤 지문인지 알아야 한다.
 
         m_model.ChangeSelections(selList);
-        
-
         m_state = EventState.CardEffect;
     }
     void CardEffect()
     {
-        CardManager.GetInst().AffectCard(m_model.m_selectedCardData);
+        // 전부 재정의 전까지...
+        //CardManager.GetInst().AffectCard(m_model.m_selectedCardData);
         
         m_state = EventState.ReadyPlayer;
     }
@@ -133,26 +166,25 @@ public class EventManager : MonoBehaviour , IManager{
 
     void CleanEffect()
     {
-        CardManager.GetInst().CleanEffect(m_model.m_selectedCardData);
-        m_model.ClearSelections();
-
-
-
+        // 전부 재정의 전까지 다음 단계로 못나감 여기서 멈추니까..
+        //CardManager.GetInst().CleanEffect(m_model.m_selectedCardData);
 
         m_state = EventState.NotifyOthers;
     }
     void NotifyOthers()
     {
         Debug.Log("나중에 여기 이름좀 바꿔야할듯");
+
         EnviManager.GetInst().Notified();
-
-
-        m_state = EventState.GetNPC;
+        m_state = EventState.CheckCondition;
     }
+  
 
 
     public void PressingDir(InputDir _dir)
     {
+        Debug.Log(_dir);
+
         if (_dir == InputDir.None)
         {
             m_view.ChangeInteractPanel("", InputDir.None);
@@ -172,6 +204,7 @@ public class EventManager : MonoBehaviour , IManager{
     }
     public void UpDir(InputDir _dir)
     {
+        Debug.Log(_dir);
         Selection sel = m_model.GetSelectionElement((int)_dir);
 
         if (sel == null || sel.m_givenID == -1 )

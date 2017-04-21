@@ -16,6 +16,7 @@ public enum CardName
 }
 public enum NPCName
 {
+    None = -1,
     Player,
-    God
+    God,
 }

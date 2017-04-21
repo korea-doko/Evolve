@@ -11,8 +11,9 @@ public class NPCModel : MonoBehaviour
     public void Init()
     {
         m_npcDataList = new List<NPCData>();
-        
-        int numNPC= System.Enum.GetNames(typeof(NPCName)).Length;
+
+        int numNPC = System.Enum.GetNames(typeof(NPCName)).Length - 1;
+        // None이 -1로서 존재 따라서 하나 빼줘야 원하는 작동
 
         for (int i = 0; i < numNPC; i++)
         {
