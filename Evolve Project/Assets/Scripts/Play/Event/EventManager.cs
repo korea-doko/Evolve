@@ -102,11 +102,11 @@ public class EventManager : MonoBehaviour , IManager{
     }
     void GetSelection()
     {
-        Selection[] selAry = CardManager.GetInst().GetSelections(m_model.m_selectedCardData);
+        List<Selection> selList = CardManager.GetInst().GetSelections(m_model.m_selectedCardData);
         // GetSelection을 통해서 적절한 선택지를 가져와야하는데, 이때 플레이어의 정보와 
         // 어떤 지문인지 알아야 한다.
 
-        m_model.ChangeSelections(selAry);
+        m_model.ChangeSelections(selList);
         
 
         m_state = EventState.CardEffect;
@@ -158,8 +158,7 @@ public class EventManager : MonoBehaviour , IManager{
             m_view.ChangeInteractPanel("", InputDir.None);
            return;
         }
-
-        //Selection sel =  m_model.m_selectedSelectionAry[(int)_dir];
+        
         Selection sel = m_model.GetSelectionElement((int)_dir);
 
         if (sel == null || sel.m_givenID == -1)
@@ -173,7 +172,7 @@ public class EventManager : MonoBehaviour , IManager{
     }
     public void UpDir(InputDir _dir)
     {
-        Selection sel = m_model.m_selectedSelectionAry[(int)_dir];
+        Selection sel = m_model.GetSelectionElement((int)_dir);
 
         if (sel == null || sel.m_givenID == -1 )
             return;

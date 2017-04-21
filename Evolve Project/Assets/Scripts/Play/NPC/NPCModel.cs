@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum NPCName
-{
-    Player,
-    God
-}
+
 public class NPCModel : MonoBehaviour
 {
     public List<NPCData> m_npcDataList;

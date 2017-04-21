@@ -3,24 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Xml;
+using System;
 
 
-public enum CardEffectType
-{
-    //Movement Type
-    AncientTemple = 10200,
-
-    // Engaing Enemy Type
-    HuntingDog = 30000,
-    GoblinSlayer = 30100,
-    RankAWarrior = 30200,
-
-    // Event Type
-    ProtectionOfLight = 40000,
-    BlessingOfDarkness = 40100,
-    WarriorOfDesert = 40200
-   
-}
 
 public class CardModel : MonoBehaviour
 {
@@ -33,13 +18,20 @@ public class CardModel : MonoBehaviour
     {
         m_cardList = new List<CardData>();
 
-        ReadCardDataFromXml();    
-        
-        for(int i = 0; i < m_fullDic.Count;i++)
-            m_cardList.Add(new CardData(m_fullDic[i]));
+        ReadCardDataFromXml();
+
+        for (int i = 0; i < m_fullDic.Count;  i++)
+        {
+            string cardName = "CardData" + i.ToString();
+            object obj = Activator.CreateInstance(Type.GetType(cardName));
+
+            CardData data = (CardData)obj;
+            data.Init(m_fullDic[i]);
+            
+            m_cardList.Add(data);
+        }
 
         m_listCount = m_cardList.Count;
-
         m_fullDic = null;
     }
     

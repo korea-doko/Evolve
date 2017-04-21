@@ -5,7 +5,8 @@ using UnityEngine;
 public class EventModel : MonoBehaviour {
 
     public CardData m_selectedCardData;
-    public Selection[] m_selectedSelectionAry;
+    public List<Selection> m_selectedList;
+
     public Selection m_selection;
 
     public NPCData m_selectedNPCData;
@@ -13,8 +14,8 @@ public class EventModel : MonoBehaviour {
     public void Init()
     {
         m_selectedCardData = null;
-        m_selection = null; 
-        m_selectedSelectionAry = null;
+        m_selection = null;
+        m_selectedList = null;
 
         m_selectedNPCData = null;
     }
@@ -28,9 +29,9 @@ public class EventModel : MonoBehaviour {
     {
         m_selectedCardData = _data;
     }
-    public void ChangeSelections(Selection[] _sels)
+    public void ChangeSelections(List<Selection> _selList)
     {
-        m_selectedSelectionAry = _sels;
+        m_selectedList = _selList;
     }
     public void SetSelection(Selection _sel)
     {
@@ -38,13 +39,16 @@ public class EventModel : MonoBehaviour {
     }
     public Selection GetSelectionElement(int _index)
     {
-        return m_selectedSelectionAry[_index];
+        if (_index >= m_selectedList.Count)
+            return null;
+
+        return m_selectedList[_index];
     }
     public void ClearSelections()
     {
         m_selectedCardData = null;
         m_selection = null;
-        m_selectedSelectionAry = null;            
+        m_selectedList = null;            
     }
 
 }

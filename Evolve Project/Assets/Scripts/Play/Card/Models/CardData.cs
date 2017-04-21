@@ -16,20 +16,27 @@ public class CardData
     public string m_desc;
     public int m_nextCardID;
     public List<Selection> m_selList;
+
     
-    public CardData(Dictionary<string,string> _data)
+    public void Init(Dictionary<string,string> _data)
     {
         m_selList = new List<Selection>();
-        
+
         m_npcName = (NPCName)int.Parse(_data["NPCID"]);
         m_givenID = int.Parse(_data["GivenID"]);
         m_name = _data["CardName"];
         m_desc = _data["Desc"];
         m_nextCardID = int.Parse(_data["NextCardID"]);
-    } 
+    }
+
     public void AddSelection(Selection _sel)
     {
         m_selList.Add(_sel);
+    }
+
+    public virtual List<Selection> GetPreferSelectionList()
+    {
+        return m_selList;
     }
 
 }
