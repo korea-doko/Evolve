@@ -27,7 +27,7 @@ public class SelectionModel : MonoBehaviour {
 
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(textAsset.text);
-        XmlNodeList itemList = xmlDoc.GetElementsByTagName("Selection1");
+        XmlNodeList itemList = xmlDoc.GetElementsByTagName("Selection");
 
 
         foreach (XmlNode itemInfo in itemList)
@@ -42,8 +42,8 @@ public class SelectionModel : MonoBehaviour {
                     case "GivenID":
                         partialDic.Add("GivenID", content.InnerText);
                         break;
-                    case "SelectionName":
-                        partialDic.Add("SelectionName", content.InnerText);
+                    case "CardID":
+                        partialDic.Add("CardID", content.InnerText);
                         break;
                     case "Desc":
                         partialDic.Add("Desc", content.InnerText);
@@ -63,11 +63,8 @@ public class SelectionModel : MonoBehaviour {
                     case "DeltaMagicPower":
                         partialDic.Add("DeltaMagicPower", content.InnerText);
                         break;
-                    case "CardID":
-                        partialDic.Add("CardID", content.InnerText);
+                    default:
                         break;
-
-
                 }
             }
             m_fullDic.Add(partialDic);

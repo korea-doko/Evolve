@@ -19,17 +19,16 @@ public enum CardEffectType
     ProtectionOfLight = 40000,
     BlessingOfDarkness = 40100,
     WarriorOfDesert = 40200
-    
-
-
+   
 }
 
 public class CardModel : MonoBehaviour
 {
     public List<CardData> m_cardList;
-
     private List<Dictionary<string, string>> m_fullDic = new List<Dictionary<string, string>>();  // every item info from DB
-  
+
+    public int m_listCount;
+
     public void Init()
     {
         m_cardList = new List<CardData>();
@@ -38,6 +37,8 @@ public class CardModel : MonoBehaviour
         
         for(int i = 0; i < m_fullDic.Count;i++)
             m_cardList.Add(new CardData(m_fullDic[i]));
+
+        m_listCount = m_cardList.Count;
 
         m_fullDic = null;
     }
@@ -82,6 +83,23 @@ public class CardModel : MonoBehaviour
 
     }
 
+    public CardData GetCardDataUsingIndex(int _index)
+    {
+        if (_index < 0 || _index > m_listCount - 1)
+            Debug.Log("Index Error");
+
+        return m_cardList[_index];
+    }
+    public CardData GetCardDataUsingID(int _id)
+    {
+        for(int i = 0; i < m_listCount; i++)
+        {
+            if (_id == m_cardList[i].m_givenID)
+                return m_cardList[i];
+        }
+
+        return null;
+    }
 
 }
 

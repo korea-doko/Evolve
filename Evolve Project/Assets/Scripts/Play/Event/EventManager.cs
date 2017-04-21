@@ -95,7 +95,7 @@ public class EventManager : MonoBehaviour , IManager{
         m_model.ChangeSelectedCard(data);
         // 카드가 선택됐음
 
-        m_view.ChangeEventLogPanel(data.m_name);
+        m_view.ChangeEventLogPanel(data.m_desc);
         // 선택된 카드의 정보를 띄워준다.
 
         m_state = EventState.GetSelection;
@@ -159,22 +159,23 @@ public class EventManager : MonoBehaviour , IManager{
            return;
         }
 
-        Selection sel =  m_model.m_selectedSelectionAry[(int)_dir];
+        //Selection sel =  m_model.m_selectedSelectionAry[(int)_dir];
+        Selection sel = m_model.GetSelectionElement((int)_dir);
 
-        if (sel == null || sel.m_id == -1)
+        if (sel == null || sel.m_givenID == -1)
         {
             m_view.ChangeInteractPanel("", InputDir.None);
             return;
         }
 
-        m_view.ChangeInteractPanel(sel.m_name, _dir);
+        m_view.ChangeInteractPanel(sel.m_desc, _dir);
         
     }
     public void UpDir(InputDir _dir)
     {
         Selection sel = m_model.m_selectedSelectionAry[(int)_dir];
 
-        if (sel == null || sel.m_id == -1 )
+        if (sel == null || sel.m_givenID == -1 )
             return;
 
         m_model.SetSelection(sel);

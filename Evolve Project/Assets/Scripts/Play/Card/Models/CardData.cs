@@ -25,12 +25,7 @@ public class CardData
         m_givenID = int.Parse(_data["GivenID"]);
         m_name = _data["CardName"];
         m_desc = _data["Desc"];
-
-        Debug.Log("A");
-        if (_data["NextCardID"] != null)
-            m_nextCardID = int.Parse(_data["NextCardID"]);
-        else
-            m_nextCardID = -1;
+        m_nextCardID = int.Parse(_data["NextCardID"]);
     } 
     public void AddSelection(Selection _sel)
     {

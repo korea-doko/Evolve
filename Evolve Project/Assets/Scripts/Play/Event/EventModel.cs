@@ -36,6 +36,10 @@ public class EventModel : MonoBehaviour {
     {
         m_selection = _sel;
     }
+    public Selection GetSelectionElement(int _index)
+    {
+        return m_selectedSelectionAry[_index];
+    }
     public void ClearSelections()
     {
         m_selectedCardData = null;

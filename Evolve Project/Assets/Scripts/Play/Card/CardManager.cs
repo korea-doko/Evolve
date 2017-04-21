@@ -33,11 +33,12 @@ public class CardManager : MonoBehaviour, IManager {
     {
         int numSelection = SelectionManager.GetInst().m_model.m_selectionList.Count;
 
-        for (int i = 0; i <numSelection;i++)
+        for (int i = 0; i < numSelection ; i++)
         {
             Selection sel = SelectionManager.GetInst().m_model.m_selectionList[i];
 
-            CardData cardData = m_model.m_cardList[sel.m_cardID];
+            CardData cardData = m_model.GetCardDataUsingID(sel.m_cardID);
+
             cardData.AddSelection(sel);
         }
 
@@ -55,11 +56,12 @@ public class CardManager : MonoBehaviour, IManager {
 
     public Selection[] GetSelections(CardData _data)
     {
-        Debug.Log("카드 데이터를 다 만들수도 있고... 여기서 카드데이터 먼지 알아낸다음 거르는 방법도 있음");
-        // 스크립트 다 만들면 좀 많긴한데..
-
+       
 
         int count = _data.m_selList.Count;
+
+        if (count == 0)
+            return null;
 
         int randNum = UnityEngine.Random.Range(0, 4);
 
