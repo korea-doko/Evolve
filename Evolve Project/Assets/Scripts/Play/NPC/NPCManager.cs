@@ -47,7 +47,7 @@ public class NPCManager : MonoBehaviour ,IManager{
         // 조건에 따라서 리턴해주면 된다.
         // 테스트 위해서..
 
-        int ran = UnityEngine.Random.Range(0, 2);
+        int ran = UnityEngine.Random.Range(0, 3);
 
         if (ran == 0)
             return GetNPCData(NPCName.GoblinChildMinder);

@@ -44,6 +44,17 @@ public class EventModel : MonoBehaviour {
     public void SetSelection(Selection _sel)
     {
         m_selection = _sel;
+
+        // 여기서 만약에 이전 상태에서 정해진 놈이 있다면?
+        // 일단 그냥 넣어본다.
+        Debug.Log(" 카드 골랐을 때, 다음에 와야하는 카드나, 선택지가 있을 수 있다. 그러나 일단 집어넣는다.");
+
+        if (m_nextCardID == -1)
+            m_nextCardID = _sel.m_nextCardID;
+
+        if (m_nextNPCName == NPCName.None)
+            m_nextNPCName = _sel.m_nextNPC;
+
     }
     public Selection GetSelectionElement(int _index)
     {

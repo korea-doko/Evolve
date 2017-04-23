@@ -199,7 +199,6 @@ public class EventManager : MonoBehaviour , IManager{
 
     public void PressingDir(InputDir _dir)
     {
-        Debug.Log(_dir);
 
         if (_dir == InputDir.None)
         {
@@ -220,7 +219,6 @@ public class EventManager : MonoBehaviour , IManager{
     }
     public void UpDir(InputDir _dir)
     {
-        Debug.Log(_dir);
         Selection sel = m_model.GetSelectionElement((int)_dir);
 
         if (sel == null || sel.m_givenID == -1 )
