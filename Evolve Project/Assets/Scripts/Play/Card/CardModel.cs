@@ -53,8 +53,8 @@ public class CardModel : MonoBehaviour
             {
                 switch (content.Name)
                 {
-                    case "NPCID":
-                        partialDic.Add("NPCID", content.InnerText);
+                    case "NPC":
+                        partialDic.Add("NPC", content.InnerText);
                         break;
                     case "GivenID":
                         partialDic.Add("GivenID", content.InnerText);
@@ -67,6 +67,11 @@ public class CardModel : MonoBehaviour
                         break;
                     case "NextCardID":
                         partialDic.Add("NextCardID", content.InnerText);
+                        break;
+                    case "NextNPC":
+                        partialDic.Add("NextNPC", content.InnerText);
+                        break;
+                    default:
                         break;
                 }
             }

@@ -121,3 +121,17 @@ public class CardData10 : CardData
         return base.GetPreferSelectionList();
     }
 }
+public class CardData11 : CardData
+{
+    public override List<Selection> GetPreferSelectionList()
+    {
+        return base.GetPreferSelectionList();
+    }
+}
+public class CardData12 : CardData
+{
+    public override List<Selection> GetPreferSelectionList()
+    {
+        return base.GetPreferSelectionList();
+    }
+}

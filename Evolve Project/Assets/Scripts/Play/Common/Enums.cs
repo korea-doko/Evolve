@@ -14,9 +14,4 @@ public enum CardName
     PlayerHungry,
     PlayerMove
 }
-public enum NPCName
-{
-    None = -1,
-    Player,
-    God,
-}
+

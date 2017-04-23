@@ -1,75 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Card.xsd" generated="2017-04-20T22:57:42">
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Card.xsd" generated="2017-04-23T14:53:44">
 <Card>
 <ID>1</ID>
 <GivenID>1</GivenID>
 <CardName>시작1</CardName>
 <Desc>흠흠.. 일어났는가?</Desc>
-<NPCID>1</NPCID>
 <NextCardID>2</NextCardID>
+<NPC>God</NPC>
+<NextNPC>None</NextNPC>
 </Card>
 <Card>
 <ID>2</ID>
 <GivenID>2</GivenID>
 <CardName>시작2</CardName>
 <Desc>나는 자네들이 신이라고 부르는 존재일세</Desc>
-<NPCID>1</NPCID>
 <NextCardID>3</NextCardID>
+<NPC>God</NPC>
+<NextNPC>None</NextNPC>
 </Card>
 <Card>
 <ID>3</ID>
 <GivenID>3</GivenID>
 <CardName>시작3</CardName>
 <Desc>자네는 불의의 사고를 당해서 죽게 됐다네. 그러나 특별히 이번에 다른 세상에서 살아갈 기회를 주게 됐지</Desc>
-<NPCID>1</NPCID>
 <NextCardID>4</NextCardID>
+<NPC>God</NPC>
+<NextNPC>None</NextNPC>
 </Card>
 <Card>
 <ID>4</ID>
 <GivenID>4</GivenID>
 <CardName>시작4</CardName>
 <Desc>더 이상 지구에서 살아갈 수 없다네. 새로운 세계에서 살아가게 될 것이야.</Desc>
-<NPCID>1</NPCID>
 <NextCardID>5</NextCardID>
+<NPC>God</NPC>
+<NextNPC>None</NextNPC>
 </Card>
 <Card>
 <ID>5</ID>
 <GivenID>5</GivenID>
 <CardName>시작5</CardName>
 <Desc>어쩌다보니… 그대가 갈 수 있는 곳은 마법과 몬스터들이 있는… 흔히 자네들이 생각할 수 있는 이세계라네! 멋지지 않나?</Desc>
-<NPCID>1</NPCID>
 <NextCardID>6</NextCardID>
+<NPC>God</NPC>
+<NextNPC>None</NextNPC>
 </Card>
 <Card>
 <ID>6</ID>
 <GivenID>6</GivenID>
 <CardName>시작6</CardName>
 <Desc>뭐 세상사는 곳이 다 똑같지 않겠나? 그대의 새로운 삶을 위해서 몇 가지 질문을 하겠네!</Desc>
-<NPCID>1</NPCID>
 <NextCardID>7</NextCardID>
+<NPC>God</NPC>
+<NextNPC>None</NextNPC>
 </Card>
 <Card>
 <ID>7</ID>
 <GivenID>7</GivenID>
 <CardName>시작7</CardName>
 <Desc>좋아. 새로운 세계에서 잘 살아가게!</Desc>
-<NPCID>1</NPCID>
 <NextCardID>-1</NextCardID>
+<NPC>God</NPC>
+<NextNPC>None</NextNPC>
 </Card>
 <Card>
 <ID>8</ID>
-<GivenID>100</GivenID>
+<GivenID>8</GivenID>
 <CardName>플레이어 배고픔</CardName>
 <Desc>배가 고픈걸?</Desc>
-<NPCID>0</NPCID>
 <NextCardID>-1</NextCardID>
+<NPC>Player</NPC>
+<NextNPC>None</NextNPC>
 </Card>
 <Card>
 <ID>9</ID>
-<GivenID>101</GivenID>
+<GivenID>9</GivenID>
 <CardName>플레이어 이동</CardName>
 <Desc>어디로 가야하지?</Desc>
-<NPCID>0</NPCID>
 <NextCardID>-1</NextCardID>
+<NPC>Player</NPC>
+<NextNPC>None</NextNPC>
+</Card>
+<Card>
+<ID>10</ID>
+<GivenID>10</GivenID>
+<CardName>과일 따러가자</CardName>
+<Desc>과일 따러가자 고블!</Desc>
+<NextCardID>-1</NextCardID>
+<NPC>GoblinChildMinder</NPC>
+<NextNPC>None</NextNPC>
+</Card>
+<Card>
+<ID>11</ID>
+<GivenID>11</GivenID>
+<CardName>너, 뭐가 되고 싶나, 고블?</CardName>
+<Desc>너, 뭐가 되고 싶나, 고블?</Desc>
+<NextCardID>-1</NextCardID>
+<NPC>GoblinChildMinder</NPC>
+<NextNPC>None</NextNPC>
+</Card>
+<Card>
+<ID>12</ID>
+<GivenID>12</GivenID>
+<CardName>먹을 것 내놔, 고블!</CardName>
+<Desc>먹을 것 내놔, 고블!</Desc>
+<NextCardID>-1</NextCardID>
+<NPC>GoblinWarrior</NPC>
+<NextNPC>None</NextNPC>
+</Card>
+<Card>
+<ID>13</ID>
+<GivenID>13</GivenID>
+<CardName>(고블린 마을, 무엇을 하지?)</CardName>
+<Desc>(고블린 마을, 무엇을 하지?)</Desc>
+<NextCardID>-1</NextCardID>
+<NPC>GoblinVillage</NPC>
+<NextNPC>None</NextNPC>
 </Card>
 </dataroot>

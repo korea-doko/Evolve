@@ -13,22 +13,22 @@
 <xsd:appinfo>
 <od:index index-name="GivenID" index-key="GivenID " primary="no" unique="no" clustered="no" order="asc"/>
 <od:index index-name="NextCardID" index-key="NextCardID " primary="no" unique="no" clustered="no" order="asc"/>
-<od:index index-name="NPCID" index-key="NPCID " primary="no" unique="no" clustered="no" order="asc"/>
+<od:index index-name="NPCID" index-key="NPC " primary="no" unique="no" clustered="no" order="asc"/>
 <od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
 <od:tableProperty name="GUID" type="9" value="4eJ9VtmXPEGjBYwkEDFx6g==
 "/>
 <od:tableProperty name="Orientation" type="2" value="0"/>
 <od:tableProperty name="OrderByOn" type="1" value="0"/>
-<od:tableProperty name="NameMap" type="11" value="CswOVQAAAADh4n1W2Zc8QaMFjCQQMXHqAAAAAHu2cIW+6+RAAAAAAAAAAABDAGEA
+<od:tableProperty name="NameMap" type="11" value="CswOVQAAAADh4n1W2Zc8QaMFjCQQMXHqAAAAAGZoAdgT7ORAAAAAAAAAAABDAGEA
 cgBkAAAAAAAAAKovNhzVhB5FjTLV6+h6hUwHAAAA4eJ9VtmXPEGjBYwkEDFx6kkA
 RAAAAAAAAABmPsq9pxveTaeZPOI7BbFQBwAAAOHifVbZlzxBowWMJBAxcepHAGkA
 dgBlAG4ASQBEAAAAAAAAAIdU1X5s6wpOiOaaKPyvTBQHAAAA4eJ9VtmXPEGjBYwk
 EDFx6kMAYQByAGQATgBhAG0AZQAAAAAAAAB80b8rDlEXTJS1di+n+mbWBwAAAOHi
-fVbZlzxBowWMJBAxcepEAGUAcwBjAAAAAAAAAK9VqUkQH29Kk3NaJGyuSCUHAAAA
-4eJ9VtmXPEGjBYwkEDFx6k4AUABDAEkARAAAAAAAAABo4UaJfCoKQYXN+hBjjXhj
-BwAAAOHifVbZlzxBowWMJBAxcepOAGUAeAB0AEMAYQByAGQASQBEAAAAAAAAAPRa
-w2PZLelKr3C1D+cZUY8HAAAA4eJ9VtmXPEGjBYwkEDFx6kUAZgBmAGUAYwB0AAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAABQAAAAAAAAAAAAAAAAAAAAAA
+fVbZlzxBowWMJBAxcepEAGUAcwBjAAAAAAAAAGjhRol8KgpBhc36EGONeGMHAAAA
+4eJ9VtmXPEGjBYwkEDFx6k4AZQB4AHQAQwBhAHIAZABJAEQAAAAAAAAAel24eOX7
+4Uyg4JfZPmjvUQcAAADh4n1W2Zc8QaMFjCQQMXHqTgBQAEMAAAAAAAAA/c1du8CB
+fEOhilHvZXPn+QcAAADh4n1W2Zc8QaMFjCQQMXHqTgBlAHgAdABOAFAAQwAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAADAAAAAUAAAAAAAAAAAAAAAAAAAAAAA==
 "/>
 <od:tableProperty name="DefaultView" type="2" value="2"/>
 <od:tableProperty name="DisplayViewsOnSharePointSite" type="2" value="1"/>
@@ -89,7 +89,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAABQAAAAAAAAAAAAAAAAAAAAAA
 <xsd:appinfo>
 <od:fieldProperty name="GUID" type="9" value="h1TVfmzrCk6I5poo/K9MFA==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="3420"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="2325"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="4"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
@@ -115,34 +115,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAABQAAAAAAAAAAAAAAAAAAAAAA
 <xsd:appinfo>
 <od:fieldProperty name="GUID" type="9" value="fNG/Kw5RF0yUtXYvp/pm1g==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="4320"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="3555"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="5"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="IMEMode" type="2" value="10"/>
-<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
-<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="ResultType" type="2" value="0"/>
-<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
-</xsd:appinfo>
-</xsd:annotation>
-<xsd:simpleType>
-<xsd:restriction base="xsd:string">
-<xsd:maxLength value="255"/>
-</xsd:restriction>
-</xsd:simpleType>
-</xsd:element>
-<xsd:element name="NPCID" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="r1WpSRAfb0qTc1okbK5IJQ==
-"/>
-<od:fieldProperty name="ColumnWidth" type="3" value="1095"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="2"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
@@ -167,7 +141,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAABQAAAAAAAAAAAAAAAAAAAAAA
 <xsd:appinfo>
 <od:fieldProperty name="GUID" type="9" value="aOFGiXwqCkGFzfoQY414Yw==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="1725"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="2190"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="6"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
@@ -188,22 +162,72 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAABQAAAAAAAAAAAAAAAAAAAAAA
 </xsd:restriction>
 </xsd:simpleType>
 </xsd:element>
-<xsd:element name="Effect" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:element name="NPC" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
 <xsd:annotation>
 <xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="9FrDY9kt6UqvcLUP5xlRjw==
+<od:fieldProperty name="GUID" type="9" value="el24eOX74Uyg4JfZPmjvUQ==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="1650"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="2160"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="2"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
+<od:fieldProperty name="DisplayControl" type="3" value="111"/>
+<od:fieldProperty name="RowSourceType" type="10" value="Value List"/>
+<od:fieldProperty name="RowSource" type="12" value="&quot;Player&quot;;&quot;God&quot;;&quot;GoblinChildMinder&quot;;&quot;GoblinWarrior&quot;;&quot;GoblinVillage&quot;"/>
+<od:fieldProperty name="BoundColumn" type="3" value="1"/>
+<od:fieldProperty name="ColumnCount" type="3" value="1"/>
+<od:fieldProperty name="ColumnHeads" type="1" value="0"/>
+<od:fieldProperty name="ColumnWidths" type="10" value="1440"/>
+<od:fieldProperty name="ListRows" type="3" value="16"/>
+<od:fieldProperty name="ListWidth" type="10" value="1440트윕"/>
+<od:fieldProperty name="LimitToList" type="1" value="0"/>
+<od:fieldProperty name="IMEMode" type="2" value="10"/>
+<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+<od:fieldProperty name="AllowMultipleValues" type="1" value="0"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AllowValueListEdits" type="1" value="1"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="ShowOnlyRowSourceValues" type="1" value="0"/>
+<od:fieldProperty name="ResultType" type="2" value="0"/>
+<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
+</xsd:appinfo>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="NextNPC" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="GUID" type="9" value="/c1du8CBfEOhilHvZXPn+Q==
+"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="7"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="DisplayControl" type="3" value="111"/>
+<od:fieldProperty name="RowSourceType" type="10" value="Value List"/>
+<od:fieldProperty name="RowSource" type="12" value="&quot;None&quot;;&quot;God&quot;;&quot;Player&quot;;&quot;GoblinChildMinder&quot;;&quot;GoblinWarrior&quot;;&quot;GoblinVillage&quot;"/>
+<od:fieldProperty name="BoundColumn" type="3" value="1"/>
+<od:fieldProperty name="ColumnCount" type="3" value="1"/>
+<od:fieldProperty name="ColumnHeads" type="1" value="0"/>
+<od:fieldProperty name="ColumnWidths" type="10" value="1440"/>
+<od:fieldProperty name="ListRows" type="3" value="16"/>
+<od:fieldProperty name="ListWidth" type="10" value="1440트윕"/>
+<od:fieldProperty name="LimitToList" type="1" value="0"/>
 <od:fieldProperty name="IMEMode" type="2" value="10"/>
 <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
 <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+<od:fieldProperty name="AllowMultipleValues" type="1" value="0"/>
 <od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AllowValueListEdits" type="1" value="1"/>
 <od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="ShowOnlyRowSourceValues" type="1" value="0"/>
 <od:fieldProperty name="ResultType" type="2" value="0"/>
 <od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
 </xsd:appinfo>

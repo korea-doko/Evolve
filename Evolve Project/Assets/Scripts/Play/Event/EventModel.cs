@@ -33,6 +33,8 @@ public class EventModel : MonoBehaviour {
     public void ChangeSelectedCard(CardData _data)
     {
         m_nextCardID = _data.m_nextCardID;
+        m_nextNPCName = _data.m_nextNPC;
+
         m_selectedCardData = _data;
     }
     public void ChangeSelections(List<Selection> _selList)

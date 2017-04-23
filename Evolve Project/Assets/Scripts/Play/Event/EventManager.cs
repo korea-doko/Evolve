@@ -128,9 +128,11 @@ public class EventManager : MonoBehaviour , IManager{
     {
         // 현재 랜덤한 NPC가져오게 했음
 
-        NPCName name = UnityEngine.Random.Range(0, 1) == 0 ? NPCName.God : NPCName.Player;
+        //NPCName name = UnityEngine.Random.Range(0, 1) == 0 ? NPCName.God : NPCName.Player;
 
-        NPCData npcData = NPCManager.GetInst().GetNPCData(name);
+        //NPCData npcData = NPCManager.GetInst().GetNPCData(name);
+        NPCData npcData = NPCManager.GetInst().GetPreferNPCData();
+
         m_model.SetNPCData(npcData);
         
         m_state = EventState.GetCardInNPC;

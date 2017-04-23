@@ -42,7 +42,24 @@ public class NPCManager : MonoBehaviour ,IManager{
     {
     }
 
+    public NPCData GetPreferNPCData()
+    {
+        // 조건에 따라서 리턴해주면 된다.
+        // 테스트 위해서..
 
+        int ran = UnityEngine.Random.Range(0, 2);
+
+        if (ran == 0)
+            return GetNPCData(NPCName.GoblinChildMinder);
+
+        if (ran == 1)
+            return GetNPCData(NPCName.GoblinWarrior);
+
+        if (ran == 2)
+            return GetNPCData(NPCName.GoblinVillage);
+
+        return null;
+    }
 
     public NPCData GetNPCData(NPCName _name = NPCName.None)
     {

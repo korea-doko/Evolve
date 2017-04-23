@@ -21,17 +21,21 @@ public class CardData : ICardData
     public string m_desc;
     public int m_nextCardID;
     public List<Selection> m_selList;
+    public NPCName m_nextNPC;
     
     
     public void Init(Dictionary<string,string> _data)
     {
         m_selList = new List<Selection>();
 
-        m_npcName = (NPCName)int.Parse(_data["NPCID"]);
+        m_npcName = (NPCName)Enum.Parse(typeof(NPCName), _data["NPC"]);
         m_givenID = int.Parse(_data["GivenID"]);
         m_name = _data["CardName"];
         m_desc = _data["Desc"];
         m_nextCardID = int.Parse(_data["NextCardID"]);
+
+        m_nextNPC = (NPCName)Enum.Parse(typeof(NPCName), _data["NextNPC"]);
+
     }
     public void AddSelection(Selection _sel)
     {

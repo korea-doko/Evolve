@@ -17,7 +17,7 @@ public class NPCModel : MonoBehaviour
 
         for (int i = 0; i < numNPC; i++)
         {
-            string passiveName = "NPC" + i.ToString();
+            string passiveName = "NPC" + ((NPCName)i).ToString();
 
             object obj = Activator.CreateInstance(Type.GetType(passiveName));
             NPCData npcData= (NPCData)obj;
