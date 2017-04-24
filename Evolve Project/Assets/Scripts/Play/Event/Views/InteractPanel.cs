@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class InteractPanel : MonoBehaviour {
 
     public Animator m_ani;
-    public Text m_text;
+    public Text m_playerAnswerText;
+    public Text m_npcNameText;
+
     public bool m_isIdle;
     public bool m_isEast;
     public bool m_isWest;
@@ -22,7 +24,11 @@ public class InteractPanel : MonoBehaviour {
     }
     public void ChangeTextTo(string _text)
     {
-        m_text.text = _text;
+        m_playerAnswerText.text = _text;
+    }
+    public void ChangeNPCTextTo(string _npcName)
+    {
+        m_npcNameText.text = _npcName;
     }
     public void AnimatorMoveTo(InputDir _dir)
     {

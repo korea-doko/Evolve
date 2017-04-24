@@ -106,12 +106,15 @@ public class EventManager : MonoBehaviour , IManager{
                 Debug.Log(" 해당 CardID를 가진 npc가 존재하지 않음");
 
             m_model.SetNPCData(npcData);
+            m_view.ChangeNPCNameTo(m_model.m_selectedNPCData.m_name.ToString());
             // 해당 Card의 NPC를 찾아냈다.
 
             CardData cardDataInNPC = NPCManager.GetInst().GetCardDataInNPCData(npcData, m_model.m_nextCardID);
             m_model.ChangeSelectedCard(cardDataInNPC);
 
             m_view.ChangeEventLogPanel(cardDataInNPC.m_desc);
+
+            npcData.NPCEffect();
 
             m_state = EventState.GetSelection;
 
@@ -123,6 +126,7 @@ public class EventManager : MonoBehaviour , IManager{
             // 카드는 지정안됐는데, 다음 NPC는 지정됐다.
             NPCData npcData = NPCManager.GetInst().GetNPCData(m_model.m_nextNPCName);
             m_model.SetNPCData(npcData);
+            m_view.ChangeNPCNameTo(m_model.m_selectedNPCData.m_name.ToString());
 
             m_state = EventState.NPCEffect;
             return;
@@ -139,11 +143,12 @@ public class EventManager : MonoBehaviour , IManager{
 
         NPCData npcData = NPCManager.GetInst().GetPreferNPCData();
         m_model.SetNPCData(npcData);
+        m_view.ChangeNPCNameTo(m_model.m_selectedNPCData.m_name.ToString());
+
         m_state = EventState.NPCEffect;
     }
     void NPCEffect()
     {
-        Debug.Log("a");
         m_model.m_selectedNPCData.NPCEffect();
 
         m_state = EventState.GetCardInNPC;

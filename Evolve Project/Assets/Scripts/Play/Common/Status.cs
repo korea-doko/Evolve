@@ -50,15 +50,15 @@ public class Status
     {
         return m_paramAry[(int)_type];
     }
-    //public static Status operator+(Status _s1,Status _s2)
-    //{
+    public static Status operator +(Status _s1, Status _s2)
+    {
 
-    //    Status temp = new Status();
-    //    int numStatType = System.Enum.GetNames(typeof(StatusType)).Length;
+        Status temp = new Status();
+        int numStatType = System.Enum.GetNames(typeof(StatusType)).Length;
 
-    //    for (int i = 0; i < numStatType; i ++)
-    //        temp.m_paramAry[i] = _s1.m_paramAry[i] + _s2.m_paramAry[i];
+        for (int i = 0; i < numStatType; i++)
+            temp.m_paramAry[i] = _s1.m_paramAry[i] + _s2.m_paramAry[i];
 
-    //    return temp;
-    //}
+        return temp;
+    }
 }

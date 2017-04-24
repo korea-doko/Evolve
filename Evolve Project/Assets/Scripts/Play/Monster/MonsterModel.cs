@@ -22,7 +22,7 @@ public class MonsterModel : MonoBehaviour {
     }
     void ReadCardDataFromXml()
     {
-        TextAsset textAsset = (TextAsset)Resources.Load("TextAsset/Monster");
+        TextAsset textAsset = (TextAsset)Resources.Load("TextAssets/Monster");
 
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(textAsset.text);

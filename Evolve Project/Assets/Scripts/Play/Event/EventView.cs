@@ -25,5 +25,8 @@ public class EventView : MonoBehaviour {
         m_interactPanel.ChangeTextTo(_text);
         m_interactPanel.AnimatorMoveTo(_dir);
     }
-
+    public void ChangeNPCNameTo(string _name)
+    {
+        m_interactPanel.ChangeNPCTextTo(_name);
+    }
 }

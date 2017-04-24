@@ -23,7 +23,7 @@ public class SelectionModel : MonoBehaviour {
 
     void ReadCardDataFromXml()
     {
-        TextAsset textAsset = (TextAsset)Resources.Load("TextAsset/Selection");
+        TextAsset textAsset = (TextAsset)Resources.Load("TextAssets/Selection");
 
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(textAsset.text);

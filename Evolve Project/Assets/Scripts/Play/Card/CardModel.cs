@@ -37,7 +37,7 @@ public class CardModel : MonoBehaviour
     
     void ReadCardDataFromXml()
     {
-        TextAsset textAsset = (TextAsset)Resources.Load("TextAsset/Card");
+        TextAsset textAsset = (TextAsset)Resources.Load("TextAssets/Card");
 
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(textAsset.text);
