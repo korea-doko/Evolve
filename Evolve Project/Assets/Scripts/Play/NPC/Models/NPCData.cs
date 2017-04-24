@@ -21,6 +21,11 @@ public class NPCData
         m_cardList.Add(_data);
     }
 
+    public virtual void NPCEffect()
+    {
+        Debug.Log("Effect " + m_name.ToString());
+    }
+
     public virtual CardData GetCardDataInPreferCondtion()
     {
         return null;

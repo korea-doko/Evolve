@@ -59,6 +59,9 @@ public class MonsterModel : MonoBehaviour {
                     case "HungryPointPerTurn":
                         partialDic.Add("HungryPointPerTurn", content.InnerText);
                         break;
+                    case "Virtue":
+                        partialDic.Add("Virtue", content.InnerText);
+                        break;
                     case "ExpForEvolution":
                         partialDic.Add("ExpForEvolution", content.InnerText);
                         break;

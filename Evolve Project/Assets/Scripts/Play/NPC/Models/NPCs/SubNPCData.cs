@@ -20,6 +20,10 @@ public enum NPCName
 }
 public class NPCPlayer : NPCData
 {
+    public override void NPCEffect()
+    {
+        base.NPCEffect();
+    }
     public override CardData GetCardDataInPreferCondtion()
     {
         int randomIndex = UnityEngine.Random.Range(0, m_cardList.Count - 1);
@@ -32,6 +36,10 @@ public class NPCPlayer : NPCData
 
 public class NPCGod : NPCData
 {
+    public override void NPCEffect()
+    {
+        base.NPCEffect();
+    }
     public override CardData GetCardDataInPreferCondtion()
     {
         int randomIndex = UnityEngine.Random.Range(0, m_cardList.Count - 1);
@@ -44,6 +52,10 @@ public class NPCGod : NPCData
 
 public class NPCGoblinChildMinder :NPCData
 {
+    public override void NPCEffect()
+    {
+        base.NPCEffect();
+    }
     public override CardData GetCardDataInPreferCondtion()
     {
         int randomIndex = UnityEngine.Random.Range(0, m_cardList.Count - 1);
@@ -55,6 +67,10 @@ public class NPCGoblinChildMinder :NPCData
 }
 public class NPCGoblinWarrior : NPCData
 {
+    public override void NPCEffect()
+    {
+        base.NPCEffect();
+    }
     public override CardData GetCardDataInPreferCondtion()
     {
         int randomIndex = UnityEngine.Random.Range(0, m_cardList.Count - 1);
@@ -66,6 +82,10 @@ public class NPCGoblinWarrior : NPCData
 }
 public class NPCGoblinVillage : NPCData
 {
+    public override void NPCEffect()
+    {
+        base.NPCEffect();
+    }
     public override CardData GetCardDataInPreferCondtion()
     {
         int randomIndex = UnityEngine.Random.Range(0, m_cardList.Count - 1);

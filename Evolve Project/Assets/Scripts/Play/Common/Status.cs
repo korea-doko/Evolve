@@ -6,42 +6,59 @@ public enum StatusType
 {
     Damage,
     Life,
-    Experience,
     Hungry,
-    MagicPower
+    MagicPower,
+    Virtue,
+    Experience
 }
 [System.Serializable]
 public class Status
 {
     public int[] m_paramAry;
-    
+    public int m_numStatusType;
     public Status()
     {
-        m_paramAry = new int[5] { -1, -1, -1, -1, -1 };
+        m_numStatusType = System.Enum.GetNames(typeof(StatusType)).Length;
+        m_paramAry = new int[m_numStatusType];
+
+        for (int i = 0; i < m_numStatusType; i++)
+            m_paramAry[i] = -1;
+
     }
     public Status(Status _status)
     {
-        m_paramAry = new int[5];
-        for (int i = 0; i < 5; i++)
+        m_numStatusType = System.Enum.GetNames(typeof(StatusType)).Length;
+
+        m_paramAry = new int[m_numStatusType];
+        for (int i = 0; i < m_numStatusType; i++)
             m_paramAry[i] = _status.m_paramAry[i];
     }
-    public Status(int _damage, int _life, int _experience,int _hungry, int _magicPower)
+    public Status(int _damage, int _life, int _experience,int _hungry, int _magicPower, int _virtue)
     {
-        m_paramAry = new int[5];
-        m_paramAry[0] = _damage;
-        m_paramAry[1] = _life;
-        m_paramAry[2] = _experience;
-        m_paramAry[3] = _hungry;
-        m_paramAry[4] = _magicPower;
+        m_numStatusType = System.Enum.GetNames(typeof(StatusType)).Length;
+
+        m_paramAry = new int[m_numStatusType];
+
+        m_paramAry[(int)StatusType.Damage] = _damage;
+        m_paramAry[(int)StatusType.Life] = _life;
+        m_paramAry[(int)StatusType.Experience] = _experience;
+        m_paramAry[(int)StatusType.Hungry] = _hungry;
+        m_paramAry[(int)StatusType.MagicPower] = _magicPower;
+        m_paramAry[(int)StatusType.Virtue] = _virtue;
     }
-    
-    public static Status operator+(Status _s1,Status _s2)
+    public int GetStatusType(StatusType _type)
     {
-        Status temp = new Status();
-
-        for(int i = 0; i < 5; i ++)
-            temp.m_paramAry[i] = _s1.m_paramAry[i] + _s2.m_paramAry[i];
-
-        return temp;
+        return m_paramAry[(int)_type];
     }
+    //public static Status operator+(Status _s1,Status _s2)
+    //{
+
+    //    Status temp = new Status();
+    //    int numStatType = System.Enum.GetNames(typeof(StatusType)).Length;
+
+    //    for (int i = 0; i < numStatType; i ++)
+    //        temp.m_paramAry[i] = _s1.m_paramAry[i] + _s2.m_paramAry[i];
+
+    //    return temp;
+    //}
 }

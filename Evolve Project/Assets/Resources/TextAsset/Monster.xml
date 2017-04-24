@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Monster.xsd" generated="2017-04-16T17:05:52">
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Monster.xsd" generated="2017-04-24T11:22:20">
 <Monster>
 <ID>1</ID>
 <GivenID>1</GivenID>
@@ -11,6 +11,7 @@
 <HungryPointPerTurn>0</HungryPointPerTurn>
 <ExpForEvolution>100</ExpForEvolution>
 <PassiveID>-1</PassiveID>
+<Virtue>0</Virtue>
 </Monster>
 <Monster>
 <ID>2</ID>
@@ -23,6 +24,7 @@
 <HungryPointPerTurn>1</HungryPointPerTurn>
 <ExpForEvolution>100</ExpForEvolution>
 <PassiveID>-1</PassiveID>
+<Virtue>0</Virtue>
 </Monster>
 <Monster>
 <ID>3</ID>
@@ -35,6 +37,7 @@
 <HungryPointPerTurn>1</HungryPointPerTurn>
 <ExpForEvolution>100</ExpForEvolution>
 <PassiveID>-1</PassiveID>
+<Virtue>0</Virtue>
 </Monster>
 <Monster>
 <ID>4</ID>
@@ -44,8 +47,9 @@
 <Damage>1</Damage>
 <Life>10</Life>
 <MagicPower>1</MagicPower>
-<HungryPointPerTurn>1</HungryPointPerTurn>
+<HungryPointPerTurn>0</HungryPointPerTurn>
 <ExpForEvolution>100</ExpForEvolution>
 <PassiveID>-1</PassiveID>
+<Virtue>0</Virtue>
 </Monster>
 </dataroot>

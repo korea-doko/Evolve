@@ -13,19 +13,16 @@ public class Passive
     }
     public virtual void Attach(PlayerModel _model)
     {
-       
         // 붙을 때
     }
     public virtual void Detach(PlayerModel _model)
     {
         // 없어질 때
-    }
-    public virtual void Check(PlayerModel _model)
+    } 
+    public virtual Status ApplyToStatus(PlayerModel _playerModel,EnviModel _enviModel, Status _status)
     {
-        // 계속해서 
-    }
-    public virtual Status ApplyToStatus(PlayerModel _model,Status _status)
-    {
+        // 특정 조건일 떄, 패시브 관련되서 가져오기
+        // 사막일 때, 데미지 증가면, 
         return null;
     }
 }

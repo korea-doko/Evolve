@@ -39,8 +39,6 @@ public class PlayerManager : MonoBehaviour,IManager {
     {
 
     }
-
-
     public void ChangePlayerStatus(Selection _sel)
     {
         m_model.ChangePlayerStatus(_sel.m_deltaStatus);
@@ -52,11 +50,9 @@ public class PlayerManager : MonoBehaviour,IManager {
     {
         m_model.AttachPassive(_passive);
     }
-
     public void DetachPassive(Passive _passive)
     {
         m_model.DetachPassive(_passive);
-    }
+    }    
 
-    
 }

@@ -8,15 +8,16 @@ public class MonsterData
     public int m_id;
     public string m_name;
     public string m_desc;
+    
     public int m_damage;
     public int m_life;
+    public int m_virtue;
     public int m_magicPower;
     public int m_hungryPointPerTurn;
     public int m_expForEvolution;
     public int m_passiveID;
 
-    public int m_currentExp;
-    public int m_currentHungryPoint;
+    
 
     public MonsterData()
     {
@@ -29,9 +30,7 @@ public class MonsterData
         m_hungryPointPerTurn = -1;
         m_expForEvolution = -1;
         m_passiveID = -1;
-        m_currentExp = -1;
-        m_currentHungryPoint = -1;
-    }
+     }
     public MonsterData(MonsterData _data)
     {
         m_id = _data.m_id;
@@ -43,9 +42,7 @@ public class MonsterData
         m_hungryPointPerTurn = _data.m_hungryPointPerTurn;
         m_expForEvolution = _data.m_expForEvolution;
         m_passiveID = _data.m_passiveID;
-        m_currentExp = _data.m_currentExp;
-        m_currentHungryPoint = _data.m_currentHungryPoint;
-    }
+     }
     public MonsterData(Dictionary<string,string> _data)
     {
         m_id = int.Parse(_data["GivenID"]);
@@ -53,20 +50,12 @@ public class MonsterData
         m_desc = _data["Desc"];
         m_damage = int.Parse(_data["Damage"]);
         m_life = int.Parse(_data["Life"]);
+        m_virtue = int.Parse(_data["Virtue"]);
         m_magicPower = int.Parse(_data["MagicPower"]);
         m_hungryPointPerTurn = int.Parse(_data["HungryPointPerTurn"]);
         m_expForEvolution = int.Parse(_data["ExpForEvolution"]);
-        m_passiveID = int.Parse(_data["PassiveID"]);
-        m_currentExp = 0;
-        m_currentHungryPoint = 0;
+        m_passiveID = int.Parse(_data["PassiveID"]);        
     }
 
-    public void ChangeStatus(Status _status)
-    {
-        m_damage += _status.m_paramAry[(int)StatusType.Damage];
-        m_life += _status.m_paramAry[(int)StatusType.Life];
-        m_magicPower += _status.m_paramAry[(int)StatusType.MagicPower];
-        m_currentHungryPoint += _status.m_paramAry[(int)StatusType.Hungry];
-        m_currentExp += _status.m_paramAry[(int)StatusType.Experience];
-    }
+   
 }

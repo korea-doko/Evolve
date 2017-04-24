@@ -6,10 +6,14 @@ using UnityEngine;
 public enum EventState
 {
     CheckCondition,     // 조건을 검사, ex) 처음 시작인가? 지정된 카드가 있는가? 지정된 NPC가 있는가??
+
     GetNPC,             // 어떤 NPC 선택할 것인가?
+    NPCEffect,          // NPC Effect 만들고 싶으면 여기에 추가로 하나..
+
     GetCardInNPC,       // NPC 안에 있는 적절한 카드를 가져온다.
-    GetSelection,       // 어떤 선택지들을 가져오는가?
     CardEffect,         // 카드를 가져올 때, 먼저 발동되는 효과가 있다면 그것을 처리한다.
+
+    GetSelection,       // 어떤 선택지들을 가져오는가?
     ReadyPlayer,        // 플레이어의 선택을 기다린다.
     DoSelection,        // 선택된 것을 실행한다.
     CleanEffect,        // 카드를 가져올 때, 적용된 것이 초기화 될 필요가 있다면, 그것을 초기화 한다.
@@ -59,14 +63,17 @@ public class EventManager : MonoBehaviour , IManager{
             case EventState.GetNPC:
                 GetNPC();
                 break;
+            case EventState.NPCEffect:
+                NPCEffect();
+                break;
             case EventState.GetCardInNPC:
                 GetCardInNPC();
                 break;
-            case EventState.GetSelection:
-                GetSelection();
-                break;
             case EventState.CardEffect:
                 CardEffect();
+                break;
+            case EventState.GetSelection:
+                GetSelection();
                 break;
             case EventState.ReadyPlayer:
                 ReadyPlayer();
@@ -117,7 +124,7 @@ public class EventManager : MonoBehaviour , IManager{
             NPCData npcData = NPCManager.GetInst().GetNPCData(m_model.m_nextNPCName);
             m_model.SetNPCData(npcData);
 
-            m_state = EventState.GetCardInNPC;
+            m_state = EventState.NPCEffect;
             return;
         }
 
@@ -127,14 +134,18 @@ public class EventManager : MonoBehaviour , IManager{
     void GetNPC()
     {
         // 현재 랜덤한 NPC가져오게 했음
-
         //NPCName name = UnityEngine.Random.Range(0, 1) == 0 ? NPCName.God : NPCName.Player;
-
         //NPCData npcData = NPCManager.GetInst().GetNPCData(name);
-        NPCData npcData = NPCManager.GetInst().GetPreferNPCData();
 
+        NPCData npcData = NPCManager.GetInst().GetPreferNPCData();
         m_model.SetNPCData(npcData);
-        
+        m_state = EventState.NPCEffect;
+    }
+    void NPCEffect()
+    {
+        Debug.Log("a");
+        m_model.m_selectedNPCData.NPCEffect();
+
         m_state = EventState.GetCardInNPC;
     }
     void GetCardInNPC()
@@ -150,6 +161,13 @@ public class EventManager : MonoBehaviour , IManager{
 
         m_state = EventState.GetSelection;
     }
+    void CardEffect()
+    {
+        // 전부 재정의 전까지...
+        //CardManager.GetInst().AffectCard(m_model.m_selectedCardData);
+
+        m_state = EventState.ReadyPlayer;
+    }
     void GetSelection()
     {
         List<Selection> selList = CardManager.GetInst().GetSelections(m_model.m_selectedCardData);
@@ -159,13 +177,7 @@ public class EventManager : MonoBehaviour , IManager{
         m_model.ChangeSelections(selList);
         m_state = EventState.CardEffect;
     }
-    void CardEffect()
-    {
-        // 전부 재정의 전까지...
-        //CardManager.GetInst().AffectCard(m_model.m_selectedCardData);
-        
-        m_state = EventState.ReadyPlayer;
-    }
+   
     void ReadyPlayer()
     {
         // 플레이어 인풋 대기 중

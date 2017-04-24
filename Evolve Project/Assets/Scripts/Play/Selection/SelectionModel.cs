@@ -63,6 +63,9 @@ public class SelectionModel : MonoBehaviour {
                     case "DeltaMagicPower":
                         partialDic.Add("DeltaMagicPower", content.InnerText);
                         break;
+                    case "DeltaVirtue":
+                        partialDic.Add("DeltaVirtue", content.InnerText);
+                        break;
                     case "NextCardID":
                         partialDic.Add("NextCardID", content.InnerText);
                         break;
