@@ -94,6 +94,8 @@ public class EventManager : MonoBehaviour , IManager{
 
     void CheckCondition()
     {
+        if (!m_view.IsAnimationEnd())
+            return;
 
         if( m_model.m_nextCardID != -1)
         {
@@ -163,7 +165,7 @@ public class EventManager : MonoBehaviour , IManager{
 
         m_view.ChangeEventLogPanel(data.m_desc);
         // 선택된 카드의 정보를 띄워준다.
-
+        
         m_state = EventState.GetSelection;
     }
     void CardEffect()
@@ -240,6 +242,8 @@ public class EventManager : MonoBehaviour , IManager{
 
         if (sel == null || sel.m_givenID == -1 )
             return;
+
+        m_view.HideEventLogPanel();
 
         m_model.SetSelection(sel);
         m_state = EventState.DoSelection;        
