@@ -7,7 +7,7 @@ public class EventView : MonoBehaviour {
     public EventLogPanel m_eventLogPanel;
     public InteractPanel m_interactPanel;
     public InteractionContainerPanel m_interactionContainerPanel;
-
+ 
     public void Init(EventModel _model)
     {
         m_eventLogPanel = GameObject.Find("EventLogPanel").GetComponent<EventLogPanel>();
@@ -17,7 +17,7 @@ public class EventView : MonoBehaviour {
         m_interactPanel.Init();
 
         m_interactionContainerPanel = GameObject.Find("InteractionContainerPanel").GetComponent<InteractionContainerPanel>();
-        m_interactionContainerPanel.Init();
+        m_interactionContainerPanel.Init();      
     }
 
     public void ChangeEventLogPanel(string _text)

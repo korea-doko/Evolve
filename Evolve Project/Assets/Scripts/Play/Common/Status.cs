@@ -2,15 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum StatusType
-{
-    Damage,
-    Life,
-    Hungry,
-    MagicPower,
-    Virtue,
-    Experience
-}
+
 [System.Serializable]
 public class Status
 {
@@ -39,11 +31,10 @@ public class Status
 
         m_paramAry = new int[m_numStatusType];
 
-        m_paramAry[(int)StatusType.Damage] = _damage;
+        m_paramAry[(int)StatusType.Power] = _damage;
         m_paramAry[(int)StatusType.Life] = _life;
         m_paramAry[(int)StatusType.Experience] = _experience;
         m_paramAry[(int)StatusType.Hungry] = _hungry;
-        m_paramAry[(int)StatusType.MagicPower] = _magicPower;
         m_paramAry[(int)StatusType.Virtue] = _virtue;
     }
     public int GetStatusType(StatusType _type)

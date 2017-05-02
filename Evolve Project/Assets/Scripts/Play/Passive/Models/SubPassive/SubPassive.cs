@@ -26,7 +26,7 @@ public class Passive0 : Passive
     {
 
         Status temp = new Status(_status);
-        temp.m_paramAry[(int)StatusType.Damage] += 1;
+        temp.m_paramAry[(int)StatusType.Power] += 1;
         return temp;
     }
 }

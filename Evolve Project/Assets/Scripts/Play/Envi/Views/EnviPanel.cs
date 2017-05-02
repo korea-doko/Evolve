@@ -31,6 +31,6 @@ public class EnviPanel : MonoBehaviour {
         GetEnviTextTypeOf(EnviPanelTextType.Time).text = _model.m_time.ToString();
         GetEnviTextTypeOf(EnviPanelTextType.Weather).text = _model.m_weather.ToString();
         GetEnviTextTypeOf(EnviPanelTextType.Location).text = _model.m_locaition.ToString();
-        GetEnviTextTypeOf(EnviPanelTextType.Race).text = "Not yet";
+       // GetEnviTextTypeOf(EnviPanelTextType.Race).text = "Not yet";
     }
 }

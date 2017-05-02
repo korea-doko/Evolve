@@ -15,12 +15,9 @@ public class StatusPanel : MonoBehaviour
 
     public void ChangePlayerStatus(PlayerModel _model)
     {
-        m_statusTextAry[(int)StatusType.Damage].text = _model.GetStatus(StatusType.Damage).ToString();
+        m_statusTextAry[(int)StatusType.Power].text = _model.GetStatus(StatusType.Power).ToString();
         m_statusTextAry[(int)StatusType.Life].text = _model.GetStatus(StatusType.Life).ToString();
         m_statusTextAry[(int)StatusType.Hungry].text = _model.GetStatus(StatusType.Hungry).ToString();
-        m_statusTextAry[(int)StatusType.MagicPower].text = _model.GetStatus(StatusType.MagicPower).ToString();
         m_statusTextAry[(int)StatusType.Virtue].text = _model.GetStatus(StatusType.Virtue).ToString();
-
-
     }
 }

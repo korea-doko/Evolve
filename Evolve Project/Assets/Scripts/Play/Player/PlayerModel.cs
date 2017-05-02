@@ -26,11 +26,10 @@ public class PlayerModel : MonoBehaviour
     {
         m_monData = _monData;
 
-        m_curStatus.m_paramAry[(int)StatusType.Damage] = _monData.m_damage;
+        m_curStatus.m_paramAry[(int)StatusType.Power] = _monData.m_damage;
         m_curStatus.m_paramAry[(int)StatusType.Experience] = _monData.m_expForEvolution;
         m_curStatus.m_paramAry[(int)StatusType.Hungry] = 100;
         m_curStatus.m_paramAry[(int)StatusType.Life] = _monData.m_life;
-        m_curStatus.m_paramAry[(int)StatusType.MagicPower] = _monData.m_magicPower;
         m_curStatus.m_paramAry[(int)StatusType.Virtue] = _monData.m_virtue;
     }
     public void ChangePlayerStatus(Status _status)

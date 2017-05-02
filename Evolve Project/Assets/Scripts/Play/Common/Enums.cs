@@ -14,4 +14,11 @@ public enum CardName
     PlayerHungry,
     PlayerMove
 }
-
+public enum StatusType
+{
+    Power,
+    Life,
+    Hungry,
+    Virtue,
+    Experience
+}
