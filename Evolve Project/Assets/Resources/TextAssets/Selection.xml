@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Selection.xsd" generated="2017-04-24T11:07:18">
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Selection.xsd" generated="2017-05-04T14:48:14">
 <Selection>
 <ID>1</ID>
 <GivenID>1</GivenID>
 <Desc>으… 머리야 당신은 누구지</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>1</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -18,11 +17,10 @@
 <ID>16</ID>
 <GivenID>2</GivenID>
 <Desc>나는.. 죽은 것인가?</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>1</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -32,11 +30,10 @@
 <ID>17</ID>
 <GivenID>3</GivenID>
 <Desc>신? 그런게 있을리 없잖아?</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>2</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -46,11 +43,10 @@
 <ID>18</ID>
 <GivenID>4</GivenID>
 <Desc>…</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>2</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -60,11 +56,10 @@
 <ID>19</ID>
 <GivenID>5</GivenID>
 <Desc>다른 세계?</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>3</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -74,11 +69,10 @@
 <ID>20</ID>
 <GivenID>6</GivenID>
 <Desc>잠시.. 다른 기회라니?</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>3</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -88,11 +82,10 @@
 <ID>21</ID>
 <GivenID>7</GivenID>
 <Desc>새로운 삶이라..좋아!</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>4</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -102,11 +95,10 @@
 <ID>22</ID>
 <GivenID>8</GivenID>
 <Desc>그래 어디에서 살아가는거지?</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>4</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -116,11 +108,10 @@
 <ID>23</ID>
 <GivenID>9</GivenID>
 <Desc>이 세계라니?</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>5</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -130,11 +121,10 @@
 <ID>24</ID>
 <GivenID>10</GivenID>
 <Desc>마법과 몬스터?</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>5</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -144,11 +134,10 @@
 <ID>25</ID>
 <GivenID>11</GivenID>
 <Desc>위험한 곳 아니야?</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>5</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -158,11 +147,10 @@
 <ID>26</ID>
 <GivenID>12</GivenID>
 <Desc>질문?</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>6</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -172,11 +160,10 @@
 <ID>27</ID>
 <GivenID>13</GivenID>
 <Desc>좋아. 뭐든 물어봐</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>6</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -186,11 +173,10 @@
 <ID>28</ID>
 <GivenID>14</GivenID>
 <Desc>고블, 좋다</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>10</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -200,11 +186,10 @@
 <ID>29</ID>
 <GivenID>15</GivenID>
 <Desc>고블, 싫다</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>10</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -214,11 +199,10 @@
 <ID>30</ID>
 <GivenID>16</GivenID>
 <Desc>고블, 과일 많이 먹고 싶다!</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>10</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -228,11 +212,10 @@
 <ID>32</ID>
 <GivenID>18</GivenID>
 <Desc>고블, 나 아직 잘 모르겠다.</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>11</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -242,11 +225,10 @@
 <ID>33</ID>
 <GivenID>19</GivenID>
 <Desc>고블, 난…</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>11</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -256,11 +238,10 @@
 <ID>35</ID>
 <GivenID>21</GivenID>
 <Desc>싫다. 고블!</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>12</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -270,11 +251,10 @@
 <ID>36</ID>
 <GivenID>22</GivenID>
 <Desc>고블린 보모를 만난다.</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>13</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>GoblinChildMinder</NextNPC>
@@ -284,11 +264,10 @@
 <ID>37</ID>
 <GivenID>23</GivenID>
 <Desc>마법 연습을 한다.</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>13</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -298,11 +277,10 @@
 <ID>38</ID>
 <GivenID>24</GivenID>
 <Desc>숨어서 음식을 훔친다.</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>13</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -312,11 +290,10 @@
 <ID>39</ID>
 <GivenID>25</GivenID>
 <Desc>알겠어</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>7</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -326,11 +303,10 @@
 <ID>31</ID>
 <GivenID>17</GivenID>
 <Desc>고블, 나 강한 전사가 될꺼다!</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>11</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
@@ -340,11 +316,10 @@
 <ID>34</ID>
 <GivenID>20</GivenID>
 <Desc>여기 있다. 고블!</Desc>
-<DeltaDamage>0</DeltaDamage>
+<DeltaPower>0</DeltaPower>
 <DeltaLife>0</DeltaLife>
 <DeltaExp>0</DeltaExp>
 <DeltaHungry>0</DeltaHungry>
-<DeltaMagicPower>0</DeltaMagicPower>
 <CardID>12</CardID>
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>

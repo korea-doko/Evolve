@@ -47,14 +47,11 @@ public class MonsterModel : MonoBehaviour {
                     case "Desc":
                         partialDic.Add("Desc", content.InnerText);
                         break;
-                    case "Damage":
-                        partialDic.Add("Damage", content.InnerText);
+                    case "Power":
+                        partialDic.Add("Power", content.InnerText);
                         break;
                     case "Life":
                         partialDic.Add("Life", content.InnerText);
-                        break;
-                    case "MagicPower":
-                        partialDic.Add("MagicPower", content.InnerText);
                         break;
                     case "HungryPointPerTurn":
                         partialDic.Add("HungryPointPerTurn", content.InnerText);

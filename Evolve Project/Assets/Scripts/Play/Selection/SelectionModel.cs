@@ -48,8 +48,8 @@ public class SelectionModel : MonoBehaviour {
                     case "Desc":
                         partialDic.Add("Desc", content.InnerText);
                         break;
-                    case "DeltaDamage":
-                        partialDic.Add("DeltaDamage", content.InnerText);
+                    case "DeltaPower":
+                        partialDic.Add("DeltaPower", content.InnerText);
                         break;
                     case "DeltaLife":
                         partialDic.Add("DeltaLife", content.InnerText);
@@ -60,10 +60,7 @@ public class SelectionModel : MonoBehaviour {
                     case "DeltaHungry":
                         partialDic.Add("DeltaHungry", content.InnerText);
                         break;
-                    case "DeltaMagicPower":
-                        partialDic.Add("DeltaMagicPower", content.InnerText);
-                        break;
-                    case "DeltaVirtue":
+                   case "DeltaVirtue":
                         partialDic.Add("DeltaVirtue", content.InnerText);
                         break;
                     case "NextCardID":

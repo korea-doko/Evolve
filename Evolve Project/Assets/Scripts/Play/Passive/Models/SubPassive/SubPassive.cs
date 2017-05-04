@@ -12,12 +12,12 @@ public class Passive0 : Passive
     }
     public override void Attach(PlayerModel _model)
     {
-        _model.m_monData.m_damage *= 2;
+        _model.m_monData.m_power *= 2;
         base.Attach(_model);
     }
     public override void Detach(PlayerModel _model)
     {
-        _model.m_monData.m_damage /= 2;
+        _model.m_monData.m_power /= 2;
 
         base.Detach(_model);
     }
@@ -39,12 +39,12 @@ public class Passive1 : Passive
 
     public override void Attach(PlayerModel _model)
     {
-        _model.m_monData.m_damage /= 2;
+        _model.m_monData.m_power /= 2;
         base.Attach(_model);
     }
     public override void Detach(PlayerModel _model)
     {
-        _model.m_monData.m_damage *= 2;
+        _model.m_monData.m_power *= 2;
         base.Detach(_model);
     }
 

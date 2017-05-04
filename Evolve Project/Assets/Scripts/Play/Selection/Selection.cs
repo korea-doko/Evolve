@@ -27,14 +27,13 @@ public class Selection
         m_cardID = int.Parse(_data["CardID"]);
         m_desc = _data["Desc"];
 
-        int deltaDamage = int.Parse(_data["DeltaDamage"]);
+        int deltaPower = int.Parse(_data["DeltaPower"]);
         int deltaLife = int.Parse(_data["DeltaLife"]);
         int deltaExp = int.Parse(_data["DeltaExp"]);
         int deltaHungry = int.Parse(_data["DeltaHungry"]);
-        int deltaMagicPower = int.Parse(_data["DeltaMagicPower"]);
         int deltaVirtue = int.Parse(_data["DeltaVirtue"]);
 
-        m_deltaStatus = new Status(deltaDamage, deltaLife, deltaExp, deltaHungry, deltaMagicPower,deltaVirtue);
+        m_deltaStatus = new Status(deltaPower, deltaLife, deltaExp, deltaHungry,deltaVirtue);
 
         m_nextCardID = int.Parse(_data["NextCardID"]);
         m_nextNPC = (NPCName)System.Enum.Parse(typeof(NPCName), _data["NextNPC"]);

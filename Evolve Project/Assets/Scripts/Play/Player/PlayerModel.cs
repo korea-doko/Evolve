@@ -26,7 +26,7 @@ public class PlayerModel : MonoBehaviour
     {
         m_monData = _monData;
 
-        m_curStatus.m_paramAry[(int)StatusType.Power] = _monData.m_damage;
+        m_curStatus.m_paramAry[(int)StatusType.Power] = _monData.m_power;
         m_curStatus.m_paramAry[(int)StatusType.Experience] = _monData.m_expForEvolution;
         m_curStatus.m_paramAry[(int)StatusType.Hungry] = 100;
         m_curStatus.m_paramAry[(int)StatusType.Life] = _monData.m_life;

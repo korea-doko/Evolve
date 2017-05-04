@@ -25,13 +25,13 @@ public class Status
         for (int i = 0; i < m_numStatusType; i++)
             m_paramAry[i] = _status.m_paramAry[i];
     }
-    public Status(int _damage, int _life, int _experience,int _hungry, int _magicPower, int _virtue)
+    public Status(int _power, int _life, int _experience,int _hungry,int _virtue)
     {
         m_numStatusType = System.Enum.GetNames(typeof(StatusType)).Length;
 
         m_paramAry = new int[m_numStatusType];
 
-        m_paramAry[(int)StatusType.Power] = _damage;
+        m_paramAry[(int)StatusType.Power] = _power;
         m_paramAry[(int)StatusType.Life] = _life;
         m_paramAry[(int)StatusType.Experience] = _experience;
         m_paramAry[(int)StatusType.Hungry] = _hungry;

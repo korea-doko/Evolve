@@ -15,6 +15,7 @@ public class InteractPanel : MonoBehaviour {
     public bool m_isSouth;
     public bool m_isNorth;
 
+
     public void Init()
     {
         m_isIdle = true;
@@ -61,5 +62,10 @@ public class InteractPanel : MonoBehaviour {
         m_ani.SetBool("IsSouth", m_isSouth);
         m_ani.SetBool("IsNorth", m_isNorth);
         m_ani.SetBool("IsIdle", m_isIdle);
+    }
+
+    public void ChangeImage()
+    {
+
     }
 }
