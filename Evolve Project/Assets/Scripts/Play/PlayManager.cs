@@ -43,7 +43,12 @@ public class PlayManager : MonoBehaviour
     void Update()
     {
         for (int i = 0; i < m_numManager; i++)
-            m_managerAry[i].UpdateManager();
+        {
+            if (m_managerAry[i] != null)
+                m_managerAry[i].UpdateManager();
+            else
+                Debug.Log(((ManagerType)i).ToString() + " 'IManager' Interface is not exist");
+        }
     }
 
     IManager MakeManager(string _managerName,GameObject _parent = null)

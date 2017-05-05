@@ -7,6 +7,7 @@ public class StatusPanel : MonoBehaviour
 {
 
     public Text[] m_statusTextAry;
+    public Image m_expProgressBar;
 
     public void Init(PlayerModel _model)
     {
@@ -19,5 +20,7 @@ public class StatusPanel : MonoBehaviour
         m_statusTextAry[(int)StatusType.Life].text = _model.GetStatus(StatusType.Life).ToString();
         m_statusTextAry[(int)StatusType.Hungry].text = _model.GetStatus(StatusType.Hungry).ToString();
         m_statusTextAry[(int)StatusType.Virtue].text = _model.GetStatus(StatusType.Virtue).ToString();
+
+        m_expProgressBar.fillAmount = _model.GetExpRatio() ;
     }
 }

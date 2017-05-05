@@ -26,20 +26,16 @@ public class EventView : MonoBehaviour {
     public void ChangeInteractPanel(string _text,InputDir _dir)
     {
         m_interactPanel.ChangeTextTo(_text);
-        m_interactPanel.AnimatorMoveTo(_dir);
     }
     public void ChangeNPCNameTo(string _name)
     {
         m_interactPanel.ChangeNPCTextTo(_name);
     }
-    public void ShowEventLogPanel()
+    public void SelectSelection(InputDir _dir)
     {
 
     }
-    public void HideEventLogPanel()
-    {
-
-    }
+  
 
     public bool IsAnimationEnd()
     {        

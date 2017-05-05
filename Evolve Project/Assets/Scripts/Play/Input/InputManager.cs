@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour, IManager
     {
         m_buttonDownPos = Vector3.zero;
 
-        m_screenTouchSensitivity = 300.0f;
+        m_screenTouchSensitivity = 150.0f;
     }
     public void InitStart()
     {

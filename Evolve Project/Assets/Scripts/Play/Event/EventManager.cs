@@ -243,8 +243,7 @@ public class EventManager : MonoBehaviour , IManager{
         if (sel == null || sel.m_givenID == -1 )
             return;
 
-        m_view.HideEventLogPanel();
-
+        m_view.SelectSelection(_dir);
         m_model.SetSelection(sel);
         m_state = EventState.DoSelection;        
     }
