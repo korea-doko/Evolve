@@ -60,7 +60,7 @@ public class SelectionModel : MonoBehaviour {
                     case "DeltaHungry":
                         partialDic.Add("DeltaHungry", content.InnerText);
                         break;
-                   case "DeltaVirtue":
+                    case "DeltaVirtue":
                         partialDic.Add("DeltaVirtue", content.InnerText);
                         break;
                     case "NextCardID":
@@ -69,6 +69,10 @@ public class SelectionModel : MonoBehaviour {
                     case "NextNPC":
                         partialDic.Add("NextNPC", content.InnerText);
                         break;
+					case "DeltaTurn":
+						partialDic.Add("DeltaTurn", content.InnerText);
+						break;
+					
                     default:
                         break;
                 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Selection.xsd" generated="2017-05-05T15:08:37">
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Selection.xsd" generated="2017-05-08T16:14:10">
 <Selection>
 <ID>1</ID>
 <GivenID>1</GivenID>
@@ -12,6 +12,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>16</ID>
@@ -25,6 +26,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>17</ID>
@@ -38,6 +40,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>18</ID>
@@ -51,6 +54,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>19</ID>
@@ -64,6 +68,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>20</ID>
@@ -77,6 +82,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>21</ID>
@@ -90,6 +96,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>22</ID>
@@ -103,6 +110,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>23</ID>
@@ -116,6 +124,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>24</ID>
@@ -129,6 +138,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>25</ID>
@@ -142,6 +152,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>26</ID>
@@ -155,6 +166,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>0</DeltaTurn>
 </Selection>
 <Selection>
 <ID>27</ID>
@@ -168,6 +180,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>28</ID>
@@ -181,6 +194,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>29</ID>
@@ -194,6 +208,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>30</ID>
@@ -207,6 +222,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>32</ID>
@@ -220,6 +236,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>33</ID>
@@ -233,6 +250,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>35</ID>
@@ -246,6 +264,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>36</ID>
@@ -259,6 +278,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>GoblinChildMinder</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>37</ID>
@@ -272,6 +292,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>38</ID>
@@ -285,6 +306,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>39</ID>
@@ -298,6 +320,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>31</ID>
@@ -311,6 +334,7 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 <Selection>
 <ID>34</ID>
@@ -324,5 +348,6 @@
 <NextCardID>-1</NextCardID>
 <NextNPC>None</NextNPC>
 <DeltaVirtue>0</DeltaVirtue>
+<DeltaTurn>1</DeltaTurn>
 </Selection>
 </dataroot>

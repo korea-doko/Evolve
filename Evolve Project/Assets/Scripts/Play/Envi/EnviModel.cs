@@ -38,4 +38,8 @@ public class EnviModel : MonoBehaviour {
         m_locaition = LocationType.Forest;
         m_time = TimeType.Day;
     }
+	public void ChangeTurn(int _deltaTurn)
+	{
+		m_turn += _deltaTurn;
+	}
 }

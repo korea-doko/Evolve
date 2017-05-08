@@ -40,7 +40,7 @@ public class EnviManager : MonoBehaviour, IManager
     {
         Debug.Log(" 환경 매니저에서 즉당히 바꿔서..");
 
-        m_model.m_turn++;
+		m_model.ChangeTurn(EventManager.GetInst().m_model.m_selection.m_deltaTurn);
 
 
         m_view.ChangePanel(m_model);

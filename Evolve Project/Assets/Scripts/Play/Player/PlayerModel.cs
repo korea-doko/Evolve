@@ -8,15 +8,18 @@ public class PlayerModel : MonoBehaviour
     public List<Passive> m_passiveList;
 
     public Status m_curStatus;      // 현재 스테이터스
+    /*
+        m_curStatus.m_paramAry[(int)StatusType.Power] : 현재 공격력을 의미한다. 그대로 사용
+        m_curStatus.m_paramAry[(int)StatusType.Experience] = 레벨 업 까지 필요한 총 경험치, 현재 경험치는 
+                                                             m_curExp로 해야한다.
+        m_curStatus.m_paramAry[(int)StatusType.Hungry] = 몬스터마다 배고픔이 늘어나는 것이 다른데 여기 포인트만큼 빠진다.
+        m_curStatus.m_paramAry[(int)StatusType.Life] = 플레이어의 생명력 0이되면 죽음 그대로 사용;
+        m_curStatus.m_paramAry[(int)StatusType.Virtue] =  플레이어의 미덕, 사실 빼는게 맞는데 그러면 바꿔야할꼐 많아서 일단..
 
-    public int m_curExp;
-    public int m_curHungryPoint;
-    //public int m_curDamage;         // 현재 공격력
-    //public int m_curLife;           // 현재 생명력, 0 이면 게임 오버
-    //public int m_curHungry;         // 현재 배고픔, 100이면 죽음
-    //public int m_curVirtue;         // 현재 미덕, 플레이어의 선택에 따라서
-    //public int m_curExp;            // 현재 경험치
-    
+     */
+
+    public int m_curExp;            // 현재 경험치
+    public int m_curHungryPoint;    // 현재 배고픔 정도
 
     public void Init()
     {

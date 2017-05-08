@@ -20,7 +20,7 @@
 "/>
 <od:tableProperty name="Orientation" type="2" value="0"/>
 <od:tableProperty name="OrderByOn" type="1" value="0"/>
-<od:tableProperty name="NameMap" type="11" value="CswOVQAAAADKe8cMQ+7CSrA3BD9ldc7gAAAAADavdLpz7eRAAAAAAAAAAABTAGUA
+<od:tableProperty name="NameMap" type="11" value="CswOVQAAAADKe8cMQ+7CSrA3BD9ldc7gAAAAAIlJpcXz7eRAAAAAAAAAAABTAGUA
 bABlAGMAdABpAG8AbgAAAAAAAACOGNZFvP5JRY7lY6KSzwcXBwAAAMp7xwxD7sJK
 sDcEP2V1zuBJAEQAAAAAAAAA+loLYYP6BUioXT1EHhjITQcAAADKe8cMQ+7CSrA3
 BD9ldc7gRwBpAHYAZQBuAEkARAAAAAAAAAAh/tL0qxHlSYoTzSaWICurBwAAAMp7
@@ -29,14 +29,14 @@ ynvHDEPuwkqwNwQ/ZXXO4EQAZQBsAHQAYQBQAG8AdwBlAHIAAAAAAAAAPcgoyilM
 f0qTiGpMXi6T0AcAAADKe8cMQ+7CSrA3BD9ldc7gRABlAGwAdABhAEwAaQBmAGUA
 AAAAAAAAAP9cwGjIc0uca1qhlsLpWQcAAADKe8cMQ+7CSrA3BD9ldc7gRABlAGwA
 dABhAEUAeABwAAAAAAAAACgeauSmocdKtuzdMN+n6e4HAAAAynvHDEPuwkqwNwQ/
-ZXXO4EQAZQBsAHQAYQBIAHUAbgBnAHIAeQAAAAAAAAANjfp/6bKTR4B68jgAzH/A
-BwAAAMp7xwxD7sJKsDcEP2V1zuBEAGUAbAB0AGEATQBhAGcAaQBjAFAAbwB3AGUA
-cgAAAAAAAADheEPvJLb7TZkrHXOquCXqBwAAAMp7xwxD7sJKsDcEP2V1zuBDAGEA
-cgBkAEkARAAAAAAAAABSXhRZYwEoQ4ysWydlOWmKBwAAAMp7xwxD7sJKsDcEP2V1
-zuBOAGUAeAB0AEMAYQByAGQASQBEAAAAAAAAAAflpO38XsJFqDHnCo+ilusHAAAA
-ynvHDEPuwkqwNwQ/ZXXO4E4AZQB4AHQATgBQAEMAAAAAAAAAw8KcY6lJjkelJtQm
-sRXI9wcAAADKe8cMQ+7CSrA3BD9ldc7gRABlAGwAdABhAFYAaQByAHQAdQBlAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAABQAAAAAAAAAAAAAAAAAAAAAA
+ZXXO4EQAZQBsAHQAYQBIAHUAbgBnAHIAeQAAAAAAAADheEPvJLb7TZkrHXOquCXq
+BwAAAMp7xwxD7sJKsDcEP2V1zuBDAGEAcgBkAEkARAAAAAAAAABSXhRZYwEoQ4ys
+WydlOWmKBwAAAMp7xwxD7sJKsDcEP2V1zuBOAGUAeAB0AEMAYQByAGQASQBEAAAA
+AAAAAAflpO38XsJFqDHnCo+ilusHAAAAynvHDEPuwkqwNwQ/ZXXO4E4AZQB4AHQA
+TgBQAEMAAAAAAAAAw8KcY6lJjkelJtQmsRXI9wcAAADKe8cMQ+7CSrA3BD9ldc7g
+RABlAGwAdABhAFYAaQByAHQAdQBlAAAAAAAAANbLwGOrQc9Mh98I9FbzqhIHAAAA
+ynvHDEPuwkqwNwQ/ZXXO4EQAZQBsAHQAYQBUAHUAcgBuAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAMAAAABQAAAAAAAAAAAAAAAAAAAAAA
 "/>
 <od:tableProperty name="DefaultView" type="2" value="2"/>
 <od:tableProperty name="DisplayViewsOnSharePointSite" type="2" value="1"/>
@@ -335,6 +335,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAABQAAAAAAAAAAAAAAAAAAAAAA
 <od:fieldProperty name="ResultType" type="2" value="0"/>
 <od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
 <od:fieldProperty name="GUID" type="9" value="w8KcY6lJjkelJtQmsRXI9w==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="DeltaTurn" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="12"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="IMEMode" type="2" value="10"/>
+<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="ResultType" type="2" value="0"/>
+<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
+<od:fieldProperty name="GUID" type="9" value="1svAY6tBz0yH3wj0VvOqEg==
 "/>
 </xsd:appinfo>
 </xsd:annotation>

@@ -10,8 +10,8 @@ public class Selection
     public string m_desc;
     public int m_nextCardID;
     public NPCName m_nextNPC;
-
     public Status m_deltaStatus;
+	public int m_deltaTurn;
 
     public Selection()
     {
@@ -37,6 +37,7 @@ public class Selection
 
         m_nextCardID = int.Parse(_data["NextCardID"]);
         m_nextNPC = (NPCName)System.Enum.Parse(typeof(NPCName), _data["NextNPC"]);
-    }
+		m_deltaTurn = int.Parse(_data["DeltaTurn"]);
+	}
  
 }
