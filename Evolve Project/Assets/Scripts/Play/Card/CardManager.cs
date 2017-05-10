@@ -37,11 +37,11 @@ public class CardManager : MonoBehaviour, IManager {
         {
             Selection sel = SelectionManager.GetInst().m_model.m_selectionList[i];
 
-            CardData cardData = m_model.GetCardDataUsingID(sel.m_cardID);
+            CardData cardData = m_model.GetCardDataUsingCardName(sel.m_parentCard);
 
             if( cardData == null)
             {
-                Debug.Log("Finding Card ID = " + sel.m_cardID.ToString());
+                Debug.Log("Finding Card ID = " + sel.m_parentCard.ToString());
             }
             cardData.AddSelection(sel);
         }

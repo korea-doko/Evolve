@@ -39,11 +39,11 @@ public class SelectionModel : MonoBehaviour {
             {
                 switch (content.Name)
                 {
-                    case "GivenID":
-                        partialDic.Add("GivenID", content.InnerText);
+                    case "ID":
+                        partialDic.Add("ID", content.InnerText);
                         break;
-                    case "CardID":
-                        partialDic.Add("CardID", content.InnerText);
+                    case "ParentCard":
+                        partialDic.Add("ParentCard", content.InnerText);
                         break;
                     case "Desc":
                         partialDic.Add("Desc", content.InnerText);

@@ -224,7 +224,7 @@ public class EventManager : MonoBehaviour , IManager{
         
         Selection sel = m_model.GetSelectionElement((int)_dir);
 
-        if (sel == null || sel.m_givenID == -1)
+        if (sel == null || sel.m_parentCard == CardName.None)
         {
             m_view.ChangeInteractPanel("", InputDir.None);
             return;
@@ -237,7 +237,7 @@ public class EventManager : MonoBehaviour , IManager{
     {
         Selection sel = m_model.GetSelectionElement((int)_dir);
 
-        if (sel == null || sel.m_givenID == -1 )
+        if (sel == null || sel.m_parentCard == CardName.None )
             return;
 
         m_view.SelectSelection(_dir);

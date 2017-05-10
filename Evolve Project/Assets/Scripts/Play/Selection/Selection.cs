@@ -5,8 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Selection 
 {
-    public int m_givenID;
-    public int m_cardID;
+    public int m_id;
+    public CardName m_parentCard;
     public string m_desc;
     public CardName m_nextCardName;
     public NPCName m_nextNPC;
@@ -15,16 +15,19 @@ public class Selection
 
     public Selection()
     {
-        m_givenID = -1;
-        m_cardID = -1;
+        m_id = -1;
+        m_parentCard = CardName.None;
         m_desc = "no desc";
+        m_nextCardName = CardName.None;
+        m_nextNPC = NPCName.None;
         m_deltaStatus = new Status();
+        m_deltaTurn = 0;
     }
 
     public Selection(Dictionary<string,string> _data)
     {
-        m_givenID = int.Parse(_data["GivenID"]);
-        m_cardID = int.Parse(_data["CardID"]);
+        m_id = int.Parse(_data["ID"]);
+        m_parentCard = (CardName)int.Parse(_data["ParentCard"]);
         m_desc = _data["Desc"];
 
         int deltaPower = int.Parse(_data["DeltaPower"]);
@@ -37,8 +40,8 @@ public class Selection
 
         m_nextCardName = (CardName)int.Parse(_data["NextCardName"]);
 
-        m_nextNPC = (NPCName)System.Enum.Parse(typeof(NPCName), _data["NextNPC"]);
-		m_deltaTurn = int.Parse(_data["DeltaTurn"]);
+        m_nextNPC = (NPCName)int.Parse(_data["NextNPC"]);
+        m_deltaTurn = int.Parse(_data["DeltaTurn"]);
 	}
  
 }
