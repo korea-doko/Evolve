@@ -3,12 +3,12 @@
 <xsd:element name="dataroot">
 <xsd:complexType>
 <xsd:sequence>
-<xsd:element ref="Card" minOccurs="0" maxOccurs="unbounded"/>
+<xsd:element ref="CardTable" minOccurs="0" maxOccurs="unbounded"/>
 </xsd:sequence>
 <xsd:attribute name="generated" type="xsd:dateTime"/>
 </xsd:complexType>
 </xsd:element>
-<xsd:element name="Card">
+<xsd:element name="CardTable">
 <xsd:annotation>
 <xsd:appinfo>
 <od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
@@ -16,20 +16,22 @@
 "/>
 <od:tableProperty name="Orientation" type="2" value="0"/>
 <od:tableProperty name="OrderByOn" type="1" value="0"/>
-<od:tableProperty name="NameMap" type="11" value="CswOVQAAAADh4n1W2Zc8QaMFjCQQMXHqAAAAAGAzXbYv7uRAAAAAAAAAAABDAGEA
-cgBkAAAAAAAAAKovNhzVhB5FjTLV6+h6hUwHAAAA4eJ9VtmXPEGjBYwkEDFx6kkA
-RAAAAAAAAAB80b8rDlEXTJS1di+n+mbWBwAAAOHifVbZlzxBowWMJBAxcepEAGUA
-cwBjAAAAAAAAAOxgVlAT7Z1Ai52pMsypw7QAAAAA0cIC3i3u5EAAAAAAAAAAAE4A
-UABDAE4AYQBtAGUAAAAAAAAA91jj1GrftkKkOr54XW0cYQcAAADsYFZQE+2dQIud
-qTLMqcO0TgBQAEMATgBhAG0AZQAAAAAAAADkCsExBFBzTpTWih3G/R4lBwAAAOHi
-fVbZlzxBowWMJBAxcepOAFAAQwAAAAAAAABZphp6PgE0RbI0ZF+CnhWFBwAAAOHi
-fVbZlzxBowWMJBAxcepOAGUAeAB0AE4AUABDAAAAAAAAAMGz2L2W3SJDgTWJ9kuv
-ayAAAAAAc+vSjS/u5EAAAAAAAAAAAEMAYQByAGQATgBhAG0AZQAAAAAAAADHhH0a
-i+zuRpBrSGEod8aZBwAAAMGz2L2W3SJDgTWJ9kuvayBJAEQAAAAAAAAApHmozcq8
-30W8wDOahSg3DwcAAADh4n1W2Zc8QaMFjCQQMXHqQwBhAHIAZABOAGEAbQBlAAAA
-AAAAAHNiHYdSkXJDrabNk0bXrowHAAAA4eJ9VtmXPEGjBYwkEDFx6k4AZQB4AHQA
-QwBhAHIAZABUAHkAcABlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAABQAAAAAA
-AAAAAAAAAAAAAAAA
+<od:tableProperty name="NameMap" type="11" value="CswOVQAAAADh4n1W2Zc8QaMFjCQQMXHqAAAAAGcBnvUv7uRAAAAAAAAAAABDAGEA
+cgBkAFQAYQBiAGwAZQAAAAAAAACqLzYc1YQeRY0y1evoeoVMBwAAAOHifVbZlzxB
+owWMJBAxcepJAEQAAAAAAAAAfNG/Kw5RF0yUtXYvp/pm1gcAAADh4n1W2Zc8QaMF
+jCQQMXHqRABlAHMAYwAAAAAAAADsYFZQE+2dQIudqTLMqcO0AAAAACmCdOAv7uRA
+AAAAAAAAAABOAFAAQwBOAGEAbQBlAFQAYQBiAGwAZQAAAAAAAAD3WOPUat+2QqQ6
+vnhdbRxhBwAAAOxgVlAT7Z1Ai52pMsypw7ROAFAAQwBOAGEAbQBlAAAAAAAAAOQK
+wTEEUHNOlNaKHcb9HiUHAAAA4eJ9VtmXPEGjBYwkEDFx6k4AUABDAAAAAAAAAFmm
+Gno+ATRFsjRkX4KeFYUHAAAA4eJ9VtmXPEGjBYwkEDFx6k4AZQB4AHQATgBQAEMA
+AAAAAAAAwbPYvZbdIkOBNYn2S69rIAAAAACuGnHeL+7kQAAAAAAAAAAAQwBhAHIA
+ZABOAGEAbQBlAFQAYQBiAGwAZQAAAAAAAADHhH0ai+zuRpBrSGEod8aZBwAAAMGz
+2L2W3SJDgTWJ9kuvayBJAEQAAAAAAAAAaL7GVBvbnUWUPaXhCXxyjAcAAADBs9i9
+lt0iQ4E1ifZLr2sgQwBhAHIAZABOAGEAbQBlAAAAAAAAAJDcfvyRZJZBqXZHqiBd
+tnYHAAAA4eJ9VtmXPEGjBYwkEDFx6kMAYQByAGQATgBhAG0AZQAAAAAAAACCvDyh
+D2e+S4/JraS7F7OBBwAAAOHifVbZlzxBowWMJBAxcepOAGUAeAB0AEMAYQByAGQA
+TgBhAG0AZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAUAAAAAAAAAAAAAAAAA
+AAAAAA==
 "/>
 <od:tableProperty name="DefaultView" type="2" value="2"/>
 <od:tableProperty name="DisplayViewsOnSharePointSite" type="2" value="1"/>
@@ -56,7 +58,7 @@ AAAAAAAAAAAAAAAA
 <xsd:appinfo>
 <od:fieldProperty name="GUID" type="9" value="qi82HNWEHkWNMtXr6HqFTA==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="1800"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="945"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="1"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="TextAlign" type="2" value="0"/>
@@ -72,7 +74,7 @@ AAAAAAAAAAAAAAAA
 <od:fieldProperty name="GUID" type="9" value="fNG/Kw5RF0yUtXYvp/pm1g==
 "/>
 <od:fieldProperty name="ColumnWidth" type="3" value="5130"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="3"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="4"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
@@ -97,14 +99,14 @@ AAAAAAAAAAAAAAAA
 <xsd:appinfo>
 <od:fieldProperty name="GUID" type="9" value="5ArBMQRQc06U1oodxv0eJQ==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="1995"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="1815"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="2"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="DisplayControl" type="3" value="111"/>
 <od:fieldProperty name="RowSourceType" type="10" value="Table/Query"/>
-<od:fieldProperty name="RowSource" type="12" value="SELECT [NPCName].[ID], [NPCName].[NPCName] FROM NPCName; "/>
+<od:fieldProperty name="RowSource" type="12" value="SELECT [NPCName].[ID], [NPCName].[NPCName] FROM NPCNameTable; "/>
 <od:fieldProperty name="BoundColumn" type="3" value="1"/>
 <od:fieldProperty name="ColumnCount" type="3" value="2"/>
 <od:fieldProperty name="ColumnHeads" type="1" value="0"/>
@@ -128,43 +130,13 @@ AAAAAAAAAAAAAAAA
 <od:fieldProperty name="GUID" type="9" value="WaYaej4BNEWyNGRfgp4VhQ==
 "/>
 <od:fieldProperty name="ColumnWidth" type="3" value="1815"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="4"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="DisplayControl" type="3" value="111"/>
-<od:fieldProperty name="RowSourceType" type="10" value="Table/Query"/>
-<od:fieldProperty name="RowSource" type="12" value="SELECT [NPCName].[ID], [NPCName].[NPCName] FROM NPCName; "/>
-<od:fieldProperty name="BoundColumn" type="3" value="1"/>
-<od:fieldProperty name="ColumnCount" type="3" value="2"/>
-<od:fieldProperty name="ColumnHeads" type="1" value="0"/>
-<od:fieldProperty name="ColumnWidths" type="10" value="0;1440"/>
-<od:fieldProperty name="ListRows" type="3" value="16"/>
-<od:fieldProperty name="ListWidth" type="10" value="1440트윕"/>
-<od:fieldProperty name="LimitToList" type="1" value="1"/>
-<od:fieldProperty name="AllowMultipleValues" type="1" value="0"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AllowValueListEdits" type="1" value="1"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="ShowOnlyRowSourceValues" type="1" value="0"/>
-<od:fieldProperty name="ResultType" type="2" value="0"/>
-<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
-</xsd:appinfo>
-</xsd:annotation>
-</xsd:element>
-<xsd:element name="CardType" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="pHmozcq830W8wDOahSg3Dw==
-"/>
-<od:fieldProperty name="ColumnWidth" type="3" value="1920"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="5"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="DisplayControl" type="3" value="111"/>
 <od:fieldProperty name="RowSourceType" type="10" value="Table/Query"/>
-<od:fieldProperty name="RowSource" type="12" value="SELECT [CardName].[ID], [CardName].[CardType] FROM CardName; "/>
+<od:fieldProperty name="RowSource" type="12" value="SELECT [NPCName].[ID], [NPCName].[NPCName] FROM NPCNameTable; "/>
 <od:fieldProperty name="BoundColumn" type="3" value="1"/>
 <od:fieldProperty name="ColumnCount" type="3" value="2"/>
 <od:fieldProperty name="ColumnHeads" type="1" value="0"/>
@@ -182,10 +154,40 @@ AAAAAAAAAAAAAAAA
 </xsd:appinfo>
 </xsd:annotation>
 </xsd:element>
-<xsd:element name="NextCardType" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:element name="CardName" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
 <xsd:annotation>
 <xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="c2Idh1KRckOtps2TRteujA==
+<od:fieldProperty name="GUID" type="9" value="kNx+/JFklkGpdkeqIF22dg==
+"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="3"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="111"/>
+<od:fieldProperty name="RowSourceType" type="10" value="Table/Query"/>
+<od:fieldProperty name="RowSource" type="12" value="SELECT [CardNameTable].[ID], [CardNameTable].[CardName] FROM CardNameTable; "/>
+<od:fieldProperty name="BoundColumn" type="3" value="1"/>
+<od:fieldProperty name="ColumnCount" type="3" value="2"/>
+<od:fieldProperty name="ColumnHeads" type="1" value="0"/>
+<od:fieldProperty name="ColumnWidths" type="10" value="0;1440"/>
+<od:fieldProperty name="ListRows" type="3" value="16"/>
+<od:fieldProperty name="ListWidth" type="10" value="1440트윕"/>
+<od:fieldProperty name="LimitToList" type="1" value="1"/>
+<od:fieldProperty name="AllowMultipleValues" type="1" value="0"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AllowValueListEdits" type="1" value="1"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="ShowOnlyRowSourceValues" type="1" value="0"/>
+<od:fieldProperty name="ResultType" type="2" value="0"/>
+<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="NextCardName" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="GUID" type="9" value="grw8oQ9nvkuPya2kuxezgQ==
 "/>
 <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="6"/>
@@ -194,7 +196,7 @@ AAAAAAAAAAAAAAAA
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="DisplayControl" type="3" value="111"/>
 <od:fieldProperty name="RowSourceType" type="10" value="Table/Query"/>
-<od:fieldProperty name="RowSource" type="12" value="SELECT [CardName].[ID], [CardName].[CardType] FROM CardName; "/>
+<od:fieldProperty name="RowSource" type="12" value="SELECT [CardNameTable].[ID], [CardNameTable].[CardName] FROM CardNameTable; "/>
 <od:fieldProperty name="BoundColumn" type="3" value="1"/>
 <od:fieldProperty name="ColumnCount" type="3" value="2"/>
 <od:fieldProperty name="ColumnHeads" type="1" value="0"/>

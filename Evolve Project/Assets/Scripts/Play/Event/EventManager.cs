@@ -94,14 +94,11 @@ public class EventManager : MonoBehaviour , IManager{
 
     void CheckCondition()
     {
-        if (!m_view.IsAnimationEnd())
-            return;
-
-        if( m_model.m_nextCardID != -1)
+        if( m_model.m_nextCardName != CardName.None)
         {
             // 선택된 카드가 있음.
             // 카드에 지정된 NPC가 있기 때문에 둘다 가져올 수 있음.
-            CardData cardData = CardManager.GetInst().GetCardDataUsingID(m_model.m_nextCardID);
+            CardData cardData = CardManager.GetInst().GetCardDataUsingCardName(m_model.m_nextCardName);
             NPCData npcData = NPCManager.GetInst().GetNPCDataHavingCardData(cardData);
 
             if (npcData == null)
@@ -111,7 +108,7 @@ public class EventManager : MonoBehaviour , IManager{
             m_view.ChangeNPCNameTo(m_model.m_selectedNPCData.m_name.ToString());
             // 해당 Card의 NPC를 찾아냈다.
 
-            CardData cardDataInNPC = NPCManager.GetInst().GetCardDataInNPCData(npcData, m_model.m_nextCardID);
+            CardData cardDataInNPC = NPCManager.GetInst().GetCardDataInNPCData(npcData, m_model.m_nextCardName);
             m_model.ChangeSelectedCard(cardDataInNPC);
 
             m_view.ChangeEventLogPanel(cardDataInNPC.m_desc);

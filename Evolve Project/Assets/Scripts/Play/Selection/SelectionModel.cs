@@ -23,11 +23,11 @@ public class SelectionModel : MonoBehaviour {
 
     void ReadCardDataFromXml()
     {
-        TextAsset textAsset = (TextAsset)Resources.Load("TextAssets/Selection");
+        TextAsset textAsset = (TextAsset)Resources.Load("TextAssets/SelectionTable");
 
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(textAsset.text);
-        XmlNodeList itemList = xmlDoc.GetElementsByTagName("Selection");
+        XmlNodeList itemList = xmlDoc.GetElementsByTagName("SelectionTable");
 
 
         foreach (XmlNode itemInfo in itemList)
@@ -63,8 +63,8 @@ public class SelectionModel : MonoBehaviour {
                     case "DeltaVirtue":
                         partialDic.Add("DeltaVirtue", content.InnerText);
                         break;
-                    case "NextCardID":
-                        partialDic.Add("NextCardID", content.InnerText);
+                    case "NextCardName":
+                        partialDic.Add("NextCardName", content.InnerText);
                         break;
                     case "NextNPC":
                         partialDic.Add("NextNPC", content.InnerText);

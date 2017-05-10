@@ -3,6 +3,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CardName
+{
+    None = 1,
+
+    GodCard1,
+    GodCard2,
+    GodCard3,
+    GodCard4,
+    GodCard5,
+    GodCard6,
+    GodCard7,
+
+    PlayerCard1,
+    PlayerCard2,
+
+    GoblinChildMinder1,
+
+    GoblinWarriorCard1,
+
+    GoblinVillageCard1,
+    GoblinVillageCard2,
+
+    ForestCard1,
+    ForestCard2,
+    ForestCard3,
+    ForestCard4,
+    ForestCard5,
+
+    DeepForestCard1,
+    DeepForestCard2,
+    DeepForestCard3
+}
 
 public class CardData0 : CardData
 {
@@ -130,8 +162,78 @@ public class CardData11 : CardData
 }
 public class CardData12 : CardData
 {
-    public override List<Selection> GetPreferSelectionList()
-    {
-        return base.GetPreferSelectionList();
-    }
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
+}
+public class CardData13 : CardData
+{
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
+}
+public class CardData14 : CardData
+{
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
+}
+public class CardData15 : CardData
+{
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
+}
+public class CardData16 : CardData
+{
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
+}
+public class CardData17 : CardData
+{
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
+}
+public class CardData18 : CardData
+{
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
+}
+public class CardData19 : CardData
+{
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
+}
+public class CardData20 : CardData
+{
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
+}
+public class CardData21 : CardData
+{
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
+}
+public class CardData22 : CardData
+{
+	public override List<Selection> GetPreferSelectionList()
+	{
+		return base.GetPreferSelectionList();
+	}
 }

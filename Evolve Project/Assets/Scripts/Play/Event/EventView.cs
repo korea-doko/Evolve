@@ -36,9 +36,5 @@ public class EventView : MonoBehaviour {
 
     }
   
-
-    public bool IsAnimationEnd()
-    {        
-        return true;
-    }
+    
 }

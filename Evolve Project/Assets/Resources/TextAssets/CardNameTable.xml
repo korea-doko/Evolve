@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="CardNameTable.xsd" generated="2017-05-10T12:01:26">
+<CardNameTable>
+<ID>1</ID>
+<CardName>None</CardName>
+<CardNameDesc>아무것도 없을 때</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>2</ID>
+<CardName>GodCard1</CardName>
+<CardNameDesc>신 카드 1번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>3</ID>
+<CardName>GodCard2</CardName>
+<CardNameDesc>신 카드 2번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>4</ID>
+<CardName>GodCard3</CardName>
+<CardNameDesc>신 카드 3번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>5</ID>
+<CardName>GodCard4</CardName>
+<CardNameDesc>신 카드 4번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>6</ID>
+<CardName>GodCard5</CardName>
+<CardNameDesc>신 카드 5번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>7</ID>
+<CardName>GodCard6</CardName>
+<CardNameDesc>신 카드 6번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>8</ID>
+<CardName>GodCard7</CardName>
+<CardNameDesc>신 카드 7번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>9</ID>
+<CardName>PlayerCard1</CardName>
+<CardNameDesc>플레이어 카드 1번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>10</ID>
+<CardName>PlayerCard2</CardName>
+<CardNameDesc>플레이어 카드 2번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>11</ID>
+<CardName>GoblinChildMinder1</CardName>
+<CardNameDesc>고블린 보모 카드 1번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>12</ID>
+<CardName>GoblinWarriorCard1</CardName>
+<CardNameDesc>고블린 전사 카드 1번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>13</ID>
+<CardName>GoblinVillageCard1</CardName>
+<CardNameDesc>고블린 마을 카드 1번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>14</ID>
+<CardName>GoblinVillageCard2</CardName>
+<CardNameDesc>고블린 마을 카드 2번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>15</ID>
+<CardName>ForestCard1</CardName>
+<CardNameDesc>숲 카드 1번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>16</ID>
+<CardName>ForestCard2</CardName>
+<CardNameDesc>숲 카드 2번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>17</ID>
+<CardName>ForestCard3</CardName>
+<CardNameDesc>숲 카드 3번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>18</ID>
+<CardName>ForestCard4</CardName>
+<CardNameDesc>숲 카드 4번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>19</ID>
+<CardName>ForestCard5</CardName>
+<CardNameDesc>숲 카드 5번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>20</ID>
+<CardName>DeepForestCard1</CardName>
+<CardNameDesc>깊은 숲 카드 1번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>21</ID>
+<CardName>DeepForestCard2</CardName>
+<CardNameDesc>깊은 숲 카드 2번</CardNameDesc>
+</CardNameTable>
+<CardNameTable>
+<ID>22</ID>
+<CardName>DeepForestCard3</CardName>
+<CardNameDesc>깊은 숲 카드 3번</CardNameDesc>
+</CardNameTable>
+</dataroot>

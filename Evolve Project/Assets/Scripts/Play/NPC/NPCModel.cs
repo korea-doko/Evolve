@@ -12,10 +12,10 @@ public class NPCModel : MonoBehaviour
     {
         m_npcDataList = new List<NPCData>();
 
-        int numNPC = System.Enum.GetNames(typeof(NPCName)).Length - 1;
+        int numNPC = System.Enum.GetNames(typeof(NPCName)).Length;
         // None이 -1로서 존재 따라서 하나 빼줘야 원하는 작동
 
-        for (int i = 0; i < numNPC; i++)
+        for (int i = 1; i <= numNPC; i++)
         {
             string passiveName = "NPC" + ((NPCName)i).ToString();
 
@@ -28,6 +28,12 @@ public class NPCModel : MonoBehaviour
 
     public NPCData GetNPCData(NPCName _name)
     {
-        return m_npcDataList[(int)_name];
+        for(int i = 0; i < m_npcDataList.Count;i++)
+        {
+            if (m_npcDataList[i].m_name == _name)
+                return m_npcDataList[i];
+        }
+
+        return m_npcDataList[0];
     }
 }

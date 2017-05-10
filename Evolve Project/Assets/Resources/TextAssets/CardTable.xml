@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="CardTable.xsd" generated="2017-05-10T11:59:48">
+<CardTable>
+<ID>1</ID>
+<Desc>흠흠.. 일어났는가?</Desc>
+<NPC>3</NPC>
+<NextNPC>1</NextNPC>
+<CardName>2</CardName>
+<NextCardName>3</NextCardName>
+</CardTable>
+<CardTable>
+<ID>2</ID>
+<Desc>나는 자네들이 신이라고 부르는 존재일세</Desc>
+<NPC>3</NPC>
+<NextNPC>1</NextNPC>
+<CardName>3</CardName>
+<NextCardName>4</NextCardName>
+</CardTable>
+<CardTable>
+<ID>3</ID>
+<Desc>자네는 불의의 사고를 당해서 죽게 됐다네. 그러나 특별히 이번에 다른 세상에서 살아갈 기회를 주게 됐지</Desc>
+<NPC>3</NPC>
+<NextNPC>1</NextNPC>
+<CardName>4</CardName>
+<NextCardName>5</NextCardName>
+</CardTable>
+<CardTable>
+<ID>4</ID>
+<Desc>더 이상 지구에서 살아갈 수 없다네. 새로운 세계에서 살아가게 될 것이야.</Desc>
+<NPC>3</NPC>
+<NextNPC>1</NextNPC>
+<CardName>5</CardName>
+<NextCardName>6</NextCardName>
+</CardTable>
+<CardTable>
+<ID>5</ID>
+<Desc>어쩌다보니… 그대가 갈 수 있는 곳은 마법과 몬스터들이 있는… 흔히 자네들이 생각할 수 있는 이세계라네! 멋지지 않나?</Desc>
+<NPC>3</NPC>
+<NextNPC>1</NextNPC>
+<CardName>6</CardName>
+<NextCardName>7</NextCardName>
+</CardTable>
+<CardTable>
+<ID>6</ID>
+<Desc>뭐 세상사는 곳이 다 똑같지 않겠나? 그대의 새로운 삶을 위해서 몇 가지 질문을 하겠네!</Desc>
+<NPC>3</NPC>
+<NextNPC>1</NextNPC>
+<CardName>7</CardName>
+<NextCardName>8</NextCardName>
+</CardTable>
+<CardTable>
+<ID>7</ID>
+<Desc>좋아. 새로운 세계에서 잘 살아가게!</Desc>
+<NPC>3</NPC>
+<NextNPC>1</NextNPC>
+<CardName>8</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>8</ID>
+<Desc>배가 고픈걸?</Desc>
+<NPC>2</NPC>
+<NextNPC>1</NextNPC>
+<CardName>9</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>9</ID>
+<Desc>어디로 가야하지?</Desc>
+<NPC>2</NPC>
+<NextNPC>1</NextNPC>
+<CardName>10</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>10</ID>
+<Desc>숲으로 가서 먹을 것을 찾아와.</Desc>
+<NPC>4</NPC>
+<NextNPC>1</NextNPC>
+<CardName>11</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>12</ID>
+<Desc>먹을 것 내놔, 고블!</Desc>
+<NPC>5</NPC>
+<NextNPC>1</NextNPC>
+<CardName>12</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>13</ID>
+<Desc>(고블린 마을, 무엇을 하지?)</Desc>
+<NPC>6</NPC>
+<NextNPC>1</NextNPC>
+<CardName>13</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>14</ID>
+<Desc>(마을에 모험가 파티가 공격해왔다.)</Desc>
+<NPC>6</NPC>
+<NextNPC>1</NextNPC>
+<CardName>14</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>15</ID>
+<Desc>( 숲 ) 무엇을 할까?</Desc>
+<NPC>7</NPC>
+<NextNPC>1</NextNPC>
+<CardName>15</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>16</ID>
+<Desc>뿔 토끼를 만났다. 그러나 깊숙한 곳으로 도망쳤다.</Desc>
+<NPC>7</NPC>
+<NextNPC>1</NextNPC>
+<CardName>16</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>17</ID>
+<Desc>독이 있어보이는 작은 타란튤라를 만났다.</Desc>
+<NPC>7</NPC>
+<NextNPC>1</NextNPC>
+<CardName>17</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>18</ID>
+<Desc>처음 보는 과일이 있었다.</Desc>
+<NPC>7</NPC>
+<NextNPC>1</NextNPC>
+<CardName>18</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>19</ID>
+<Desc>깊은 숲, 그곳엔 무엇인가 있을 것 같다.</Desc>
+<NPC>7</NPC>
+<NextNPC>1</NextNPC>
+<CardName>19</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>20</ID>
+<Desc>(깊은 숲) 빛이 들어오지 않는다.</Desc>
+<NPC>8</NPC>
+<NextNPC>1</NextNPC>
+<CardName>20</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>21</ID>
+<Desc>무엇을 할까?</Desc>
+<NPC>8</NPC>
+<NextNPC>1</NextNPC>
+<CardName>21</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+<CardTable>
+<ID>22</ID>
+<Desc>작은 빛이 보인다</Desc>
+<NPC>8</NPC>
+<NextNPC>1</NextNPC>
+<CardName>22</CardName>
+<NextCardName>1</NextCardName>
+</CardTable>
+</dataroot>

@@ -14,28 +14,28 @@ public interface ICardData
 [System.Serializable]
 public class CardData : ICardData
 {
-
-    public NPCName m_npcName;
-    public int m_givenID;
-    public string m_name;
-    public string m_desc;
-    public int m_nextCardID;
     public List<Selection> m_selList;
+
+    public int m_id;
+    public CardName m_cardName;
+    public NPCName m_npcName;
+    public string m_desc;
     public NPCName m_nextNPC;
-    
+    public CardName m_nextCardName;
+
     
     public void Init(Dictionary<string,string> _data)
     {
         m_selList = new List<Selection>();
 
-        m_npcName = (NPCName)Enum.Parse(typeof(NPCName), _data["NPC"]);
-        m_givenID = int.Parse(_data["GivenID"]);
-        m_name = _data["CardName"];
+        m_id = int.Parse(_data["ID"]);
+        m_cardName = (CardName)int.Parse(_data["CardName"]);
+        m_npcName = (NPCName)int.Parse(_data["NPC"]);
         m_desc = _data["Desc"];
-        m_nextCardID = int.Parse(_data["NextCardID"]);
+        m_nextNPC = (NPCName)int.Parse(_data["NextNPC"]);
+        m_nextCardName = (CardName)int.Parse(_data["NextCardName"]);
 
-        m_nextNPC = (NPCName)Enum.Parse(typeof(NPCName), _data["NextNPC"]);
-
+                     
     }
     public void AddSelection(Selection _sel)
     {

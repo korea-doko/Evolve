@@ -45,42 +45,41 @@ public class NPCManager : MonoBehaviour ,IManager{
     public NPCData GetPreferNPCData()
     {
         // 조건에 따라서 리턴해주면 된다.
-        // 테스트 위해서..
+        // 테스트 위해서.. // 캐릭터 타입의 NPC와 지형 타입의 NPC 두 종류가 있다.
+        NPCName name = NPCName.None;
 
-        int ran = UnityEngine.Random.Range(0, 3);
+        while (name == NPCName.None || name == NPCName.God)
+        {
+            int ran = UnityEngine.Random.Range(0, System.Enum.GetNames(typeof(NPCName)).Length - 1);
 
-        if (ran == 0)
-            return GetNPCData(NPCName.GoblinChildMinder);
+            name = (NPCName)ran;
+        }
 
-        if (ran == 1)
-            return GetNPCData(NPCName.GoblinWarrior);
 
-        if (ran == 2)
-            return GetNPCData(NPCName.GoblinVillage);
+        return GetNPCData(name);
 
-        return null;
     }
 
     public NPCData GetNPCData(NPCName _name = NPCName.None)
     {
-        if (_name != NPCName.None)
-            return m_model.GetNPCData(_name);
-
-        return null;
+        return m_model.GetNPCData(_name);
     }
     public NPCData GetNPCDataHavingCardData(CardData _data)
     {
+        if (_data == null)
+            Debug.Log("Null input");
+
         return GetNPCData(_data.m_npcName);        
     }
-    public CardData GetCardDataInNPCData(NPCData _data, int _cardID = -1)
+    public CardData GetCardDataInNPCData(NPCData _data, CardName _cardName = CardName.None)
     {
 
-        if (_cardID == -1)
+        if (_cardName == CardName.None)
             return _data.GetCardDataInPreferCondtion();
 
         for(int i = 0; i < _data.m_cardList.Count;i++)
         {
-            if (_data.m_cardList[i].m_givenID == _cardID)
+            if (_data.m_cardList[i].m_cardName == _cardName)
                 return _data.m_cardList[i];
         }
 

@@ -39,6 +39,10 @@ public class CardManager : MonoBehaviour, IManager {
 
             CardData cardData = m_model.GetCardDataUsingID(sel.m_cardID);
 
+            if( cardData == null)
+            {
+                Debug.Log("Finding Card ID = " + sel.m_cardID.ToString());
+            }
             cardData.AddSelection(sel);
         }
 
@@ -58,15 +62,13 @@ public class CardManager : MonoBehaviour, IManager {
     {
         return _data.GetPreferSelectionList();
     }
-    public CardData GetCardDataUsingID(int _id)
+    
+
+    public CardData GetCardDataUsingCardName(CardName _name)
     {
-        for(int i = 0; i < m_model.m_cardList.Count;i++)
-        {
-            if (m_model.m_cardList[i].m_givenID == _id)
-                return m_model.m_cardList[i];
-        }
-        return null;
+        return m_model.GetCardDataUsingCardName(_name);
     }
+    
 
     public void AffectCard(CardData _data)
     {

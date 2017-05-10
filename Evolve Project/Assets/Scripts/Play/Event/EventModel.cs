@@ -10,7 +10,7 @@ public class EventModel : MonoBehaviour {
     public Selection m_selection;                 // 플레이어가 고른 선택지
     public NPCData m_selectedNPCData;             // 선택된 NPC Data
 
-    public int m_nextCardID;                     // 다음에 와야하는 카드가 있습니까? -1 이라면 없음
+    public CardName m_nextCardName;                     // 다음에 와야하는 카드가 있습니까? -1 이라면 없음
     public NPCName m_nextNPCName;                // 다음에 와야하는 NPC가 있는가?
 
     public void Init()
@@ -21,7 +21,7 @@ public class EventModel : MonoBehaviour {
         m_selection = null;
         m_selectedNPCData = null;
 
-        m_nextCardID = 1;
+        m_nextCardName = CardName.GodCard1;
         m_nextNPCName = NPCName.God;
     }
 
@@ -32,7 +32,7 @@ public class EventModel : MonoBehaviour {
 
     public void ChangeSelectedCard(CardData _data)
     {
-        m_nextCardID = _data.m_nextCardID;
+        m_nextCardName = _data.m_nextCardName;
         m_nextNPCName = _data.m_nextNPC;
 
         m_selectedCardData = _data;
@@ -45,8 +45,8 @@ public class EventModel : MonoBehaviour {
     {
         m_selection = _sel;
 
-		if (m_nextCardID == -1)
-			m_nextCardID = _sel.m_nextCardID;
+		if (m_nextCardName == CardName.None)
+            m_nextCardName = _sel.m_nextCardName;
 
 		if (m_nextNPCName == NPCName.None)
 			m_nextNPCName = _sel.m_nextNPC;
