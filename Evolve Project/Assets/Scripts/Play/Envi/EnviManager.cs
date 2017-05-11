@@ -36,13 +36,51 @@ public class EnviManager : MonoBehaviour, IManager
     {
     }
     
+    public void ChangeNPC(NPCData _data)
+    {
+        switch (_data.m_name)
+        {
+            case NPCName.None:
+                break;
+            case NPCName.Player:
+                break;
+            case NPCName.God:
+                ChangeLocation(LocationType.Heaven);
+                break;
+            case NPCName.GoblinChildMinder:
+            case NPCName.GoblinWarrior:
+            case NPCName.GoblinVillage:
+                ChangeLocation(LocationType.GoblinVillage);
+                break;
+            case NPCName.Forest:
+                ChangeLocation(LocationType.Forest);
+                break;
+            case NPCName.DeepForest:
+                ChangeLocation(LocationType.DeepForest);
+                break;
+        }
+    }
     public void Notified()
     {
-        Debug.Log(" 환경 매니저에서 즉당히 바꿔서..");
+        m_model.m_turn += EventManager.GetInst().m_model.m_selection.m_deltaTurn;
 
-		m_model.ChangeTurn(EventManager.GetInst().m_model.m_selection.m_deltaTurn);
+        m_view.ChangePanel(m_model);
+    }
+    public void ChangeWeather(WeatherType _type)
+    {
+        m_model.m_weather = _type;
 
+        m_view.ChangePanel(m_model);
+    }
+    public void ChangeLocation(LocationType _type)
+    {
+        m_model.m_locaition = _type;
 
+        m_view.ChangePanel(m_model);
+    }
+    public void ChangeTime(TimeType _type)
+    {
+        m_model.m_time = _type;
         m_view.ChangePanel(m_model);
     }
 }

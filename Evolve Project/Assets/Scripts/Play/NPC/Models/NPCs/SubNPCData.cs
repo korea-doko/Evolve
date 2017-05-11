@@ -23,17 +23,12 @@ public class NPCNone :NPCData
 {
     public override void NPCEffect()
     {
-        base.NPCEffect();
+
     }
     public override CardData GetCardDataInPreferCondtion()
     {
-        int randomIndex = UnityEngine.Random.Range(0, m_cardList.Count - 1);
-
-        Debug.Log(m_name.ToString() + " 선택된 번호 : " + randomIndex.ToString());
-
-        return m_cardList[randomIndex];
+        return base.GetCardDataInPreferCondtion();
     }
-
 }
 public class NPCPlayer : NPCData
 {
@@ -54,7 +49,7 @@ public class NPCGod : NPCData
 {
     public override void NPCEffect()
     {
-        base.NPCEffect();
+
     }
     public override CardData GetCardDataInPreferCondtion()
     {
@@ -111,7 +106,7 @@ public class NPCGoblinVillage : NPCData
 {
     public override void NPCEffect()
     {
-        base.NPCEffect();
+
     }
     public override CardData GetCardDataInPreferCondtion()
     {
@@ -130,12 +125,15 @@ public class NPCForest : NPCData
 	}
 	public override CardData GetCardDataInPreferCondtion()
 	{
-		int randomIndex = UnityEngine.Random.Range(0, m_cardList.Count - 1);
+		int randomIndex = UnityEngine.Random.Range(0, 2);
 
-		Debug.Log(m_name.ToString() + " 선택된 번호 : " + randomIndex.ToString());
+        if (randomIndex % 2 == 0)
+            return m_cardList[0];
+        else
+            return m_cardList[m_cardList.Count - 1];
 
-		return m_cardList[randomIndex];
-	}
+
+    }
 }
 public class NPCDeepForest : NPCData
 {

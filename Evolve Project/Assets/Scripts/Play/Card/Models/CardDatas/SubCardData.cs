@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum CardName
 {
-    None,
+    None = 1,
 
     GodCard1,
     GodCard2,
@@ -36,21 +36,6 @@ public enum CardName
     DeepForestCard3
 }
 
-public class CardData0 : CardData
-{
-    public override void ClearEffect()
-    {
-        base.ClearEffect();
-    }
-    public override void Affect()
-    {
-        base.Affect();
-    }
-    public override List<Selection> GetPreferSelectionList()
-    {
-        return base.GetPreferSelectionList();
-    }
-}
 public class CardData1 : CardData
 {
     public override List<Selection> GetPreferSelectionList()
@@ -171,6 +156,8 @@ public class CardData13 : CardData
 {
 	public override List<Selection> GetPreferSelectionList()
 	{
+       
+
 		return base.GetPreferSelectionList();
 	}
 }

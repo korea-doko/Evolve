@@ -108,6 +108,9 @@ public class EventManager : MonoBehaviour , IManager{
             m_view.ChangeNPCNameTo(m_model.m_selectedNPCData.m_name.ToString());
             // 해당 Card의 NPC를 찾아냈다.
 
+            EnviManager.GetInst().ChangeNPC(npcData);
+            // 알려준다.
+
             CardData cardDataInNPC = NPCManager.GetInst().GetCardDataInNPCData(npcData, m_model.m_nextCardName);
             m_model.ChangeSelectedCard(cardDataInNPC);
 
@@ -127,6 +130,10 @@ public class EventManager : MonoBehaviour , IManager{
             m_model.SetNPCData(npcData);
             m_view.ChangeNPCNameTo(m_model.m_selectedNPCData.m_name.ToString());
 
+
+            EnviManager.GetInst().ChangeNPC(npcData);
+            // 알려준다.
+
             m_state = EventState.NPCEffect;
             return;
         }
@@ -143,6 +150,9 @@ public class EventManager : MonoBehaviour , IManager{
         NPCData npcData = NPCManager.GetInst().GetPreferNPCData();
         m_model.SetNPCData(npcData);
         m_view.ChangeNPCNameTo(m_model.m_selectedNPCData.m_name.ToString());
+
+        EnviManager.GetInst().ChangeNPC(npcData);
+        // 알려준다.
 
         m_state = EventState.NPCEffect;
     }

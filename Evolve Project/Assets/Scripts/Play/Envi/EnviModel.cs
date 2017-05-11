@@ -15,12 +15,15 @@ public enum TimeType
 }
 public enum LocationType
 {
+    Heaven,         // 신이 있는 곳
     Forest,
     River,
     Mountain,
     AncientTemple,
     Dungeon,
-    Desert
+    Desert,
+    GoblinVillage,
+    DeepForest
 }
 
 
@@ -35,11 +38,8 @@ public class EnviModel : MonoBehaviour {
     {
         m_turn = 0;
         m_weather = WeatherType.Sunny;
-        m_locaition = LocationType.Forest;
+        m_locaition = LocationType.Heaven;
         m_time = TimeType.Day;
     }
-	public void ChangeTurn(int _deltaTurn)
-	{
-		m_turn += _deltaTurn;
-	}
+
 }

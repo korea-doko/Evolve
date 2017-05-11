@@ -44,20 +44,44 @@ public class NPCManager : MonoBehaviour ,IManager{
 
     public NPCData GetPreferNPCData()
     {
-        // 조건에 따라서 리턴해주면 된다.
-        // 테스트 위해서.. // 캐릭터 타입의 NPC와 지형 타입의 NPC 두 종류가 있다.
-        NPCName name = NPCName.None;
-
-        while (name == NPCName.None || name == NPCName.God)
+        switch(EnviManager.GetInst().m_model.m_locaition)
         {
-            int ran = UnityEngine.Random.Range(0, System.Enum.GetNames(typeof(NPCName)).Length - 1);
+            case LocationType.Heaven:
 
-            name = (NPCName)ran;
+                return GetNPCData(NPCName.GoblinVillage);
+                
+            case LocationType.GoblinVillage:
+
+                return UnityEngine.Random.Range(0, 1) == 0 ? GetNPCData(NPCName.GoblinChildMinder) : GetNPCData(NPCName.GoblinWarrior);
+                
+            case LocationType.Forest:
+
+                return GetNPCData(NPCName.Forest);
+                
+            case LocationType.DeepForest:
+
+                return GetNPCData(NPCName.DeepForest);
+                
+            default:
+                break;
         }
 
+        Debug.Log("Error");
 
-        return GetNPCData(name);
+        return null;
+        // 조건에 따라서 리턴해주면 된다.
+        // 테스트 위해서.. // 캐릭터 타입의 NPC와 지형 타입의 NPC 두 종류가 있다.
+        //NPCName name = NPCName.None;
 
+        //while (name == NPCName.None || name == NPCName.God)
+        //{
+        //    int ran = UnityEngine.Random.Range(0, System.Enum.GetNames(typeof(NPCName)).Length - 1);
+
+        //    name = (NPCName)ran;
+        //}
+
+
+        //return GetNPCData(name);
     }
 
     public NPCData GetNPCData(NPCName _name = NPCName.None)

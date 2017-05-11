@@ -22,7 +22,16 @@ public class CardModel : MonoBehaviour
 
         LoadCardData();
     }
-    
+    public CardData GetCardDataUsingCardName(CardName _name)
+    {
+        for(int i = 0; i < m_cardList.Count;i++)
+        {
+            if (m_cardList[i].m_cardName == _name)
+                return m_cardList[i];
+        }
+
+        return m_cardList[0];
+    }
     void LoadCardData()
     {
         m_cardList = new List<CardData>();
@@ -31,7 +40,7 @@ public class CardModel : MonoBehaviour
 
         int numOfCard = System.Enum.GetNames(typeof(CardName)).Length;
 
-        for(int i = 0; i < numOfCard;i++)
+        for (int i = 1; i <= numOfCard; i++)
         {
             string cardName = "CardData" + i.ToString();
             object obj = Activator.CreateInstance(Type.GetType(cardName));
@@ -39,7 +48,7 @@ public class CardModel : MonoBehaviour
             m_cardList.Add(data);
         }
 
-        for(int i = 0; i < m_fullDic.Count;i++)
+        for (int i = 0; i < m_fullDic.Count; i++)
         {
             String name = GetCardNameUsingID(int.Parse(m_fullDic[i]["CardName"]));
 
@@ -48,35 +57,25 @@ public class CardModel : MonoBehaviour
 
             CardName cardName = (CardName)Enum.Parse(typeof(CardName), name);
 
-            CardData data = m_cardList[(int)cardName];
+            CardData data = m_cardList[(int)(cardName-1)];
+            // CardName 1번부터 시작한다. 따라서 -1 안하면 마지막에서 인덱스 초과
+
             data.Init(m_fullDic[i]);
 
- //           Debug.Log("Name =" +name + "// Index = " + (int)cardName );
         }
-
-        //for (int i = 0; i < m_fullDic.Count; i++)
-        //{
-        //    string cardName = "CardData" + i.ToString();
-        //    object obj = Activator.CreateInstance(Type.GetType(cardName));
-
-        //    CardData data = (CardData)obj;
-        //    data.Init(m_fullDic[i]);
-                
-        //    m_cardList.Add(data);
-        //}        
 
         for (int i = 0; i < m_fullDic.Count; i++)
             m_fullDic[i].Clear();
 
-        m_fullDic.Clear();        
+        m_fullDic.Clear();
     }
     void LoadCardNameData()
     {
-        
+
         m_cardNameDataList = new List<CardNameData>();
         ReadCardNameDataFromXml();
 
-        for (int i = 0; i < m_fullDic.Count;i++)
+        for (int i = 0; i < m_fullDic.Count; i++)
         {
             CardNameData nameData = new CardNameData(m_fullDic[i]);
             m_cardNameDataList.Add(nameData);
@@ -87,7 +86,6 @@ public class CardModel : MonoBehaviour
 
         m_fullDic.Clear();
     }
-
     void ReadCardDataFromXml()
     {
         TextAsset textAsset = (TextAsset)Resources.Load("TextAssets/CardTable");
@@ -96,11 +94,11 @@ public class CardModel : MonoBehaviour
         xmlDoc.LoadXml(textAsset.text);
         XmlNodeList itemList = xmlDoc.GetElementsByTagName("CardTable");
 
-        
+
         foreach (XmlNode itemInfo in itemList)
         {
             XmlNodeList itemContent = itemInfo.ChildNodes;
-            Dictionary<string,string> partialDic = new Dictionary<string, string>(); // ItemName is TestItem;
+            Dictionary<string, string> partialDic = new Dictionary<string, string>(); // ItemName is TestItem;
 
             foreach (XmlNode content in itemContent)
             {
@@ -166,28 +164,15 @@ public class CardModel : MonoBehaviour
             m_fullDic.Add(partialDic);
         }
     }
-
-    public string GetCardNameUsingID(int _id)
+    string GetCardNameUsingID(int _id)
     {
-        for(int i = 0; i < m_cardNameDataList.Count;i++)
+        for (int i = 0; i < m_cardNameDataList.Count; i++)
         {
             if (m_cardNameDataList[i].m_id == _id)
                 return m_cardNameDataList[i].m_cardName;
         }
-
-        return null ;
+        return null;
     }
 
-    public CardData GetCardDataUsingCardName(CardName _name)
-    {
-        for(int i = 0; i < m_cardList.Count;i++)
-        {
-            if (m_cardList[i].m_cardName == _name)
-                return m_cardList[i];
-        }
-
-        return m_cardList[0];
-    }
-    
 }
 
