@@ -27,15 +27,12 @@ public class CardData : ICardData
     public void Init(Dictionary<string,string> _data)
     {
         m_selList = new List<Selection>();
-
         m_id = int.Parse(_data["ID"]);
         m_cardName = (CardName)int.Parse(_data["CardName"]);
         m_npcName = (NPCName)int.Parse(_data["NPC"]);
         m_desc = _data["Desc"];
         m_nextNPC = (NPCName)int.Parse(_data["NextNPC"]);
-        m_nextCardName = (CardName)int.Parse(_data["NextCardName"]);
-
-                     
+        m_nextCardName = (CardName)int.Parse(_data["NextCardName"]);                     
     }
     public void AddSelection(Selection _sel)
     {

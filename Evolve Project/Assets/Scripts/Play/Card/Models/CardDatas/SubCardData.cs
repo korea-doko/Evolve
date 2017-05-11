@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum CardName
 {
-    None = 1,
+    None,
 
     GodCard1,
     GodCard2,

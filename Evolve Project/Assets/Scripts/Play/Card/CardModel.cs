@@ -29,24 +29,46 @@ public class CardModel : MonoBehaviour
 
         ReadCardDataFromXml();
 
-        for (int i = 0; i < m_fullDic.Count; i++)
+        int numOfCard = System.Enum.GetNames(typeof(CardName)).Length;
+
+        for(int i = 0; i < numOfCard;i++)
         {
             string cardName = "CardData" + i.ToString();
             object obj = Activator.CreateInstance(Type.GetType(cardName));
-
             CardData data = (CardData)obj;
-            data.Init(m_fullDic[i]);
-
             m_cardList.Add(data);
         }
 
-        
+        for(int i = 0; i < m_fullDic.Count;i++)
+        {
+            String name = GetCardNameUsingID(int.Parse(m_fullDic[i]["CardName"]));
+
+            if (name == null)
+                Debug.Log("Error");
+
+            CardName cardName = (CardName)Enum.Parse(typeof(CardName), name);
+
+            CardData data = m_cardList[(int)cardName];
+            data.Init(m_fullDic[i]);
+
+ //           Debug.Log("Name =" +name + "// Index = " + (int)cardName );
+        }
+
+        //for (int i = 0; i < m_fullDic.Count; i++)
+        //{
+        //    string cardName = "CardData" + i.ToString();
+        //    object obj = Activator.CreateInstance(Type.GetType(cardName));
+
+        //    CardData data = (CardData)obj;
+        //    data.Init(m_fullDic[i]);
+                
+        //    m_cardList.Add(data);
+        //}        
+
         for (int i = 0; i < m_fullDic.Count; i++)
             m_fullDic[i].Clear();
 
-        m_fullDic.Clear();
-
-        
+        m_fullDic.Clear();        
     }
     void LoadCardNameData()
     {
@@ -145,27 +167,15 @@ public class CardModel : MonoBehaviour
         }
     }
 
-
-
-    public CardNameData GetCardNameData(int _id)
+    public string GetCardNameUsingID(int _id)
     {
         for(int i = 0; i < m_cardNameDataList.Count;i++)
         {
             if (m_cardNameDataList[i].m_id == _id)
-                return m_cardNameDataList[i];
+                return m_cardNameDataList[i].m_cardName;
         }
 
-        return m_cardNameDataList[0];
-    }
-    public CardNameData GetCardNameData(string _cardName)
-    {
-        for(int  i = 0; i < m_cardNameDataList.Count;i++)
-        {
-            if (m_cardNameDataList[i].m_cardName == _cardName)
-                return m_cardNameDataList[i];
-        }
-
-        return m_cardNameDataList[0];
+        return null ;
     }
 
     public CardData GetCardDataUsingCardName(CardName _name)
@@ -178,24 +188,6 @@ public class CardModel : MonoBehaviour
 
         return m_cardList[0];
     }
-
-    public CardData GetCardDataUsingIndex(int _index)
-    {
-        if (_index < 0 || _index > m_cardList.Count - 1)
-            Debug.Log("Index Error");
-
-        return m_cardList[_index];
-    }
-    public CardData GetCardDataUsingID(int _id)
-    {
-        for(int i = 0; i < m_cardList.Count ; i++)
-        {
-            if (_id == m_cardList[i].m_id)
-                return m_cardList[i];
-        }
-
-        return null;
-    }
-
+    
 }
 

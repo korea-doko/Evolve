@@ -16,22 +16,23 @@
 "/>
 <od:tableProperty name="Orientation" type="2" value="0"/>
 <od:tableProperty name="OrderByOn" type="1" value="0"/>
-<od:tableProperty name="NameMap" type="11" value="CswOVQAAAADh4n1W2Zc8QaMFjCQQMXHqAAAAAGcBnvUv7uRAAAAAAAAAAABDAGEA
+<od:tableProperty name="NameMap" type="11" value="CswOVQAAAADh4n1W2Zc8QaMFjCQQMXHqAAAAAGWbkF1Q7uRAAAAAAAAAAABDAGEA
 cgBkAFQAYQBiAGwAZQAAAAAAAACqLzYc1YQeRY0y1evoeoVMBwAAAOHifVbZlzxB
 owWMJBAxcepJAEQAAAAAAAAAfNG/Kw5RF0yUtXYvp/pm1gcAAADh4n1W2Zc8QaMF
-jCQQMXHqRABlAHMAYwAAAAAAAADsYFZQE+2dQIudqTLMqcO0AAAAACmCdOAv7uRA
-AAAAAAAAAABOAFAAQwBOAGEAbQBlAFQAYQBiAGwAZQAAAAAAAAD3WOPUat+2QqQ6
-vnhdbRxhBwAAAOxgVlAT7Z1Ai52pMsypw7ROAFAAQwBOAGEAbQBlAAAAAAAAAOQK
-wTEEUHNOlNaKHcb9HiUHAAAA4eJ9VtmXPEGjBYwkEDFx6k4AUABDAAAAAAAAAFmm
-Gno+ATRFsjRkX4KeFYUHAAAA4eJ9VtmXPEGjBYwkEDFx6k4AZQB4AHQATgBQAEMA
-AAAAAAAAwbPYvZbdIkOBNYn2S69rIAAAAACuGnHeL+7kQAAAAAAAAAAAQwBhAHIA
-ZABOAGEAbQBlAFQAYQBiAGwAZQAAAAAAAADHhH0ai+zuRpBrSGEod8aZBwAAAMGz
-2L2W3SJDgTWJ9kuvayBJAEQAAAAAAAAAaL7GVBvbnUWUPaXhCXxyjAcAAADBs9i9
-lt0iQ4E1ifZLr2sgQwBhAHIAZABOAGEAbQBlAAAAAAAAAJDcfvyRZJZBqXZHqiBd
-tnYHAAAA4eJ9VtmXPEGjBYwkEDFx6kMAYQByAGQATgBhAG0AZQAAAAAAAACCvDyh
-D2e+S4/JraS7F7OBBwAAAOHifVbZlzxBowWMJBAxcepOAGUAeAB0AEMAYQByAGQA
-TgBhAG0AZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAUAAAAAAAAAAAAAAAAA
-AAAAAA==
+jCQQMXHqRABlAHMAYwAAAAAAAADsYFZQE+2dQIudqTLMqcO0AAAAABMuggpQ7uRA
+AAAAAAAAAABOAFAAQwBOAGEAbQBlAFQAYQBiAGwAZQAAAAAAAACzxKOBEeXxSLJ1
+av6yjte2BwAAAOxgVlAT7Z1Ai52pMsypw7RJAEQAAAAAAAAA91jj1GrftkKkOr54
+XW0cYQcAAADsYFZQE+2dQIudqTLMqcO0TgBQAEMATgBhAG0AZQAAAAAAAABZphp6
+PgE0RbI0ZF+CnhWFBwAAAOHifVbZlzxBowWMJBAxcepOAGUAeAB0AE4AUABDAAAA
+AAAAAMGz2L2W3SJDgTWJ9kuvayAAAAAArhpx3i/u5EAAAAAAAAAAAEMAYQByAGQA
+TgBhAG0AZQBUAGEAYgBsAGUAAAAAAAAAx4R9Govs7kaQa0hhKHfGmQcAAADBs9i9
+lt0iQ4E1ifZLr2sgSQBEAAAAAAAAAGi+xlQb251FlD2l4Ql8cowHAAAAwbPYvZbd
+IkOBNYn2S69rIEMAYQByAGQATgBhAG0AZQAAAAAAAACQ3H78kWSWQal2R6ogXbZ2
+BwAAAOHifVbZlzxBowWMJBAxcepDAGEAcgBkAE4AYQBtAGUAAAAAAAAAgrw8oQ9n
+vkuPya2kuxezgQcAAADh4n1W2Zc8QaMFjCQQMXHqTgBlAHgAdABDAGEAcgBkAE4A
+YQBtAGUAAAAAAAAABqWwXoM/Kk+VkNumBoel6AcAAADh4n1W2Zc8QaMFjCQQMXHq
+TgBQAEMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAAAAAAAAAAAA
+AAA=
 "/>
 <od:tableProperty name="DefaultView" type="2" value="2"/>
 <od:tableProperty name="DisplayViewsOnSharePointSite" type="2" value="1"/>
@@ -58,7 +59,7 @@ AAAAAA==
 <xsd:appinfo>
 <od:fieldProperty name="GUID" type="9" value="qi82HNWEHkWNMtXr6HqFTA==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="945"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="1200"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="1"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="TextAlign" type="2" value="0"/>
@@ -94,36 +95,6 @@ AAAAAA==
 </xsd:restriction>
 </xsd:simpleType>
 </xsd:element>
-<xsd:element name="NPC" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="GUID" type="9" value="5ArBMQRQc06U1oodxv0eJQ==
-"/>
-<od:fieldProperty name="ColumnWidth" type="3" value="1815"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="2"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="DisplayControl" type="3" value="111"/>
-<od:fieldProperty name="RowSourceType" type="10" value="Table/Query"/>
-<od:fieldProperty name="RowSource" type="12" value="SELECT [NPCName].[ID], [NPCName].[NPCName] FROM NPCNameTable; "/>
-<od:fieldProperty name="BoundColumn" type="3" value="1"/>
-<od:fieldProperty name="ColumnCount" type="3" value="2"/>
-<od:fieldProperty name="ColumnHeads" type="1" value="0"/>
-<od:fieldProperty name="ColumnWidths" type="10" value="0;1440"/>
-<od:fieldProperty name="ListRows" type="3" value="16"/>
-<od:fieldProperty name="ListWidth" type="10" value="1440트윕"/>
-<od:fieldProperty name="LimitToList" type="1" value="1"/>
-<od:fieldProperty name="AllowMultipleValues" type="1" value="0"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AllowValueListEdits" type="1" value="1"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="ShowOnlyRowSourceValues" type="1" value="0"/>
-<od:fieldProperty name="ResultType" type="2" value="0"/>
-<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
-</xsd:appinfo>
-</xsd:annotation>
-</xsd:element>
 <xsd:element name="NextNPC" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
 <xsd:annotation>
 <xsd:appinfo>
@@ -136,7 +107,7 @@ AAAAAA==
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="DisplayControl" type="3" value="111"/>
 <od:fieldProperty name="RowSourceType" type="10" value="Table/Query"/>
-<od:fieldProperty name="RowSource" type="12" value="SELECT [NPCName].[ID], [NPCName].[NPCName] FROM NPCNameTable; "/>
+<od:fieldProperty name="RowSource" type="12" value="SELECT [NPCNameTable].[ID], [NPCNameTable].[NPCName] FROM NPCNameTable; "/>
 <od:fieldProperty name="BoundColumn" type="3" value="1"/>
 <od:fieldProperty name="ColumnCount" type="3" value="2"/>
 <od:fieldProperty name="ColumnHeads" type="1" value="0"/>
@@ -159,8 +130,8 @@ AAAAAA==
 <xsd:appinfo>
 <od:fieldProperty name="GUID" type="9" value="kNx+/JFklkGpdkeqIF22dg==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="3"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="1530"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="2"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
@@ -189,7 +160,7 @@ AAAAAA==
 <xsd:appinfo>
 <od:fieldProperty name="GUID" type="9" value="grw8oQ9nvkuPya2kuxezgQ==
 "/>
-<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="1710"/>
 <od:fieldProperty name="ColumnOrder" type="3" value="6"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
@@ -197,6 +168,36 @@ AAAAAA==
 <od:fieldProperty name="DisplayControl" type="3" value="111"/>
 <od:fieldProperty name="RowSourceType" type="10" value="Table/Query"/>
 <od:fieldProperty name="RowSource" type="12" value="SELECT [CardNameTable].[ID], [CardNameTable].[CardName] FROM CardNameTable; "/>
+<od:fieldProperty name="BoundColumn" type="3" value="1"/>
+<od:fieldProperty name="ColumnCount" type="3" value="2"/>
+<od:fieldProperty name="ColumnHeads" type="1" value="0"/>
+<od:fieldProperty name="ColumnWidths" type="10" value="0;1440"/>
+<od:fieldProperty name="ListRows" type="3" value="16"/>
+<od:fieldProperty name="ListWidth" type="10" value="1440트윕"/>
+<od:fieldProperty name="LimitToList" type="1" value="1"/>
+<od:fieldProperty name="AllowMultipleValues" type="1" value="0"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AllowValueListEdits" type="1" value="1"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="ShowOnlyRowSourceValues" type="1" value="0"/>
+<od:fieldProperty name="ResultType" type="2" value="0"/>
+<od:fieldProperty name="CurrencyLCID" type="4" value="0"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="NPC" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="GUID" type="9" value="BqWwXoM/Kk+VkNumBoel6A==
+"/>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="3"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="111"/>
+<od:fieldProperty name="RowSourceType" type="10" value="Table/Query"/>
+<od:fieldProperty name="RowSource" type="12" value="SELECT [NPCNameTable].[ID], [NPCNameTable].[NPCName] FROM NPCNameTable; "/>
 <od:fieldProperty name="BoundColumn" type="3" value="1"/>
 <od:fieldProperty name="ColumnCount" type="3" value="2"/>
 <od:fieldProperty name="ColumnHeads" type="1" value="0"/>
